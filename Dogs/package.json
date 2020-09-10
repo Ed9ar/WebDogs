@@ -1,26 +1,26 @@
 {
-    "name": "dogs",
-    "version": "1.0.0",
-    "description": "Proyecto webdogs",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
-        "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-        "build-bootstrap": "node-sass --include-path scss scss/styles.scss public/css/styles.css",
-        "watch-bootstrap": "nodemon -e scss -x \"npm run build-bootstrap\""
-    },
-    "keywords": [
-        "dogs"
-    ],
-    "author": "EdgarLV, Emiliano Roldan, Mercedes Vázquez, Alan Mendoza",
-    "license": "ISC",
-    "devDependencies": {
-        "node-sass": "^4.14.1",
-        "nodemon": "^2.0.4"
-    },
-    "dependencies": {
-        "bootstrap": "^4.5.2",
-        "jquery": "^3.5.1"
-    }
+  "name": "dogs",
+  "version": "1.0.0",
+  "description": "Proyecto webdogs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss public/css/styles.css",
+    "watch-css": "nodemon --watch static/scss --ext scss,json --exec \"npm run build-css\"",
+    "build-bootstrap": "node-sass --include-path scss scss/styles.scss public/css/styles.css",
+    "watch-bootstrap": "nodemon -e scss -x \"npm run build-bootstrap\"" 
+  },
+  "keywords": [
+    "dogs"
+  ],
+  "author": "EdgarLV, Emiliano Roldan, Mercedes Vázquez, Alan Mendoza",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1"
+  }
 }
