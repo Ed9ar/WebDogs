@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header id="head">
+    <header id="head" class="header-login">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-4">
             <a class="navbar-brand ml-2" href="#">Nombre/Logo</a>
@@ -41,18 +41,30 @@
 
         <div class="hero-text-box">
             <div class="row">
-                <h1 class="col-12"></h1>
-                <h1 class="col-md-8 first">Cambia una vida hoy.<br>Adopta.</h1>
+                <h3 class="col-md-12 text-center texto-inicio">Inicio de Sesi&oacute;n</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 div-email">
+                    <label for="email" class="label-color">Email: </label>
+                    <input type="email" class="border-input">
+                </div>
+                <div class="col-md-6 div-password">
+                    <label for="password" class="label-color">Contraseña: </label>
+                    <input type="password" class="border-input">
+                </div>
             </div>
             <div class="row">
-                <h1 class="col-lg-2 col-md-0"></h1>
-                <div class="col-lg-1 col-md-12 first_button">
-                    <a class="btn btn-full first_button" href="#">Adopta <i class="fas fa-paw"></i></a>
+                <div class="col-md-12">
+                    <button class="btn-primary btn-md border-btn">Iniciar Sesi&oacute;n</button>
                 </div>
-                <div class="col-lg-1 col-md-12 first_button">
-                    <a class="btn btn-ghost first_button" href="#">Ver m&aacute;s</a>
+                <div class="col-md-6 btn-regis">
+                    <a href="#" class="anchor-regisForgot">Reg&iacute;strate</a>
                 </div>
-
+                <div class="col-md-6 btn-forgot">
+                    <a href="#" class="anchor-regisForgot">Olvid&eacute; mi contraseña</a>
+                </div>
             </div>
         </div>
         </nav>
