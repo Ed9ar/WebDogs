@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <title>Perritos</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -39,32 +39,35 @@
             </div>
         </nav>
 
-        <div class="hero-text-box">
-            <div class="row">
-                <h3 class="col-md-12 text-center texto-inicio">Inicio de Sesi&oacute;n</h3>
-            </div>
-        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 div-email">
-                    <label for="email" class="label-color">Email: </label>
-                    <input type="email" class="border-input">
+            <div class="d-flex justify-content-center h-100">
+                <div class="inner">
+                    <div class="inner-header">
+                        <h3>Inicio de Sesi&oacute;n</h3>
+                    </div>
+                    <div class="inner-body">
+                        <form>
+                            <div class="input-group form-group">
+                                <input type="email" class="border-input" placeholder="Correo">
+                            </div>
+                            <div class="input-group form-group">
+                                <input type="password" class="border-input" placeholder="Contrase&ntilde;a">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Iniciar Sesi&oacute;n" class="btn btn-primary float-left border-btn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class ="links">
+                        <div class="d-flex ">
+                            <p><span class="nocuenta">Soy nuevo : </span><a href="#">Reg&iacute;strate</a></p>
+                        </div>
+                        <div class="d-flex nocuenta">
+                            <a href="#">Olvide mi contrase&ntilde;a</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 div-password">
-                    <label for="password" class="label-color">Contraseña: </label>
-                    <input type="password" class="border-input">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <button class="btn-primary btn-md border-btn">Iniciar Sesi&oacute;n</button>
-                </div>
-                <div class="col-md-6 btn-regis">
-                    <a href="#" class="anchor-regisForgot">Reg&iacute;strate</a>
-                </div>
-                <div class="col-md-6 btn-forgot">
-                    <a href="#" class="anchor-regisForgot">Olvid&eacute; mi contraseña</a>
-                </div>
+                
             </div>
         </div>
         </nav>

@@ -5,19 +5,25 @@
   background-position: center;
   height: 100vh; }
 
-.texto-inicio {
-  margin: -21vh 0 0 12vw;
-  color: aliceblue; }
+.container {
+  padding: 80px; }
+
+.links {
+  margin-top: 40%; }
+
+.nocuenta {
+  color: aliceblue;
+  font-size: 20px;
+  padding-left: 30px;
+  text-align: center; }
+
+.inner-header {
+  color: aliceblue;
+  height: 30%;
+  font-size: 50%; }
 
 .label-color {
   color: aliceblue; }
-
-.div-email {
-  margin: 26vh 0 3vh 25vw; }
-
-.div-password {
-  margin-left: 21.5vw;
-  margin-bottom: 3vh; }
 
 .border-input {
   border-radius: 4px;
@@ -26,7 +32,7 @@
 .border-btn {
   border-radius: 5px;
   border-style: solid;
-  margin-left: 32.2vw; }
+  margin-left: 20%; }
   .border-btn-primary {
     border-color: #7b7b7b; }
 
