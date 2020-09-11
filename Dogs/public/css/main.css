@@ -47,6 +47,9 @@
 .anchor-regisForgot {
   font-size: 0.8rem; }
 
+.card-img-top {
+  max-height: 10px; }
+
 /* --------------------------------- */
 /* Basic setup*/
 /* --------------------------------- */
