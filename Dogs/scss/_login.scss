@@ -1,6 +1,7 @@
 $color-texto: aliceblue;
-$margen-email: 26vh 0 3vh 25vw;
+$padding-container: 80px;
 $font-btn-regisForgot: 0.8rem;
+
 .header-login {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/loginDog.jpg");
     background-size: cover;
@@ -8,23 +9,33 @@ $font-btn-regisForgot: 0.8rem;
     height: 100vh;
 }
 
-.texto-inicio {
-    margin: -21vh 0 0 12vw;
+.container{
+    padding: $padding-container;
+    
+}
+
+.links{
+    margin-top: 40%;
+}
+
+.nocuenta{
+    color:$color-texto;
+    font-size: 20px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+.inner-header {
     color: $color-texto;
+    height: 30%;
+    font-size: 50%;
+    
 }
 
 .label-color {
     color: $color-texto;
 }
 
-.div-email {
-    margin: $margen-email
-}
-
-.div-password {
-    margin-left: 21.5vw;
-    margin-bottom: 3vh;
-}
 
 @mixin estilo-input($border,
 $style) {
@@ -43,7 +54,7 @@ $style) {
     &-primary {
         border-color: darken(grey, 2%);
     }
-    margin-left:32.2vw;
+    margin-left:20%;
 }
 
 .btn-regis {
@@ -59,3 +70,5 @@ $style) {
 .anchor-regisForgot {
     font-size: $font-btn-regisForgot;
 }
+
+
