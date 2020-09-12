@@ -1,6 +1,8 @@
 @import "login";
 @import "loggedUser";
 
+$tamanos_logo: 5;
+
 /* --------------------------------- */
 
 
@@ -107,7 +109,7 @@ h1 {
     background-color: #639DF1;
     border: 1px solid #639DF1;
     color: #fff;
-    margin-right: 15px;
+    //margin-right: 15px;
 }
 
 .btn-ghost:link,
@@ -132,16 +134,14 @@ h1 {
     background-color: #8ECEFC;
 }
 
+/* Se ajustan los tamaños del logo */
 
-/*
-.logo{
-    height: 85px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
+@for $i from 1 through $tamanos_logo{
+    .logo#{$i} {
+        margin-left: 5%;
+        width: ($i * $i) + 12vw;
+    }
 }
-*/
-
 
 /* Se ajustan las caracteristicas de la barra de navegación */
 
@@ -179,6 +179,19 @@ h1 {
 
 .main-nav li a:active {
     border-bottom: 2px solid #639DF1;
+}
+
+/* Se ajustan los tamaños predetermiandos */
+@function multiple($i){  
+    @return ($i % 10 == 0);   
+}
+
+@for $i from 10 through 50{  
+    @if(multiple($i)){    
+        .pp-#{$i}{        
+            height: 0px + $i; 
+        }
+    }
 }
 
 
