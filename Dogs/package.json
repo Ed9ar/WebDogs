@@ -8,7 +8,9 @@
     "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
     "watch-css": "nodemon --watch static/scss --ext scss,json --exec \"npm run build-css\"",
     "build-bootstrap": "node-sass --include-path scss scss/styles.scss public/css/styles.css",
-    "watch-bootstrap": "nodemon -e scss -x \"npm run build-bootstrap\""
+    "watch-bootstrap": "nodemon -e scss -x \"npm run build-bootstrap\"",
+    "compilar": "node-sass scss/ -o public/css/",
+    "css:minify": "cleancss --level 1 --source-map --source-map-inline-sources --output public/css/main.min.css public/css/main.css "
   },
   "keywords": [
     "dogs"
