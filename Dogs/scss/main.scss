@@ -68,7 +68,8 @@ header {
 
 /* Se ajustan las caracteristicas del texto que sea h1 */
 
-h1 {
+h1,
+.first{
     left: 50%;
     transform: translate(-50%, -50%);
     color: aliceblue;
@@ -82,13 +83,6 @@ h1 {
     word-spacing: 4px;
 }
 
-h1,
-.titulo_adopta{
-    left: 0;
-    transform: translate(0, 0);
-    margin-top: 5%;
-    color: black;
-}
 
 /* Se arregla el tamaño de las imagenes*/
 .card-img-top {
@@ -339,12 +333,18 @@ h1,
 }
 
 @media screen and (max-width:1000px) {
-    header {
+    header,
+    .backdog{
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog_responsive.jpg");
         background-size: cover;
         background-position: center;
         height: 100vh;
     }
+
+    header {
+        height: 0;
+    }
+    
     .first {
         text-align: center;
         color: white;
