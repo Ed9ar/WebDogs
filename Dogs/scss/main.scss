@@ -40,13 +40,18 @@ html {
 
 /* Se ajustan las caracteristicas del header y se agrega el fondo de la página de manera correcta */
 
-header {
+
+header,
+.backdog{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
+header {
+    height: 0vh;
+}
 
 /* Se ajustan las caracteristicas de el texto de la primera sección de la página */
 
@@ -77,6 +82,18 @@ h1 {
     word-spacing: 4px;
 }
 
+h1,
+.titulo_adopta{
+    left: 0;
+    transform: translate(0, 0);
+    margin-top: 5%;
+    color: black;
+}
+
+/* Se arregla el tamaño de las imagenes*/
+.card-img-top {
+    max-height: 100%; 
+}
 
 /* Se ajustan las caracteristicas de todos los botones con clase btn */
 
@@ -188,8 +205,8 @@ h1 {
 
 @for $i from 10 through 50{  
     @if(multiple($i)){    
-        .pp-#{$i}{        
-            height: 0px + $i; 
+        .fs-#{$i}{        
+            font-size: 0px + $i; 
         }
     }
 }
