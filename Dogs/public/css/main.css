@@ -1,4 +1,5 @@
 @charset "UTF-8";
+header,
 .header-login {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/loginDog.jpg");
   background-size: cover;
@@ -50,6 +51,18 @@
 .card-img-top {
   max-height: 10px; }
 
+h1,
+.titulo_adopta {
+  left: 0;
+  transform: translate(0, 0);
+  margin-top: 5%;
+  color: black; }
+
+@media screen and (max-width: 1000px) {
+  h1,
+  .titulo_adopta {
+    margin-top: 15%; } }
+
 /* --------------------------------- */
 /* Basic setup*/
 /* --------------------------------- */
@@ -73,11 +86,15 @@ html {
   margin: 0 auto; }
 
 /* Se ajustan las caracteristicas del header y se agrega el fondo de la página de manera correcta */
-header {
+header,
+.backdog {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh; }
+
+header {
+  height: 0vh; }
 
 /* Se ajustan las caracteristicas de el texto de la primera sección de la página */
 .hero-text-box {
@@ -89,7 +106,8 @@ header {
   margin-right: 2vw; }
 
 /* Se ajustan las caracteristicas del texto que sea h1 */
-h1 {
+h1,
+.first {
   left: 50%;
   transform: translate(-50%, -50%);
   color: aliceblue;
@@ -101,6 +119,10 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 4px; }
+
+/* Se arregla el tamaño de las imagenes*/
+.card-img-top {
+  max-height: 100%; }
 
 /* Se ajustan las caracteristicas de todos los botones con clase btn */
 .btn {
@@ -126,8 +148,7 @@ h1 {
 .btn-full:visited {
   background-color: #639DF1;
   border: 1px solid #639DF1;
-  color: #fff;
-  margin-right: 15px; }
+  color: #fff; }
 
 .btn-ghost:link,
 .btn-ghost:visited {
@@ -147,14 +168,27 @@ h1 {
 .btn:active {
   background-color: #8ECEFC; }
 
-/*
-.logo{
-    height: 85px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
-}
-*/
+/* Se ajustan los tamaños del logo */
+.logo1 {
+  margin-left: 5%;
+  width: 13vw; }
+
+.logo2 {
+  margin-left: 5%;
+  width: 16vw; }
+
+.logo3 {
+  margin-left: 5%;
+  width: 21vw; }
+
+.logo4 {
+  margin-left: 5%;
+  width: 28vw; }
+
+.logo5 {
+  margin-left: 5%;
+  width: 37vw; }
+
 /* Se ajustan las caracteristicas de la barra de navegación */
 .main-nav {
   float: right;
@@ -184,6 +218,22 @@ h1 {
 
 .main-nav li a:active {
   border-bottom: 2px solid #639DF1; }
+
+/* Se ajustan los tamaños predetermiandos */
+.fs-10 {
+  font-size: 10px; }
+
+.fs-20 {
+  font-size: 20px; }
+
+.fs-30 {
+  font-size: 30px; }
+
+.fs-40 {
+  font-size: 40px; }
+
+.fs-50 {
+  font-size: 50px; }
 
 /*Footer styles*/
 /* Se ajustan las caracteristicas del footer */
@@ -286,11 +336,14 @@ h1 {
     border-left: solid 1px rgba(255, 255, 255, 0.1); } }
 
 @media screen and (max-width: 1000px) {
-  header {
+  header,
+  .backdog {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog_responsive.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh; }
+  header {
+    height: 0; }
   .first {
     text-align: center;
     color: white; }

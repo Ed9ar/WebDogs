@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <header id="head">
+    <header id="head" class="backdog">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-4">
-            <a class="navbar-brand ml-2" href="#">Nombre/Logo</a>
-            <!-- <img src="#" alt="Logo" class="logo"> -->
+            <!-- <a class="navbar-brand ml-2" href="#">Logo/</a>-->
+            <img src="/Dogs/public/css/img/logo.png" alt="Logo" class="logo1"> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,6 +35,30 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Login.html">Ingresar</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#logOutModal">Cerrar Sesion</a>
+                       <!-- Modal -->
+                       <div class="modal fade" id="logOutModal" tabindex="-1" role="dialog" aria-labelledby="logOutModalLabel" aria-hidden="true">
+                           <div class="modal-dialog" role="document">
+                           <div class="modal-content">
+                               <div class="modal-header">
+                               <h5 class="modal-title" id="logOutModalLabel">Cerrar Sesion</h5>
+                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                               </button>
+                               </div>
+                               <div class="modal-body">
+                               ¿Seguro que desea cerrar sesion?
+                               </div>
+                               <div class="modal-footer">
+                               <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                               <button type="button" class="btn btn-primary" ><a href="Login.html">Si</a></button>
+                               </div>
+                           </div>
+                           </div>
+                       </div>
+                   </li>
+                    
                 </ul>
             </div>
         </nav>
@@ -46,10 +70,10 @@
             </div>
             <div class="row">
                 <h1 class="col-lg-2 col-md-0"></h1>
-                <div class="col-lg-1 col-md-12 first_button">
+                <div class="col-lg-2 col-md-12 first_button">
                     <a class="btn btn-full first_button" href="#">Adopta <i class="fas fa-paw"></i></a>
                 </div>
-                <div class="col-lg-1 col-md-12 first_button">
+                <div class="col-lg-2 col-md-12 first_button">
                     <a class="btn btn-ghost first_button" href="#">Ver m&aacute;s</a>
                 </div>
 
@@ -64,7 +88,7 @@
     <footer class="footer-bs py-3 mb-0">
         <div class="row">
             <div class="col-md-4 footer-brand animated fadeInLeft">
-                <h2>Logo</h2>
+                <img src="/Dogs/public/css/img/logo.png" alt="Logo" class="logo2"> 
                 <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
                 <p>© Nombre Equipo, All rights reserved</p>
             </div>
