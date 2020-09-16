@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic'");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 header,
 .header-login {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/loginDog.jpg");
@@ -53,15 +55,94 @@ header,
 
 h1,
 .titulo_adopta {
-  left: 0;
+  text-align: center;
   transform: translate(0, 0);
   margin-top: 5%;
   color: black; }
+
+.row {
+  justify-content: space-evenly; }
+
+.container {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.jumbotron {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important; }
 
 @media screen and (max-width: 1000px) {
   h1,
   .titulo_adopta {
     margin-top: 15%; } }
+
+#title_register {
+  color: aliceblue;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 3%; }
+
+.subtitle_plant {
+  color: aliceblue;
+  text-align: center;
+  font-size: 1em;
+  margin-top: -3%; }
+
+#textBox {
+  margin-top: 3%; }
+
+#checkBox {
+  align-content: center;
+  margin-left: 30%;
+  margin-top: 2%; }
+
+.register-top {
+  margin-top: -14%; }
+
+.aceptar_terminos {
+  color: rgba(240, 248, 255, 0.575);
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: lighter;
+  font-size: .9em;
+  margin-left: 37%; }
+
+.color_input {
+  background-color: #f9f9faa8;
+  border-color: aliceblue;
+  border-width: 0.1rem;
+  border-radius: 0%; }
+
+.info {
+  display: block;
+  background-color: #162133;
+  width: 100%;
+  color: aliceblue;
+  height: 2.5em; }
+
+.style_select {
+  margin-top: 5%; }
+
+.style_email {
+  margin-bottom: 5%; }
+
+.btn-margin {
+  margin-top: 2vh;
+  margin-right: 7vw; }
+
+@media only screen and (max-width: 575px) {
+  .spacing_textBox {
+    margin-top: 5%; }
+  .footer-bs .footer-nav,
+  .footer-bs .footer-social,
+  .footer-bs .footer-ns {
+    margin-top: 10%; } }
+
+@media (min-width: 575px) {
+  .footer-bs .footer-nav,
+  .footer-bs .footer-social,
+  .footer-bs .footer-ns {
+    margin-top: 10%; } }
 
 /* --------------------------------- */
 /* Basic setup*/
