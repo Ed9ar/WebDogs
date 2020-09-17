@@ -1,4 +1,5 @@
 @import "login";
+@import "contacto";
 @import "loggedUser";
 @import "registro";
 $web-font-path: "http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic'" !default;
@@ -52,6 +53,14 @@ header,
     height: 100vh;
 }
 
+header,
+.perritodudoso {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/perritodudoso1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
 header {
     height: 0vh;
 }
@@ -63,6 +72,12 @@ header {
     position: absolute;
     width: 100%;
     top: 50%;
+}
+
+.hero-text-box2 {
+    position: absolute;
+    width: 100%;
+    top: 25%;
 }
 
 .first_button {

@@ -50,6 +50,27 @@ header,
 .anchor-regisForgot {
   font-size: 0.8rem; }
 
+.contact-form {
+  width: 60%;
+  margin: 0 auto; }
+
+.span-3-of-3 {
+  width: 100%; }
+
+.span-2-of-3 {
+  width: 66%; }
+
+.span-1-of-3 {
+  width: 33%; }
+
+@media only screen and (max-width: 480px) {
+  .span-3-of-3 {
+    width: 100%; }
+  .span-2-of-3 {
+    width: 100%; }
+  .span-1-of-3 {
+    width: 100%; } }
+
 .card-img-top {
   max-height: 10px; }
 
@@ -174,6 +195,13 @@ header,
   background-position: center;
   height: 100vh; }
 
+header,
+.perritodudoso {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/perritodudoso1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh; }
+
 header {
   height: 0vh; }
 
@@ -182,6 +210,11 @@ header {
   position: absolute;
   width: 100%;
   top: 50%; }
+
+.hero-text-box2 {
+  position: absolute;
+  width: 100%;
+  top: 25%; }
 
 .first_button {
   margin-right: 2vw; }
