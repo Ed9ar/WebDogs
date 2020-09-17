@@ -6,30 +6,8 @@
 }
 
 
-.span-3-of-3{
-    width: 100%
-}
-
-.span-2-of-3{
-    width: 66%
-}
-
-.span-1-of-3{
-    width: 33%
-}
-
-
-@media only screen and (max-width:480px){
-    .span-3-of-3{
-    width: 100%
+@media (max-width: 1000px) {
+    .dudas {
+        display: none;
     }
-
-    .span-2-of-3{
-        width: 100%
-    }
-
-    .span-1-of-3{
-        width: 100%
-    }
-
 }
