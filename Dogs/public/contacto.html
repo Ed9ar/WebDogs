@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <header id="head" class="backdog">
+    <header id="head" class="perritodudoso">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-4">
             <!-- <a class="navbar-brand ml-2" href="#">Logo/</a>-->
@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto  main-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Conoce</a>
@@ -28,7 +28,7 @@
                         <a class="nav-link" href="#">Familias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="#">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Login.html">Ingresar</a>
@@ -61,23 +61,52 @@
             </div>
         </nav>
 
-        <div class="hero-text-box">
+        <div class="hero-text-box2">
             <div class="row">
-                <h1 class="col-12"></h1>
-                <h1 class="col-md-8 first">Cambia una vida hoy.<br>Adopta.</h1>
-            </div>
-            <div class="row">
-                <h1 class="col-lg-2 col-md-0"></h1>
-                <div class="col-lg-2 col-md-12 first_button">
-                    <a class="btn btn-full first_button" href="#">Adopta <i class="fas fa-paw"></i></a>
-                </div>
-                <div class="col-lg-2 col-md-12 first_button">
-                    <a class="btn btn-ghost first_button" href="#">Ver m&aacute;s</a>
-                </div>
-
+                <h1 class="col-md-8 dudas">Si tienes dudas, podemos resolverlas</h1>
             </div>
         </div>
     </header>
+    
+    <div class="general">
+        <section class="contact-section">
+        <div class="my-5 inner-contact">
+                <form class="contact-form ">
+                
+                <div class="form-group">  
+                        <label for="exampleFormControlInput1">Nombre</label>    
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                </div>
+                <div class="form-group">  
+                        <label for="exampleFormControlInput1">Correo</label>    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
+                </div>
+                    
+                <div class="form-group">  
+                        <label for="exampleFormControlInput1">Conoc&iacute; la p&aacute;gina en:</label>  
+                        <select class="form-control" name="conociste" id="conociste" placeholder="Conoc&iacute; el sitio por">
+                            <option value="redes">Redes Sociales</option>
+                            <option value="webp">P&aacute;gina Web</option>
+                            <option value="amigos">Amigos</option>
+                            <option value="otros">Otros usuarios</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlInput1">Escr&iacute;be todas tus inquietudes</label>  
+                        <textarea class="form-control" id="#" rows="3" placeholder="Escribe..."></textarea>
+                </div>
+                <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Enviar">
+                </div>
+            </form>
+                
+            
+        </div>
+        
+    </section>
+
+    </div>
+    
+
 
     <!----------- Footer ------------>
     <footer class="footer-bs py-3 mb-0">
@@ -126,4 +155,4 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 
-</html>
+</html>   

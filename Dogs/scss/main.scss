@@ -1,12 +1,26 @@
 @import "login";
+@import "cuenta";
+@import "contacto";
 @import "loggedUser";
 @import "registro";
 @import "conocenos";
+@import "perfilPerro";
 $web-font-path: "http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic'" !default;
 @import url($web-font-path);
 $web-icons-path: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css";
 @import url($web-icons-path);
 $tamanos_logo: 5;
+$hover_color: #639DF1;
+
+
+@mixin border-b($size, $style, $color1){
+    border-bottom: $size $style $color1;
+}
+
+@mixin border-r($size, $style, $color1){
+    border: $size $style $color1;
+}
+
 
 /* --------------------------------- */
 
@@ -53,6 +67,14 @@ header,
     height: 100vh;
 }
 
+header,
+.perritodudoso {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/perritodudoso1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
 header {
     height: 0vh;
 }
@@ -64,6 +86,11 @@ header {
     position: absolute;
     width: 100%;
     top: 50%;
+}
+
+.hero-text-box2 {
+    position: absolute;
+    top: 25%;
 }
 
 .first_button {
@@ -108,6 +135,7 @@ h1,
 }
 
 
+
 /*
 .btn: link,
 .btn: visited {
@@ -124,26 +152,26 @@ h1,
 
 .btn-full:link,
 .btn-full:visited {
-    background-color: #639DF1;
-    border: 1px solid #639DF1;
+    background-color: $hover_color;
+    @include border-r(1px, solid, #639DF1);
     color: #fff;
     //margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #AFE7FD;
+    @include border-r(1px, solid, #AFE7FD);
     color: #AFE7FD;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #8ECEFC;
+     @include border-r(1px, solid, #8ECEFC);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #8ECEFC;
+    @include border-r(1px, solid, #8ECEFC);
     color: #fff;
 }
 
@@ -175,30 +203,24 @@ h1,
     margin-left: 40px;
 }
 
+
 .main-nav li a {
     padding: 8px 0;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
-    border-bottom: 2px solid transparent;
+    @include border-b(2px, solid,
+    transparent);
     transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover {
-    border-bottom: 2px solid #639DF1;
+    @include border-b(2px, solid,#639DF1);
 }
 
 .main-nav li a:active {
-    border-bottom: 2px solid #639DF1;
-}
-
-.main-nav li a:hover {
-    border-bottom: 2px solid #639DF1;
-}
-
-.main-nav li a:active {
-    border-bottom: 2px solid #639DF1;
+    @include border-b(2px, solid,#639DF1);
 }
 
 

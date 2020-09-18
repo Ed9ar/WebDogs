@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/7083cd3d84.js" crossorigin="anonymous"></script>
+    <title>Perfil</title>
+</head>
+
+<body>
+    <header id="head">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- <a class="navbar-brand ml-2" href="#">Logo/</a>-->
+            <img src="/Dogs/public/css/img/logo.png" alt="Logo" class="logo1" href="index.html">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto  main-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conoce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Familias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#logOutModal">Cerrar Sesion</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="logOutModal" tabindex="-1" role="dialog" aria-labelledby="logOutModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="logOutModalLabel">Cerrar Sesion</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                               </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ¿Seguro que desea cerrar sesion?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                        <button type="button" class="btn btn-primary"><a href="Login.html">Si</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="fs-30 titulo_adopta">Con webdogs Encuentra un amigo cerca de ti</h1>
+            <br>
+            <div class="row">
+                <h5>Perros en adopción</h5>
+                <h5>Encuentra tu mascota ideal</h5>
+            </div>
+
+        </div>
+    </div>
+    <section class="body-profile">
+        <div class="profile-card">
+            <div class="image-container">
+                <img src="css/img/loginDog.jpg" class="image-profile">
+                <div class="title float-left">
+                    <h2>Roque</h2>
+                </div>
+            </div>
+            <div class="main-container">
+                <p><i class="fas fa-dog info-dog"></i>Mi nombre es Roque</p>
+                <p><i class="fas fa-paw info-dog"></i>Soy un Corgi</p>
+                <p><i class="fas fa-bone info-dog"></i>Soy macho</p>
+                <p><i class="fas fa-paw info-dog"></i>Soy de tamaño mediano</p>
+                <p><i class="fas fa-bone info-dog"></i>Soy un cachorro Juguetón</p>
+                <p><i class="fas fa-paw info-dog"></i>Tengo 5 años</p>
+                <p><i class="fas fa-bone info-dog"></i>Me encuentro actualmente en CDMX</p>
+                <div class="text-center justify-content-center">
+                    <div class="form-group">
+                        <input type="submit" value="Contactar al Responsable" class="btn btn-primary border-btn btn-margin btn-contactar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS buena practica -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
