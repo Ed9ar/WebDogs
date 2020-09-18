@@ -1,0 +1,53 @@
+$width-profile: 100%;
+.image-profile {
+    width: $width-profile;
+}
+
+@mixin estilo-body($color, $bg-color) {
+    color: $color;
+    background-color: $bg-color;
+}
+
+.body-profile {
+    @include estilo-body(#3c3939, #f1f1f1);
+    margin-top: -5%;
+}
+
+.profile-card {
+    width: 600px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    position: relative;
+}
+
+.info-dog {
+    color: rgb(187, 162, 19);
+    margin-right: 16px;
+}
+
+.main-container {
+    padding: 20px;
+}
+
+.title {
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    color: black;
+}
+
+@media (max-width: 650px) {
+    .body-profile {
+        margin-top: -7%;
+    }
+    .profile-card {
+        width: 300px;
+    }
+    .btn-contactar {
+        margin-left: -0%;
+    }
+}
