@@ -208,6 +208,19 @@ h1,
   .footer-bs .footer-ns {
     margin-top: 10%; } }
 
+
+.tres-principios,
+.col-lg-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center; }
+
+.imagen_conocenos {
+  max-width: 267px; }
+
+.conocenos-icono {
+  margin-bottom: 1.5rem; }
+
 .image-profile {
   width: 100%; }
 
