@@ -122,23 +122,31 @@ h1,
   text-align: center;
   transform: translate(0, 0);
   margin-top: 5%;
-  color: black; }
+  color: #DFD0B7; }
 
 .row {
   justify-content: space-evenly; }
+
+.texts {
+  color: #E3DAC9; }
 
 .container {
   padding-top: 0;
   padding-bottom: 0; }
 
-.jumbotron {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important; }
+header,
+.perritodudosoMain {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/dog-main.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh; }
 
 @media screen and (max-width: 1000px) {
   h1,
   .titulo_adopta {
-    margin-top: 15%; } }
+    margin-top: 15%; }
+  .dudas {
+    display: none; } }
 
 #title_register {
   color: aliceblue;
@@ -307,8 +315,8 @@ section {
   width: 32.26%; }
 
 .section-testimonials {
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-lights.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-lights.jpg);
   background-size: cover;
   color: #fff;
   background-attachment: fixed;
