@@ -1,5 +1,11 @@
 $ancho-foto:70%;
 
+.perritodudosoCuenta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header_conoce.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .card-adopcion{
     margin-top: 20px; 
     max-width: 500px;

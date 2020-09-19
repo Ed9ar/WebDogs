@@ -3,6 +3,16 @@ $width-profile: 100%;
     width: $width-profile;
 }
 
+.perfp {
+    padding: 1rem 2rem !important;
+}
+
+.perritodudosoPerfil {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header_conoce.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 @mixin estilo-body($color, $bg-color) {
     color: $color;
     background-color: $bg-color;
