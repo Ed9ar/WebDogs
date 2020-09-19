@@ -36,6 +36,10 @@ $hover_color: #639DF1;
     box-sizing: border-box;
 }
 
+/* Arreglo del modal con la nav sticky*/
+.modal-backdrop.show {
+    z-index: 0;
+}
 
 /* Css de el documento HTML en general */
 

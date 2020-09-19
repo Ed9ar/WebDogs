@@ -208,7 +208,6 @@ h1,
   .footer-bs .footer-ns {
     margin-top: 10%; } }
 
-
 .tres-principios,
 .col-lg-4 {
   margin-top: 1.5rem;
@@ -220,6 +219,21 @@ h1,
 
 .conocenos-icono {
   margin-bottom: 1.5rem; }
+
+.modal-body {
+  max-height: 80vh;
+  /* max 80% of the viewport height */
+  overflow-y: auto; }
+
+header,
+.perritodudosoConocenos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header_conoce.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh; }
+
+.section-conocenos {
+  margin-top: 3vw; }
 
 .image-profile {
   width: 100%; }
@@ -266,6 +280,10 @@ h1,
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+/* Arreglo del modal con la nav sticky*/
+.modal-backdrop.show {
+  z-index: 0; }
 
 /* Css de el documento HTML en general */
 html {
