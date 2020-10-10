@@ -62,7 +62,7 @@ html {
 
 header,
 .backdog {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/assets/img/backdog.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -70,7 +70,7 @@ header,
 
 header,
 .perritodudoso {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/perritodudoso1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/assets/img/perritodudoso1.jpg");
     background-size: cover;
     background-position: center;
     height: 40vh;
@@ -369,7 +369,7 @@ h1,
 @media screen and (max-width:1000px) {
     header,
     .backdog {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog_responsive.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/assets/img/backdog_responsive.jpg");
         background-size: cover;
         background-position: center;
         height: 100vh;
