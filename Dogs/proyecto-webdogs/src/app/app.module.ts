@@ -7,6 +7,9 @@ import { EncabezadoComponent } from './main-components/encabezado/encabezado.com
 import { FooterComponent } from './main-components/footer/footer.component';
 import { ContentComponent } from './main-components/content/content.component';
 
+import { ConoceModule } from './module/conoce/conoce.module';
+import { DenunciasModule} from './module/denuncias/denuncias.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,9 @@ import { ContentComponent } from './main-components/content/content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ConoceModule,
+    DenunciasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
