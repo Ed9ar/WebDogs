@@ -25,6 +25,11 @@ const routes: Routes = [
   },{
     path:'registrarPerro',
     loadChildren: './module/registrar-perro/registrar-perro.module#RegistrarPerroModule'
+    path:'familias', 
+    loadChildren: './module/familias/familias.module#FamiliasModule'
+  },{
+    path:'main', 
+    loadChildren: './module/main/main.module#MainModule'
   }
 ];
 
