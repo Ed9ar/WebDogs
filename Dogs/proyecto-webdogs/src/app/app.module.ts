@@ -16,6 +16,7 @@ import { LoginModule } from './module/login/login.module';
 import { RegistrarPerroModule } from './module/registrar-perro/registrar-perro.module';
 import { FamiliasModule } from './module/familias/familias.module';
 import { MainModule } from './module/main/main.module';
+import { PerfilPerroModule } from './module/perfil-perro1/perfil-perro.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MainModule } from './module/main/main.module';
     LoginModule,
     RegistrarPerroModule,
     FamiliasModule,
-    MainModule
+    MainModule,
+    PerfilPerroModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -31,6 +31,9 @@ const routes: Routes = [
   },{
     path:'main',
     loadChildren: './module/main/main.module#MainModule'
+  },{
+    path:'perfil-perro',
+    loadChildren: './module/perfil-perro1/perfil-perro.module#PerfilPerroModule'
   }
 ];
 
