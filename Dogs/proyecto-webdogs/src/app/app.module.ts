@@ -9,6 +9,8 @@ import { ContentComponent } from './main-components/content/content.component';
 
 import { ConoceModule } from './module/conoce/conoce.module';
 import { DenunciasModule} from './module/denuncias/denuncias.module';
+import { ContactoModule } from './module/contacto/contacto.module';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { DenunciasModule} from './module/denuncias/denuncias.module';
     BrowserModule,
     AppRoutingModule,
     ConoceModule,
-    DenunciasModule
+    DenunciasModule,
+    ContactoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

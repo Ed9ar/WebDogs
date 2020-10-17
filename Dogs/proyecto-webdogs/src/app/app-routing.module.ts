@@ -10,6 +10,12 @@ const routes: Routes = [
   },{
     path:'denuncias', 
     loadChildren: './module/denuncias/denuncias.module#DenunciasModule'
+  },{
+    path:'contacto', 
+    loadChildren: './module/contacto/contacto.module#ContactoModule'
+  },{
+    path:'cuenta', 
+    loadChildren: './module/cuenta/cuenta.module#CuentaModule'
   }
 ];
 
