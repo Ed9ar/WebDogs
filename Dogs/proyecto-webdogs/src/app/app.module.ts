@@ -33,7 +33,7 @@ import { MainModule } from './module/main/main.module';
     CuentaModule,
     RegistroModule,
     LoginModule,
-    RegistrarPerroModule
+    RegistrarPerroModule,
     FamiliasModule,
     MainModule
   ],
