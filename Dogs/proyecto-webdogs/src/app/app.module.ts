@@ -11,6 +11,9 @@ import { ConoceModule } from './module/conoce/conoce.module';
 import { DenunciasModule} from './module/denuncias/denuncias.module';
 import { ContactoModule } from './module/contacto/contacto.module';
 import { CuentaModule } from './module/cuenta/cuenta.module';
+import { RegistroModule } from './module/registro/registro.module';
+import { LoginModule } from './module/login/login.module';
+import { RegistrarPerroModule } from './module/registrar-perro/registrar-perro.module';
 import { FamiliasModule } from './module/familias/familias.module';
 import { MainModule } from './module/main/main.module';
 
@@ -28,6 +31,9 @@ import { MainModule } from './module/main/main.module';
     DenunciasModule,
     ContactoModule,
     CuentaModule,
+    RegistroModule,
+    LoginModule,
+    RegistrarPerroModule
     FamiliasModule,
     MainModule
   ],

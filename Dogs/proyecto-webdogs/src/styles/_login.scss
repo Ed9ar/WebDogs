@@ -1,24 +1,22 @@
 @import "variables";
-
 header,
-.header-login{
+.header-login {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/assets/img/loginDog.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
-.container{
+.container-fluid-login {
     padding: $padding-container;
-    
 }
 
-.links{
+.links {
     margin-top: 40%;
 }
 
-.nocuenta{
-    color:$color-texto;
+.nocuenta {
+    color: $color-texto;
     font-size: 20px;
     padding-left: 30px;
     text-align: center;
@@ -28,18 +26,20 @@ header,
     color: $color-texto;
     height: 30%;
     font-size: 50%;
-    
 }
 
 .label-color {
     color: $color-texto;
 }
 
-
 @mixin estilo-input($border,
 $style) {
     border-radius: $border;
     border-style: $style;
+}
+
+.btn-login {
+    margin-left: -0.8vw;
 }
 
 .border-input {

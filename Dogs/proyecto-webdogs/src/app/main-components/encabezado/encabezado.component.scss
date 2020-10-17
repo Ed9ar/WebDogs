@@ -10,19 +10,19 @@ header,
     text-align: center;
 }
 
-.imagen_conocenos{
+.imagen_conocenos {
     max-width: 267px;
 }
 
-.conocenos-icono{
+.conocenos-icono {
     margin-bottom: 1.5rem;
 }
 
 .modal-body {
-    max-height: 80vh; /* max 80% of the viewport height */
+    max-height: 80vh;
+    /* max 80% of the viewport height */
     overflow-y: auto;
 }
-
 
 header,
 .perritodudosoConocenos {
@@ -32,6 +32,6 @@ header,
     height: 40vh;
 }
 
-.section-conocenos{
+.section-conocenos {
     margin-top: 3vw;
 }
