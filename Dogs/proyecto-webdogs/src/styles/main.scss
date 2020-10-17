@@ -8,13 +8,11 @@
 @import "familias";
 @import "variables";
 @import "denuncias";
-
-
-@mixin border-b($size, $style, $color1){
+@mixin border-b($size, $style, $color1) {
     border-bottom: $size $style $color1;
 }
 
-@mixin border-r($size, $style, $color1){
+@mixin border-r($size, $style, $color1) {
     border: $size $style $color1;
 }
 
@@ -33,10 +31,13 @@
     box-sizing: border-box;
 }
 
+
 /* Arreglo del modal con la nav sticky*/
+
 .modal-backdrop.show {
     z-index: 0;
 }
+
 
 /* Css de el documento HTML en general */
 
@@ -136,7 +137,6 @@ h1,
 }
 
 
-
 /*
 .btn: link,
 .btn: visited {
@@ -154,25 +154,33 @@ h1,
 .btn-full:link,
 .btn-full:visited {
     background-color: $hover_color;
-    @include border-r(1px, solid, #639DF1);
+    @include border-r(1px,
+    solid,
+    #639DF1);
     color: #fff;
     //margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    @include border-r(1px, solid, #AFE7FD);
+    @include border-r(1px,
+    solid,
+    #AFE7FD);
     color: #AFE7FD;
 }
 
 .btn-full:hover,
 .btn-full:active {
-     @include border-r(1px, solid, #8ECEFC);
+    @include border-r(1px,
+    solid,
+    #8ECEFC);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    @include border-r(1px, solid, #8ECEFC);
+    @include border-r(1px,
+    solid,
+    #8ECEFC);
     color: #fff;
 }
 
@@ -204,24 +212,28 @@ h1,
     margin-left: 40px;
 }
 
-
 .main-nav li a {
     padding: 8px 0;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
-    @include border-b(2px, solid,
+    @include border-b(2px,
+    solid,
     transparent);
     transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover {
-    @include border-b(2px, solid,#639DF1);
+    @include border-b(2px,
+    solid,
+    #639DF1);
 }
 
 .main-nav li a:active {
-    @include border-b(2px, solid,#639DF1);
+    @include border-b(2px,
+    solid,
+    #639DF1);
 }
 
 

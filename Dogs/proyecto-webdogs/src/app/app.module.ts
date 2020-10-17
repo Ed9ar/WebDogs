@@ -13,6 +13,7 @@ import { ContactoModule } from './module/contacto/contacto.module';
 import { CuentaModule } from './module/cuenta/cuenta.module';
 import { RegistroModule } from './module/registro/registro.module';
 import { LoginModule } from './module/login/login.module';
+import { RegistrarPerroModule } from './module/registrar-perro/registrar-perro.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginModule } from './module/login/login.module';
     ContactoModule,
     CuentaModule,
     RegistroModule,
-    LoginModule
+    LoginModule,
+    RegistrarPerroModule
   ],
   providers: [],
   bootstrap: [AppComponent]

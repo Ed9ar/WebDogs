@@ -22,6 +22,9 @@ const routes: Routes = [
   },{
     path:'login',
     loadChildren: './module/login/login.module#LoginModule'
+  },{
+    path:'registrarPerro',
+    loadChildren: './module/registrar-perro/registrar-perro.module#RegistrarPerroModule'
   }
 ];
 
