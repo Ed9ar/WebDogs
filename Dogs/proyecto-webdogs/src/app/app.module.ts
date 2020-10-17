@@ -11,6 +11,8 @@ import { ConoceModule } from './module/conoce/conoce.module';
 import { DenunciasModule} from './module/denuncias/denuncias.module';
 import { ContactoModule } from './module/contacto/contacto.module';
 import { CuentaModule } from './module/cuenta/cuenta.module';
+import { RegistroModule } from './module/registro/registro.module';
+import { LoginModule } from './module/login/login.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { CuentaModule } from './module/cuenta/cuenta.module';
     AppRoutingModule,
     ConoceModule,
     DenunciasModule,
-    ContactoModule
+    ContactoModule,
+    CuentaModule,
+    RegistroModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
