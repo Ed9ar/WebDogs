@@ -10,7 +10,7 @@ import { ContentComponent } from './main-components/content/content.component';
 import { ConoceModule } from './module/conoce/conoce.module';
 import { DenunciasModule} from './module/denuncias/denuncias.module';
 import { ContactoModule } from './module/contacto/contacto.module';
-
+import { CuentaModule } from './module/cuenta/cuenta.module';
 
 @NgModule({
   declarations: [
