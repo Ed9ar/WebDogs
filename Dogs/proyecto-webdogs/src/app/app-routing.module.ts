@@ -16,6 +16,12 @@ const routes: Routes = [
   },{
     path:'cuenta', 
     loadChildren: './module/cuenta/cuenta.module#CuentaModule'
+  },{
+    path:'familias', 
+    loadChildren: './module/familias/familias.module#FamiliasModule'
+  },{
+    path:'main', 
+    loadChildren: './module/main/main.module#MainModule'
   }
 ];
 
