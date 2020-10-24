@@ -1,39 +1,40 @@
 <div class="container-fluid d-flex justify-content-center header-login">
+
     <div class="row register-container">
         <div class="col-sm-12">
             <p id="title_register">Registro</p>
-            <form id="textBox">
+            <form id="textBox" [formGroup]="modeloRegistro" (ngSubmit)="registrarUsuario()">
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control color_input" placeholder="Nombre" required>
+                        <input type="text" formControlName="nombreUsuario" class="form-control color_input" placeholder="Nombre" required>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control color_input" placeholder="Ciudad" required>
+                        <input type="text" class="form-control color_input" formControlName="ciudad" placeholder="Ciudad" required>
                     </div>
                 </div>
-            </form>
+            
 
             <br>
-            <form>
+            
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <input type="text" class="form-control color_input spacing_textBox" placeholder="CP" required>
+                        <input type="text" class="form-control color_input spacing_textBox" formControlName="codigoPostal" placeholder="CP" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <input type="text" class="form-control color_input spacing_textBox" placeholder="Edad" required>
+                        <input type="text" class="form-control color_input spacing_textBox" formControlName="edadUsuario" placeholder="Edad" required>
                     </div>
                 </div>
-            </form>
+           
             <br>
-            <form>
+            
                 <div class="row">
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <input type="email" class="form-control color_input style_email" aria-describedby="emailHelp" placeholder="Email" required>
-                        <input type="password" class="form-control color_input style_email" placeholder="Contrase&ntilde;a" required>
-                        <textarea class="form-control color_input spacing_textBox" rows="4" placeholder="Describe porque quieres adoptar a un perro" required></textarea>
+                        <input type="email" class="form-control color_input style_email" aria-describedby="emailHelp" formControlName="correoUsuario" placeholder="Email" required>
+                        <input type="password" class="form-control color_input style_email" formControlName="contrasenia" placeholder="Contrase&ntilde;a" required>
+                        <textarea class="form-control color_input spacing_textBox" rows="4" formControlName="motivo" placeholder="Describe porque quieres adoptar a un perro" required></textarea>
                     </div>
                 </div>
-            </form>
+            
             <br>
 
             <br>
@@ -48,6 +49,7 @@
                     <a routerLink="/main"><input type="submit" value="Registrarse" class="btn btn-primary border-btn btn-margin"></a>
                 </div>
             </div>
+        </form>
         </div>
     </div>
 </div>

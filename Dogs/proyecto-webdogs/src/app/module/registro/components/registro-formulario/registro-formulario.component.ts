@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-registro-formulario',
@@ -6,10 +7,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro-formulario.component.scss']
 })
 export class RegistroFormularioComponent implements OnInit {
+  constructor(private formBuild:FormBuilder) { }
 
-  constructor() { }
+
+  modeloRegistro = this.formBuild.group(
+    {
+      nombreUsuario: ['', Validators.required],
+      ciudad: ['', Validators.required],
+      codigoPostal: ['', Validators.required],
+      edadUsuario: ['', Validators.required],
+      correoUsuario: ['', Validators.required],
+      contrasenia: ['',Validators.required],
+      motivo: ['',Validators.required]
+    }
+  );
 
   ngOnInit(): void {
   }
 
+  registrarUsuario() {
+    console.log(this.modeloRegistro.value)
+
+  }
+
 }
+
+
+
+
+  
+
+  

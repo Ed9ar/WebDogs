@@ -2,19 +2,18 @@
 <div class="general">
     <section class="contact-section">
     <div class="my-5 inner-contact">
-            <form class="contact-form ">
-            
-            <div class="form-group">  
+            <form class="contact-form " [formGroup]="modeloContacto" (ngSubmit)="enviarComentarios()">
+            <div class="form-group" formGroupName="usuario">  
                     <label for="exampleFormControlInput1">Nombre</label>    
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
-            </div>
-            <div class="form-group">  
-                    <label for="exampleFormControlInput1">Correo</label>    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
+                <input type="email" class="form-control" formControlName="nombre" id="exampleFormControlInput1" placeholder="Nombre">
+        
+                    <label for="exampleFormControlInput1">Correo</label>    
+                    <input type="email" class="form-control" formControlName="correo" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
             </div>
                 
             <div class="form-group">  
                     <label for="exampleFormControlInput1">Conoc&iacute; la p&aacute;gina en:</label>  
-                    <select class="form-control" name="conociste" id="conociste" placeholder="Conoc&iacute; el sitio por">
+                    <select class="form-control" name="conociste" formControlName="conociste" id="conociste" placeholder="Conoc&iacute; el sitio por">
                         <option value="redes">Redes Sociales</option>
                         <option value="webp">P&aacute;gina Web</option>
                         <option value="amigos">Amigos</option>
@@ -23,7 +22,7 @@
             </div>
             <div class="form-group">
                     <label for="exampleFormControlInput1">Escr&iacute;be todas tus inquietudes</label>  
-                    <textarea class="form-control" id="#" rows="3" placeholder="Escribe..."></textarea>
+                    <textarea class="form-control" formControlName="inquietudes" id="#" rows="3" placeholder="Escribe..."></textarea>
             </div>
             <div class="form-group">
                     <input class="btn btn-success" type="submit" value="Enviar">
@@ -36,3 +35,7 @@
 </section>
 
 </div>
+
+
+
+  

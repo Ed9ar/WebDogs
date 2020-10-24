@@ -8,19 +8,18 @@
 <div class="general">
     <section class="contact-section">
         <div class="my-5 inner-contact">
-            <form class="contact-form ">
-
+            <form class="contact-form " [formGroup]="modeloPerro" (ngSubmit)="registrarPerro()">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nombre</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                    <input type="email" formControlName="nombrePerro" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Raza</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Raza">
+                    <input type="email" class="form-control" formControlName="raza" id="exampleFormControlInput1" placeholder="Raza">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Selccciona el tamaño</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="exampleFormControlSelect1">Selecciona el tamaño</label>
+                    <select class="form-control" formControlName="tamanio" id="exampleFormControlSelect1">
         <option>Selecciona...</option>
         <option>Pequeño</option>
         <option>Mediano</option>
@@ -30,15 +29,15 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Edad</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Edad">
+                    <input type="email" formControlName="edad" class="form-control" id="exampleFormControlInput1" placeholder="Edad">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Correo de contacto</label> <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
+                    <label for="exampleFormControlInput1" formControlName="correoContacto">Correo de contacto</label> <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Descripci&oacute;n del perro</label>
+                    <label for="exampleFormControlInput1" formControlName="descripcion">Descripci&oacute;n del perro</label>
                     <textarea class="form-control" id="#" rows="3" placeholder="Escribe..."></textarea>
                 </div>
                 <div class="form-group">
