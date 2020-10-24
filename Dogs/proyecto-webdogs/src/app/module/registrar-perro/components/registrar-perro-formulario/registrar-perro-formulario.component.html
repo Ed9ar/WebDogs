@@ -33,18 +33,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1" formControlName="correoContacto">Correo de contacto</label> <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
+                    <label for="exampleFormControlInput1">Correo de contacto</label> <input type="email" formControlName="correoContacto" class="form-control" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1" formControlName="descripcion">Descripci&oacute;n del perro</label>
-                    <textarea class="form-control" id="#" rows="3" placeholder="Escribe..."></textarea>
+                    <label for="exampleFormControlInput1">Descripci&oacute;n del perro</label>
+                    <textarea formControlName="descripcion" class="form-control" id="#" rows="3" placeholder="Escribe..."></textarea>
                 </div>
                 <div class="form-group">
                     <a routerLink="/main"><input class="btn btn-success" type="submit" value="Guardar"></a>
                 </div>
             </form>
-            <!-- <table class="gridList">
+            <table class="gridList">
                 <tr>
                     <th>Id Perro</th>
                     <th>Nombre</th>
@@ -53,15 +53,15 @@
                     <th>Correo de Contacto</th>
                     <th>Descripcion</th>
                 </tr>
-                <tr *ngFor="let item of perroList">
-                    <td>{{ perroId }}</td>
-                    <td>{{ nombrePerro }}</td>
-                    <td>{{ raza }}</td>
-                    <td>{{ tamanio }}</td>
-                    <td>{{ correoContacto }}</td>
-                    <td>{{ descripcion }}</td>
+                <tr *ngFor="let perro of perroList">
+                    <td>{{ perro.perroId }}</td>
+                    <td>{{ perro.nombrePerro }}</td>
+                    <td>{{ perro.raza }}</td>
+                    <td>{{ perro.tamanio }}</td>
+                    <td>{{ perro.correoContacto }}</td>
+                    <td>{{ perro.descripcion}}</td>
                 </tr>
-            </table>-->
+            </table>
 
 
         </div>

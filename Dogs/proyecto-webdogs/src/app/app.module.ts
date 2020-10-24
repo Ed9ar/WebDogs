@@ -17,6 +17,8 @@ import { RegistrarPerroModule } from './module/registrar-perro/registrar-perro.m
 import { FamiliasModule } from './module/familias/familias.module';
 import { MainModule } from './module/main/main.module';
 import { PerfilPerroModule } from './module/perfil-perro1/perfil-perro.module';
+import { RegistrarPerroService } from './module/registrar-perro/services/registrar-perro.service';
+import { ContactoService } from './module/contacto/services/contacto.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { PerfilPerroModule } from './module/perfil-perro1/perfil-perro.module';
     MainModule,
     PerfilPerroModule
   ],
-  providers: [],
+  providers: [RegistrarPerroService, ContactoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

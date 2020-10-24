@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
+import { Perro } from 'src/app/models/perro.model';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { RegistrarPerroService } from '../../services/registrar-perro.service';
 
 export class RegistrarPerroFormularioComponent implements OnInit {
 
-  perroList: any;
+  perroList: Array<Perro>;
   suscribe: Subscription;
 
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService,  private title: Title) { }
@@ -20,6 +21,7 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   ngOnInit() {
     this.title.setTitle("Perros Registrados");
     this.perroList = this.registrarPerroService.get();
+    console.log(this.perroList);
   }
   modeloPerro = this.formBuild.group(
     {
