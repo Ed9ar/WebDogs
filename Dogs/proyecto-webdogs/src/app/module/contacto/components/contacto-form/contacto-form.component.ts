@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { ContactoService } from '../../services/contacto.service';
 
 @Component({
   selector: 'contacto-form',
@@ -8,7 +10,9 @@ import { FormBuilder, Validators, FormArray } from '@angular/forms';
 })
 export class ContactoFormComponent implements OnInit {
 
-  constructor(private formBuild:FormBuilder) { }
+  suscribe: Subscription;
+
+  constructor(private formBuild:FormBuilder, private contactoService: ContactoService) { }
 
   modeloContacto = this.formBuild.group(
     {
@@ -31,6 +35,6 @@ export class ContactoFormComponent implements OnInit {
 
 }
 
-  
 
- 
+
+
