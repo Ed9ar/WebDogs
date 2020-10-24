@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
+import { RegistrarPerroService } from '../../services/registrar-perro.service';
 
 @Component({
   selector: 'app-registrar-perro-formulario',
@@ -9,28 +12,27 @@ import { FormBuilder, Validators, FormArray } from '@angular/forms';
 
 export class RegistrarPerroFormularioComponent implements OnInit {
 
-  constructor(private formBuild:FormBuilder) { }
+  perroList: any;
+  suscribe: Subscription;
 
+  constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService,  private title: Title) { }
 
+  ngOnInit() {
+    this.title.setTitle("Perros Registrados");
+    this.perroList = this.registrarPerroService.get();
+  }
   modeloPerro = this.formBuild.group(
     {
+      perroId: ['', Validators.required],
       nombrePerro: ['', Validators.required],
       raza: ['', Validators.required],
       tamanio: ['', Validators.required],
       edad: ['', Validators.required],
       correoContacto: ['', Validators.required],
       descripcion: ['',Validators.required],
-      profesor: this.formBuild.group({
-        nombre: [''],
-        apellido: ['']
-      })
 
     }
   );
-  
-
-  ngOnInit(): void {
-  }
 
   registrarPerro() {
     console.log(this.modeloPerro.value)
