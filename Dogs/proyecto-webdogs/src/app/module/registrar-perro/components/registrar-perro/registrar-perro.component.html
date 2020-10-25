@@ -1,1 +1,30 @@
-<app-registrar-perro-formulario></app-registrar-perro-formulario>
+<!-- <app-registrar-perro-formulario></app-registrar-perro-formulario> -->
+<section>
+    <app-registrar-perro-formulario></app-registrar-perro-formulario>
+
+        <div class="row">
+            <h3>Perros:</h3>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Raza</th>
+                    <th scope="col">Tamaño</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Correo contacto</th>
+                    <th scope="col">Descripcion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cont of registroPerroObjeto">
+                    <td>{{cont.nombrePerro}}</td>
+                    <td>{{cont.raza}}</td>
+                    <td>{{cont.tamanio}}</td>
+                    <td>{{cont.edad}}</td>
+                    <td>{{cont.correoContacto}}</td>
+                    <td>{{cont.descripcion}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+</section>

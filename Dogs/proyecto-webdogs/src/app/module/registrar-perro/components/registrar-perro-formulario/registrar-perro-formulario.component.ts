@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
-import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
-import { Perro } from 'src/app/models/perro.model';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
 
 @Component({
@@ -13,16 +11,11 @@ import { RegistrarPerroService } from '../../services/registrar-perro.service';
 
 export class RegistrarPerroFormularioComponent implements OnInit {
 
-  perroList: Array<Perro>;
   suscribe: Subscription;
 
-  constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService,  private title: Title) { }
+  constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService) { }
 
-  ngOnInit() {
-    this.title.setTitle("Perros Registrados");
-    this.perroList = this.registrarPerroService.get();
-    console.log(this.perroList);
-  }
+ 
   modeloPerro = this.formBuild.group(
     {
       perroId: ['', Validators.required],
@@ -32,26 +25,17 @@ export class RegistrarPerroFormularioComponent implements OnInit {
       edad: ['', Validators.required],
       correoContacto: ['', Validators.required],
       descripcion: ['',Validators.required],
-
     }
   );
 
-  registrarPerro() {
-    console.log(this.modeloPerro.value)
-
+  ngOnInit() {
   }
 
-  // actualizar() {
-  //   this.modeloMaterias.patchValue({
-  //     nombreMateria: "desarrollo de aplicaciones web",
-  //     semestre: "7",
-  //     profesor: {
-  //       nombre: "Juan",
-  //       apellido: "Velez"
-  //     }
-
-  //   });
-  // }
+  registrarPerro() {
+    console.log(this.modeloPerro.value)
+    this.registrarPerroService.agregacionPerro(this.modeloPerro.value);
+    this.modeloPerro.reset();
+  }
 
 }
 

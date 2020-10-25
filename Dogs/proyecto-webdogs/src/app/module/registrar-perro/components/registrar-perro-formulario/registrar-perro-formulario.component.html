@@ -20,11 +20,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Selecciona el tamaño</label>
                     <select class="form-control" formControlName="tamanio" id="exampleFormControlSelect1">
-        <option>Selecciona...</option>
-        <option>Pequeño</option>
-        <option>Mediano</option>
-        <option>Grande</option>
-      </select>
+                        <option>Selecciona...</option>
+                        <option>Pequeño</option>
+                        <option>Mediano</option>
+                        <option>Grande</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -41,10 +41,11 @@
                     <textarea formControlName="descripcion" class="form-control" id="#" rows="3" placeholder="Escribe..."></textarea>
                 </div>
                 <div class="form-group">
-                    <a routerLink="/main"><input class="btn btn-success" type="submit" value="Guardar"></a>
+                    <a><input class="btn btn-success" type="submit" value="Guardar"></a>
+                    <!-- routerLink="/main" -->
                 </div>
             </form>
-            <table class="gridList">
+            <!-- <table class="gridList">
                 <tr>
                     <th>Id Perro</th>
                     <th>Nombre</th>
@@ -61,7 +62,7 @@
                     <td>{{ perro.correoContacto }}</td>
                     <td>{{ perro.descripcion}}</td>
                 </tr>
-            </table>
+            </table> -->
 
 
         </div>
