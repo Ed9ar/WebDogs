@@ -19,6 +19,7 @@ import { MainModule } from './module/main/main.module';
 import { PerfilPerroModule } from './module/perfil-perro1/perfil-perro.module';
 import { RegistrarPerroService } from './module/registrar-perro/services/registrar-perro.service';
 import { ContactoService } from './module/contacto/services/contacto.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ContactoService } from './module/contacto/services/contacto.service';
     RegistrarPerroModule,
     FamiliasModule,
     MainModule,
-    PerfilPerroModule
+    PerfilPerroModule,
+    NgbModule
   ],
   providers: [RegistrarPerroService, ContactoService],
   bootstrap: [AppComponent]

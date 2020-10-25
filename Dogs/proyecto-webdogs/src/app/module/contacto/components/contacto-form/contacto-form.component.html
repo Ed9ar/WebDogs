@@ -5,7 +5,7 @@
             <form class="contact-form " [formGroup]="modeloContacto" (ngSubmit)="enviarComentarios()">
             <div class="form-group" formGroupName="usuario">  
                     <label for="exampleFormControlInput1">Nombre</label>    
-                <input type="email" class="form-control" formControlName="nombre" id="exampleFormControlInput1" placeholder="Nombre">
+                    <input type="text" class="form-control" formControlName="nombre" id="exampleFormControlInput1" placeholder="Nombre">
         
                     <label for="exampleFormControlInput1">Correo</label>    
                     <input type="email" class="form-control" formControlName="correo" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
@@ -13,12 +13,8 @@
                 
             <div class="form-group">  
                     <label for="exampleFormControlInput1">Conoc&iacute; la p&aacute;gina en:</label>  
-                    <select class="form-control" name="conociste" formControlName="conociste" id="conociste" placeholder="Conoc&iacute; el sitio por">
-                        <option value="redes">Redes Sociales</option>
-                        <option value="webp">P&aacute;gina Web</option>
-                        <option value="amigos">Amigos</option>
-                        <option value="otros">Otros usuarios</option>
-                    </select>
+                    <input type="text" class="form-control" formControlName="conociste" id="exampleFormControlInput1" placeholder="Conociste">
+
             </div>
             <div class="form-group">
                     <label for="exampleFormControlInput1">Escr&iacute;be todas tus inquietudes</label>  

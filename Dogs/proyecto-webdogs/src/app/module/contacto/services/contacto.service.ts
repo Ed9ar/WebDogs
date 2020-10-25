@@ -5,28 +5,14 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactoService {
-  private nombre = new Subject<string>();
-  private correo = new Subject<string>();
-  private conociste = new Subject<string>();
-  private inquietudes = new Subject<string>();
+  //Los datos que van a cambiar y se notificara
+  private contactoAgregado = new Subject<object>();
 
-  nombreAceptado$ = this.nombre.asObservable();
-  correoAceptado$ = this.correo.asObservable();
-  conocisteAceptado$ = this.conociste.asObservable();
-  inquietudesAceptado$ = this.inquietudes.asObservable();
+  claseContactoAgregadoAnunciada$ = this.contactoAgregado.asObservable();
 
-  constructor() { }
-
-  registrarNombreContacto(nombreUsuarioContacto: string) {
-    this.nombre.next(nombreUsuarioContacto);
-  }
-  registrarCorreoCont(correoCont: string) {
-    this.correo.next(correoCont);
-  }
-  registrarConociste(conocisteContacto: string) {
-    this.conociste.next(conocisteContacto);
-  }
-  registrarInquietudes(inquietudesContacto: string) {
-    this.inquietudes.next(inquietudesContacto);
+  agregacionContacto(contact: object){
+    this.contactoAgregado.next(contact);
+    console.log("Contacto agregado");
+    console.log(contact);
   }
 }
