@@ -30,7 +30,8 @@ export class ContactoFormComponent implements OnInit {
 
   enviarComentarios() {
     console.log(this.modeloContacto.value)
-
+    this.contactoService.agregacionContacto(this.modeloContacto.value);
+    this.modeloContacto.reset();
   }
 
 }
