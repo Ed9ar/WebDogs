@@ -1,6 +1,6 @@
 import { trigger, transition, style, query, animateChild, group, animate, keyframes } from '@angular/animations';
 
-export const fader = 
+export const fader =
 	trigger('triggerName', [
 		transition('* <=> *', [
 			query(':enter, :leave', [
@@ -13,7 +13,7 @@ export const fader =
 				})
 			]),
 			query(':enter', [
-				animate('500ms ease',
+				animate('600ms ease',
 				style({
 					opacity: 1,
 					transform: 'scale(1) translateY(0)'
