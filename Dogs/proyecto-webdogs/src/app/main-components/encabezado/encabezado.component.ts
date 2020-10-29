@@ -11,5 +11,6 @@ export class EncabezadoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public isNavbarCollapsed = false;
 
 }
