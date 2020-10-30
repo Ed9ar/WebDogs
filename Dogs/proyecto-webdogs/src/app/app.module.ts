@@ -22,6 +22,8 @@ import { RegistrarPerroService } from './module/registrar-perro/services/registr
 import { ContactoService } from './module/contacto/services/contacto.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
