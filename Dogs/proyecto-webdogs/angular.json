@@ -58,6 +58,13 @@
                                     "maximumError": "10kb"
                                 }
                             ]
+                        },
+                        "en": {
+                          "aot": true,
+                          "outputPath": "dist/under-c-en/",
+                          "i18nFile": "src/locale/messages.en.xlf",
+                          "i18nFormat": "xlf",
+                          "i18nLocale": "en"
                         }
                     }
                 },
@@ -70,7 +77,10 @@
                     "configurations": {
                         "production": {
                             "browserTarget": "proyecto-webdogs:build:production"
-                        }
+                        },
+                            "en": {
+                              "browserTarget": "proyecto-webdogs:build:en"
+                            }
                     }
                 },
                 "extract-i18n": {
