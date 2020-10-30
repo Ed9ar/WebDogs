@@ -355,6 +355,96 @@
         <note priority="1" from="description">Texto de boton 2</note>
         <note priority="1" from="meaning">Texto Boton 2</note>
       </trans-unit>
+      <trans-unit id="descApp" datatype="html">
+        <source>WebDogs es una aplicación web que busca ayudar a combatir el problema de los perros callejeros en Mexico.</source>
+        <target>WebDogs is an application that wants to erradicate stray dogs problem in Mexico</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Descripcion de la app</note>
+        <note priority="1" from="meaning">Descripcion app</note>
+      </trans-unit>
+      <trans-unit id="derechos" datatype="html">
+        <source>© WebDogs Team, All rights reserved</source>
+        <target>© WebDogs Team, All rights reserved</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Copyright aplicacion</note>
+        <note priority="1" from="meaning">Derechos Reservados</note>
+      </trans-unit>
+      <trans-unit id="inicioFooter" datatype="html">
+        <source>Inicio</source>
+        <target>Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Pestaña de inicio en footer</note>
+        <note priority="1" from="meaning">Inicio footer</note>
+      </trans-unit>
+      <trans-unit id="conoceFooter" datatype="html">
+        <source>Conoce</source>
+        <target>Know us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Pestaña de conoce en footer</note>
+        <note priority="1" from="meaning">Conoce footer</note>
+      </trans-unit>
+      <trans-unit id="familiasFooter" datatype="html">
+        <source>Familias</source>
+        <target>Families</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Pestaña de familias en footer</note>
+        <note priority="1" from="meaning">Familias footer</note>
+      </trans-unit>
+      <trans-unit id="contactoFooter" datatype="html">
+        <source>Contacto</source>
+        <target>Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Pestaña de contacto en footer</note>
+        <note priority="1" from="meaning">Contacto footer</note>
+      </trans-unit>
+      <trans-unit id="denunciasFooter" datatype="html">
+        <source>Denuncias</source>
+        <target>Reports</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Pestaña de denuncias en footer</note>
+        <note priority="1" from="meaning">Denuncias footer</note>
+      </trans-unit>
+      <trans-unit id="seguir" datatype="html">
+        <source>Síguenos</source>
+        <target>Follow us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Seguir en las diferentes redes</note>
+        <note priority="1" from="meaning">Seguir en redes</note>
+      </trans-unit>
+      <trans-unit id="suscribe" datatype="html">
+        <source>Suscríbete!</source>
+        <target>Suscribe!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/footer/footer.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Suscribirse al newsletter</note>
+        <note priority="1" from="meaning">Boton suscripcion</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>
