@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { FamiliasRoutingModule } from './familias-routing.module';
 import { FamiliasComponent } from './components/familias/familias.component';
@@ -11,7 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [CarrouselComponent, FamiliasComponent, FooterComponent],
   imports: [
     CommonModule,
-    FamiliasRoutingModule
+    FamiliasRoutingModule,
+    NgbModule
   ]
 })
 export class FamiliasModule { }
