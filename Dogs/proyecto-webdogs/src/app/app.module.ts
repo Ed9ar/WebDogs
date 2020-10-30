@@ -23,6 +23,8 @@ import { ContactoService } from './module/contacto/services/contacto.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EncabezadoLogueadoComponent } from './main-components/encabezado-logueado/encabezado-logueado.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

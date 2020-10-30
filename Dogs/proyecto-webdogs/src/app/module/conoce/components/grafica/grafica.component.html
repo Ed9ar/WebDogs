@@ -1,0 +1,19 @@
+<section>
+    <div class="container">
+        <h4 class="text-center titulo">Adopciones anuales</h4>
+    </div>
+    <div class="graph">
+        <div style="display: block">
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [colors]="chartColors"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+        </div>
+      </div>
+</section> 
+
+<script src="/../../../../node_modules/chart.js/src/chart.js"></script>
