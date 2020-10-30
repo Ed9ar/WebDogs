@@ -21,6 +21,7 @@ import { PerfilPerroModule } from './module/perfil-perro1/perfil-perro.module';
 import { RegistrarPerroService } from './module/registrar-perro/services/registrar-perro.service';
 import { ContactoService } from './module/contacto/services/contacto.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EncabezadoLogueadoComponent } from './main-components/encabezado-logueado/encabezado-logueado.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EncabezadoComponent,
     FooterComponent,
     ContentComponent,
+    EncabezadoLogueadoComponent,
   ],
   imports: [
     BrowserModule,

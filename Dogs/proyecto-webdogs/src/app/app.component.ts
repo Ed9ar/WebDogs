@@ -11,6 +11,7 @@ import { fader } from './route-transition-animations';
 })
 export class AppComponent {
   title = 'proyecto-webdogs';
+  loggedIn = false;
   prepareRoute(outlet: RouterOutlet): boolean {
     return outlet && 
     outlet.activatedRouteData && 
