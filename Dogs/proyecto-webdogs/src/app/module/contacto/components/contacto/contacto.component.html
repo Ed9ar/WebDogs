@@ -1,15 +1,15 @@
 <section>
     <contacto-form></contacto-form>
-    <button class="btn btn-primary ml-5" (click)="toggle()">Mostrar Solicitudes de Contacto</button>
+    <button i18n="Mostrar solicitudes|Mostrar solicitudes@@mostrar" class="btn btn-primary ml-5" (click)="toggle()">Mostrar Solicitudes de Contacto</button>
     <div class="row" [@childAnimation]="estilo ? 'closed' : 'open'">
-        <h3>Contactos:</h3>
+        <h3 i18n="Contactos|Encabezado contactos@@contactos">Contactos:</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Conocí</th>
-                    <th scope="col">Inquietudes</th>
+                    <th i18n="Nombre|Input de nombre@@nombre" scope="col">Nombre</th>
+                    <th i18n="Correo|Input de correo@@correo" scope="col">Correo</th>
+                    <th i18n="Conoci|Input de conoci@@conoci" scope="col">Conocí</th>
+                    <th i18n="Inquietudes|Input de inquietudes@@inquietudes" scope="col">Inquietudes</th>
                 </tr>
             </thead>
             <tbody>

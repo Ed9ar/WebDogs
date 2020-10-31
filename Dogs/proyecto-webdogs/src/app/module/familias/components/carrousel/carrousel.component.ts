@@ -11,23 +11,19 @@ export class CarrouselComponent implements OnInit {
   ciudades:any[] = [
     {
       name: 'Guadalajara',
-      img: '../../../../../assets/img/guadalajara.jpg',
-      desc: 'Contamos con 16 familias y mas de 70 estrellas de recomendacion'
+      img: '../../../../../assets/img/guadalajara.jpg'
     },
     {
       name: 'Ciudad de Mexico',
-      img: '../../../../../assets/img/cdmx.jpg',
-      desc: 'Contamos con 16 familias y mas de 70 estrellas de recomendacion'
+      img: '../../../../../assets/img/cdmx.jpg'
     },
     {
       name: 'Oaxaca',
-      img: '../../../../../assets/img/oaxaca.jpg',
-      desc: 'Contamos con 16 familias y mas de 70 estrellas de recomendacion'
+      img: '../../../../../assets/img/oaxaca.jpg'
     },
     {
       name: 'San Miguel de Allende',
-      img: '../../../../../assets/img/sanmiguel.jpg',
-      desc: 'Contamos con 16 familias y mas de 70 estrellas de recomendacion'
+      img: '../../../../../assets/img/sanmiguel.jpg'
     }
   ];
 
