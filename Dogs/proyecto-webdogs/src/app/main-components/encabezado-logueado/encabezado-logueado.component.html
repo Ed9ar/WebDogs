@@ -1,0 +1,43 @@
+<header id="head" class="espacio">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary pt-4 espacio">
+        <a href="index.html"><img src="../../../assets/img/logo.png" alt="Logo" class="logo1"></a>
+        <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div [ngbCollapse]="isNavbarCollapsed" (click)="isNavbarCollapsed = true" class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto  main-nav">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/" >Inicio</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/conoce/" >Conoce</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/familias/" >Familias</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/contacto/" >Contacto</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/denuncias/" >Denuncias</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/registrarPerro" >Registro Perro</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/cuenta" >Perfil</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/perfil-perro" >PerfilPerro</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <app-cerrar-sesion></app-cerrar-sesion>
+                    <!--<a class="nav-link" routerLink="/login" >Cerrar Sesion</a>-->
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+

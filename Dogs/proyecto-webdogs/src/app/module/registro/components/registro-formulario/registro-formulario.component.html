@@ -1,0 +1,55 @@
+<div class="container-fluid d-flex justify-content-center header-login">
+
+    <div class="row register-container">
+        <div class="col-sm-12">
+            <p id="title_register">Registro</p>
+            <form id="textBox" [formGroup]="modeloRegistro" (ngSubmit)="registrarUsuario()">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" formControlName="nombreUsuario" class="form-control color_input" placeholder="Nombre" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control color_input" formControlName="ciudad" placeholder="Ciudad" required>
+                    </div>
+                </div>
+            
+
+            <br>
+            
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" class="form-control color_input spacing_textBox" formControlName="codigoPostal" placeholder="CP" required>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" class="form-control color_input spacing_textBox" formControlName="edadUsuario" placeholder="Edad" required>
+                    </div>
+                </div>
+           
+            <br>
+            
+                <div class="row">
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <input type="email" class="form-control color_input style_email" aria-describedby="emailHelp" formControlName="correoUsuario" placeholder="Email" required>
+                        <input type="password" class="form-control color_input style_email" formControlName="contrasenia" placeholder="Contrase&ntilde;a" required>
+                        <textarea class="form-control color_input spacing_textBox" rows="4" formControlName="motivo" placeholder="Describe porque quieres adoptar a un perro" required></textarea>
+                    </div>
+                </div>
+            
+            <br>
+
+            <br>
+            <div class="form-check register-top">
+                <input id="checkBox" class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label aceptar_terminos" for="defaultCheck1">
+                Acepto t&eacute;rminos y condiciones
+              </label>
+            </div>
+            <div class="text-center justify-content-center">
+                <div class="form-group">
+                    <a routerLink="/main"><input type="submit" value="Registrarse" class="btn btn-primary border-btn btn-margin"></a>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

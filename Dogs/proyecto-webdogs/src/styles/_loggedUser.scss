@@ -1,0 +1,47 @@
+.card-img-top{
+    max-height: 10px;
+}
+
+h1,
+.titulo_adopta{
+    text-align: center;
+    transform: translate(0, 0);
+    margin-top: 5%;
+    color: #DFD0B7;
+}
+
+.row {
+    justify-content: space-evenly;
+    
+}
+
+.texts {
+
+    color: #E3DAC9;
+}
+
+.container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header,
+.perritodudosoMain {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/assets/img/dog-main.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
+@media screen and (max-width:1000px) {
+    h1,
+    .titulo_adopta{
+        margin-top: 15%;
+        
+    }
+    .dudas {
+        display: none;
+    }
+}
+
+

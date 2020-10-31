@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <h2>Mis denuncias</h2>
+            <div class="d-flex justify-content-center">
+                <p>Aquí podras realizar denuncias a tu nombre o anónimas, las cuales serán reportadas con el gobierno de la CDMX y podrás ver su estado.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container section-conocenos">
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Denuncia</th>
+                <th scope="col">Anónima</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Estatus</th>
+                <th scope="col"><app-formulario></app-formulario></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>20-12-2020</td>
+                <td>Selecciona Nuevo para ver formulario</td>
+                <td>Si</td>
+                <td>agrega y veras en la tabla</td>
+                <td>En Proceso</td>
+                <td><app-cerrar-sesion></app-cerrar-sesion><app-editar></app-editar></td>
+              </tr>
+              <tr *ngFor="let den of denunciasObjeto">
+                <th scope="row">{{den.idDenuncia}}</th>
+                <td>{{den.fechaDenuncia}}</td>
+                <td>{{den.tituloDenuncia}}</td>
+                <td>{{den.anonimatoDenuncia}}</td>
+                <td>{{den.ubicacionDenuncia}}</td>
+                <td>{{den.estatusDenuncia}}</td>
+                <td><button type="button" class="btn btn-success">E</button>  <button type="button" class="btn btn-danger">D</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+    <hr class="featurette-divider">
+</div>

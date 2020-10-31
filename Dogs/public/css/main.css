@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic'");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic'");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 header,
 .header-login {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/loginDog.jpg");
@@ -50,6 +52,75 @@ header,
 .anchor-regisForgot {
   font-size: 0.8rem; }
 
+.perritodudosoCuenta {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header_conoce.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.card-adopcion {
+  margin-top: 20px;
+  max-width: 500px; }
+
+.img-adopt {
+  height: 100px;
+  max-width: 100px; }
+
+.progress {
+  margin-top: 10px; }
+
+.inner-perfil {
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: white;
+  min-height: 100vh; }
+
+.foto-perfil {
+  text-align: center;
+  margin-top: 20px; }
+
+.foto-perfil img {
+  width: 70%;
+  height: 100%; }
+
+.foto-perfil .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8; }
+
+.foto-perfil .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0; }
+
+.perfil-superior h5 {
+  color: black;
+  margin-top: 20px; }
+
+.perfil-superior h6 {
+  color: #A9A9A9; }
+
+@media screen and (max-width: 500px) {
+  .card-adopcion {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px; } }
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto; }
+
+@media (max-width: 1000px) {
+  .dudas {
+    display: none; } }
+
 .card-img-top {
   max-height: 10px; }
 
@@ -58,23 +129,260 @@ h1,
   text-align: center;
   transform: translate(0, 0);
   margin-top: 5%;
-  color: black; }
+  color: #DFD0B7; }
 
 .row {
   justify-content: space-evenly; }
+
+.texts {
+  color: #E3DAC9; }
 
 .container {
   padding-top: 0;
   padding-bottom: 0; }
 
-.jumbotron {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important; }
+header,
+.perritodudosoMain {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/dog-main.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh; }
 
 @media screen and (max-width: 1000px) {
   h1,
   .titulo_adopta {
-    margin-top: 15%; } }
+    margin-top: 15%; }
+  .dudas {
+    display: none; } }
+
+#title_register {
+  color: aliceblue;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 3%; }
+
+.subtitle_plant {
+  color: aliceblue;
+  text-align: center;
+  font-size: 1em;
+  margin-top: -3%; }
+
+#textBox {
+  margin-top: 3%; }
+
+#checkBox {
+  align-content: center;
+  margin-left: 30%;
+  margin-top: 2%; }
+
+.register-top {
+  margin-top: -14%; }
+
+.aceptar_terminos {
+  color: rgba(240, 248, 255, 0.575);
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: lighter;
+  font-size: .9em;
+  margin-left: 37%; }
+
+.color_input {
+  background-color: #f9f9faa8;
+  border-color: aliceblue;
+  border-width: 0.1rem;
+  border-radius: 0%; }
+
+.info {
+  display: block;
+  background-color: #162133;
+  width: 100%;
+  color: aliceblue;
+  height: 2.5em; }
+
+.style_select {
+  margin-top: 5%; }
+
+.style_email {
+  margin-bottom: 5%; }
+
+.btn-margin {
+  margin-top: 2vh;
+  margin-right: 7vw; }
+
+@media only screen and (max-width: 575px) {
+  .spacing_textBox {
+    margin-top: 5%; }
+  .footer-bs .footer-nav,
+  .footer-bs .footer-social,
+  .footer-bs .footer-ns {
+    margin-top: 10%; } }
+
+@media (min-width: 575px) {
+  .footer-bs .footer-nav,
+  .footer-bs .footer-social,
+  .footer-bs .footer-ns {
+    margin-top: 10%; } }
+
+.tres-principios,
+.col-lg-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center; }
+
+.imagen_conocenos {
+  max-width: 267px; }
+
+.conocenos-icono {
+  margin-bottom: 1.5rem; }
+
+.modal-body {
+  max-height: 80vh;
+  /* max 80% of the viewport height */
+  overflow-y: auto; }
+
+header,
+.perritodudosoConocenos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header_conoce.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh; }
+
+.section-conocenos {
+  margin-top: 3vw; }
+
+.image-profile {
+  width: 100%; }
+
+.perfp {
+  padding: 1rem 2rem !important; }
+
+.perritodudosoPerfil {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header_conoce.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.body-profile {
+  color: #3c3939;
+  background-color: #f1f1f1;
+  margin-top: -5%; }
+
+.profile-card {
+  width: 600px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5); }
+
+.image-container {
+  position: relative; }
+
+.info-dog {
+  color: #bba213;
+  margin-right: 16px; }
+
+.main-container {
+  padding: 20px; }
+
+.title {
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  color: black; }
+
+@media (max-width: 650px) {
+  .body-profile {
+    margin-top: -7%; }
+  .profile-card {
+    width: 300px; }
+  .btn-contactar {
+    margin-left: -0%; } }
+
+header,
+.perritodudosoConocenos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/perritos_familia.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh; }
+
+section {
+  padding: 80px 0; }
+
+.box {
+  padding: 1%; }
+
+/* ----------------------------------------------- */
+/* Ciudades */
+/* ----------------------------------------------- */
+.section-familias {
+  width: 60%;
+  margin: auto; }
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px; }
+
+.city-feature {
+  margin-bottom: 5px; }
+
+.span-1-of-4 {
+  width: 23.8%; }
+
+/* ----------------------------------------------- */
+/* Testimonios */
+/* ----------------------------------------------- */
+.section-testimonials {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-lights.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-lights.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+  padding: 80px 0;
+  margin: auto; }
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px; }
+
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px; }
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block; }
+
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle; }
+
+@media only screen and (max-width: 480px) {
+  .span-1-of-3 {
+    width: 100%; }
+  .span-1-of-4 {
+    width: 100%; } }
+
+.map-container {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 /* --------------------------------- */
 /* Basic setup*/
@@ -83,6 +391,10 @@ h1,
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+/* Arreglo del modal con la nav sticky*/
+.modal-backdrop.show {
+  z-index: 0; }
 
 /* Css de el documento HTML en general */
 html {
@@ -106,6 +418,13 @@ header,
   background-position: center;
   height: 100vh; }
 
+header,
+.perritodudoso {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/perritodudoso1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh; }
+
 header {
   height: 0vh; }
 
@@ -114,6 +433,10 @@ header {
   position: absolute;
   width: 100%;
   top: 50%; }
+
+.hero-text-box2 {
+  position: absolute;
+  top: 25%; }
 
 .first_button {
   margin-right: 2vw; }
@@ -219,12 +542,6 @@ h1,
   font-size: 90%;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s; }
-
-.main-nav li a:hover {
-  border-bottom: 2px solid #639DF1; }
-
-.main-nav li a:active {
-  border-bottom: 2px solid #639DF1; }
 
 .main-nav li a:hover {
   border-bottom: 2px solid #639DF1; }

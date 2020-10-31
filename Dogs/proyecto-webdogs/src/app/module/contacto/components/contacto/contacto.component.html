@@ -1,0 +1,25 @@
+<section>
+    <contacto-form></contacto-form>
+    <button class="btn btn-primary ml-5" (click)="toggle()">Mostrar Solicitudes de Contacto</button>
+    <div class="row" [@childAnimation]="estilo ? 'closed' : 'open'">
+        <h3>Contactos:</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Conocí</th>
+                    <th scope="col">Inquietudes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cont of contactosObjeto">
+                    <th scope="row">{{cont.usuario.nombre}}</th>
+                    <td>{{cont.usuario.correo}}</td>
+                    <td>{{cont.conociste}}</td>
+                    <td>{{cont.inquietudes}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

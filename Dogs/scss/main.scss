@@ -1,11 +1,23 @@
 @import "login";
+@import "cuenta";
+@import "contacto";
 @import "loggedUser";
-$web-font-path: "http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic'" !default;
-@import url($web-font-path);
-$web-icons-path: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css";
-@import url($web-icons-path);
+@import "registro";
+@import "conocenos";
+@import "perfilPerro";
+@import "familias";
+@import "variables";
+@import "denuncias";
 
-$tamanos_logo: 5;
+
+@mixin border-b($size, $style, $color1){
+    border-bottom: $size $style $color1;
+}
+
+@mixin border-r($size, $style, $color1){
+    border: $size $style $color1;
+}
+
 
 /* --------------------------------- */
 
@@ -21,6 +33,10 @@ $tamanos_logo: 5;
     box-sizing: border-box;
 }
 
+/* Arreglo del modal con la nav sticky*/
+.modal-backdrop.show {
+    z-index: 0;
+}
 
 /* Css de el documento HTML en general */
 
@@ -44,18 +60,26 @@ html {
 
 /* Se ajustan las caracteristicas del header y se agrega el fondo de la página de manera correcta */
 
-
 header,
-.backdog{
+.backdog {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
+header,
+.perritodudoso {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/perritodudoso1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
 header {
     height: 0vh;
 }
+
 
 /* Se ajustan las caracteristicas de el texto de la primera sección de la página */
 
@@ -63,6 +87,11 @@ header {
     position: absolute;
     width: 100%;
     top: 50%;
+}
+
+.hero-text-box2 {
+    position: absolute;
+    top: 25%;
 }
 
 .first_button {
@@ -73,7 +102,7 @@ header {
 /* Se ajustan las caracteristicas del texto que sea h1 */
 
 h1,
-.first{
+.first {
     left: 50%;
     transform: translate(-50%, -50%);
     color: aliceblue;
@@ -89,9 +118,11 @@ h1,
 
 
 /* Se arregla el tamaño de las imagenes*/
+
 .card-img-top {
-    max-height: 100%; 
+    max-height: 100%;
 }
+
 
 /* Se ajustan las caracteristicas de todos los botones con clase btn */
 
@@ -103,6 +134,7 @@ h1,
     border-radius: 200px;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
+
 
 
 /*
@@ -121,26 +153,26 @@ h1,
 
 .btn-full:link,
 .btn-full:visited {
-    background-color: #639DF1;
-    border: 1px solid #639DF1;
+    background-color: $hover_color;
+    @include border-r(1px, solid, #639DF1);
     color: #fff;
     //margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #AFE7FD;
+    @include border-r(1px, solid, #AFE7FD);
     color: #AFE7FD;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #8ECEFC;
+     @include border-r(1px, solid, #8ECEFC);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #8ECEFC;
+    @include border-r(1px, solid, #8ECEFC);
     color: #fff;
 }
 
@@ -149,14 +181,16 @@ h1,
     background-color: #8ECEFC;
 }
 
+
 /* Se ajustan los tamaños del logo */
 
-@for $i from 1 through $tamanos_logo{
+@for $i from 1 through $tamanos_logo {
     .logo#{$i} {
         margin-left: 5%;
         width: ($i * $i) + 12vw;
     }
 }
+
 
 /* Se ajustan las caracteristicas de la barra de navegación */
 
@@ -170,41 +204,37 @@ h1,
     margin-left: 40px;
 }
 
+
 .main-nav li a {
     padding: 8px 0;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
-    border-bottom: 2px solid transparent;
+    @include border-b(2px, solid,
+    transparent);
     transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover {
-    border-bottom: 2px solid #639DF1;
+    @include border-b(2px, solid,#639DF1);
 }
 
 .main-nav li a:active {
-    border-bottom: 2px solid #639DF1;
+    @include border-b(2px, solid,#639DF1);
 }
 
-.main-nav li a:hover {
-    border-bottom: 2px solid #639DF1;
-}
-
-.main-nav li a:active {
-    border-bottom: 2px solid #639DF1;
-}
 
 /* Se ajustan los tamaños predetermiandos */
-@function multiple($i){  
-    @return ($i % 10 == 0);   
+
+@function multiple($i) {
+    @return ($i % 10==0);
 }
 
-@for $i from 10 through 50{  
-    @if(multiple($i)){    
-        .fs-#{$i}{        
-            font-size: 0px + $i; 
+@for $i from 10 through 50 {
+    @if(multiple($i)) {
+        .fs-#{$i} {
+            font-size: 0px + $i;
         }
     }
 }
@@ -338,17 +368,15 @@ h1,
 
 @media screen and (max-width:1000px) {
     header,
-    .backdog{
+    .backdog {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/backdog_responsive.jpg");
         background-size: cover;
         background-position: center;
         height: 100vh;
     }
-
     header {
         height: 0;
     }
-    
     .first {
         text-align: center;
         color: white;

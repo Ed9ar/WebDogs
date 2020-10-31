@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <header id="head" class="header-login">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-4">
+            <!-- <a class="navbar-brand ml-2" href="#">Logo/</a>-->
+            <img src="css/img/logo.png" alt="Logo" class="logo1">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto  main-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conoce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Familias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="row register-container">
+                <div class="col-sm-12">
+                    <p id="title_register">Registro</p>
+                    <form id="textBox">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control color_input" placeholder="Nombre" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control color_input" placeholder="Ciudad" required>
+                            </div>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <input type="text" class="form-control color_input spacing_textBox" placeholder="CP" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <input type="text" class="form-control color_input spacing_textBox" placeholder="Edad" required>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                <input type="email" class="form-control color_input style_email" aria-describedby="emailHelp" placeholder="Email" required>
+                                <input type="password" class="form-control color_input style_email" placeholder="Contrase&ntilde;a" required>
+                                <textarea class="form-control color_input spacing_textBox" rows="4" placeholder="Describe porque quieres adoptar a un perro" required></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+
+                    <br>
+                    <div class="form-check register-top">
+                        <input id="checkBox" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label aceptar_terminos" for="defaultCheck1">
+                          Acepto t&eacute;rminos y condiciones
+                        </label>
+                    </div>
+                    <div class="text-center justify-content-center">
+                        <div class="form-group">
+                            <a href="main.html"><input type="submit" value="Registrarse" class="btn btn-primary border-btn btn-margin"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </nav>
+
+
+    </header>
+
+    <!----------- Footer ------------>
+    <footer class="footer-bs py-3 mb-0">
+        <div class="row">
+            <div class="col-md-4 footer-brand animated fadeInLeft">
+                <img src="/Dogs/public/css/img/logo.png" alt="Logo" class="logo2">
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                <p>© Nombre Equipo, All rights reserved</p>
+            </div>
+            <div class="col-md-3 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+                <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Conoce</a></li>
+                        <li><a href="#">Familias</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 footer-social animated fadeInDown">
+                <h4>S&iacute;guenos</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-ns animated fadeInRight">
+                <h4>Newsletter</h4>
+                <p>Suscr&iacute;bete!</p>
+                <p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter your email">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="fas fa-envelope"></span></button>
+                        </span>
+                    </div>
+                    <!-- /input-group -->
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- JS buena practica -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+
+</html>

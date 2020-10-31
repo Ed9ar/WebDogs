@@ -1,0 +1,11 @@
+
+<div *ngIf="loggedIn; else elseBlock">
+    <app-encabezado-logueado></app-encabezado-logueado>
+</div>
+<ng-template #elseBlock>
+    <app-encabezado></app-encabezado>
+</ng-template>
+
+<main [@triggerName]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</main>

@@ -1,0 +1,83 @@
+#title_register {
+    color: aliceblue;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 7%;
+}
+
+.subtitle_plant {
+    color: aliceblue;
+    text-align: center;
+    font-size: 1em;
+    margin-top: -3%;
+}
+
+#textBox {
+    margin-top: 3%;
+}
+
+#checkBox {
+    align-content: center;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
+.register-top {
+    margin-top: -14%;
+}
+
+.aceptar_terminos {
+    color: rgba(240, 248, 255, 0.575);
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: lighter;
+    font-size: .9em;
+    margin-left: 37%;
+}
+
+.color_input {
+    background-color: aliceblue;
+    border-color: aliceblue;
+    border-width: 0.1rem;
+    border-radius: 0%;
+}
+
+.info {
+    display: block;
+    background-color: #162133;
+    width: 100%;
+    color: aliceblue;
+    height: 2.5em;
+}
+
+.style_select {
+    margin-top: 5%;
+}
+
+.style_email {
+    margin-bottom: 5%;
+}
+
+.btn-margin {
+    margin-top: $margin-btn;
+    margin-right: $margin-right-btn;
+}
+
+@media only screen and (max-width: 575px) {
+    .spacing_textBox {
+        margin-top: 5%;
+    }
+    .footer-bs .footer-nav,
+    .footer-bs .footer-social,
+    .footer-bs .footer-ns {
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 575px) {
+    .footer-bs .footer-nav,
+    .footer-bs .footer-social,
+    .footer-bs .footer-ns {
+        margin-top: 10%;
+    }
+}
