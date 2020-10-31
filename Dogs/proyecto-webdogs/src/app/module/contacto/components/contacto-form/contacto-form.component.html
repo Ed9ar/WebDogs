@@ -3,35 +3,35 @@
     <section class="contact-section">
     <div class="my-5 inner-contact">
             <form class="contact-form " [formGroup]="modeloContacto" (ngSubmit)="enviarComentarios()">
-            <div class="form-group" formGroupName="usuario">  
-                    <label for="exampleFormControlInput1">Nombre</label>    
-                    <input type="text" class="form-control" formControlName="nombre" id="exampleFormControlInput1" placeholder="Nombre">
-        
-                    <label for="exampleFormControlInput1">Correo</label>    
-                    <input type="email" class="form-control" formControlName="correo" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
+            <div class="form-group" formGroupName="usuario">
+                    <label i18n="Etiqueta nombre|Etiqueta de nombre@@nombreEtiqueta" for="exampleFormControlInput1">Nombre</label>
+                    <input type="text" class="form-control" formControlName="nombre" id="exampleFormControlInput1" >
+
+                    <label i18n="Etiqueta correo|Etiqueta de correo@@correoEtiqueta" for="exampleFormControlInput1">Correo</label>
+                    <input type="email" class="form-control" formControlName="correo" id="exampleFormControlInput1">
             </div>
-                
-            <div class="form-group">  
-                    <label for="exampleFormControlInput1">Conoc&iacute; la p&aacute;gina en:</label>  
-                    <input type="text" class="form-control" formControlName="conociste" id="exampleFormControlInput1" placeholder="Conociste">
+
+            <div class="form-group">
+                    <label i18n="Etiqueta conoci|Etiqueta de conoci@@conociEtiqueta" for="exampleFormControlInput1">Conoc&iacute; la p&aacute;gina en:</label>
+                    <input type="text" class="form-control" formControlName="conociste" id="exampleFormControlInput1">
 
             </div>
             <div class="form-group">
-                    <label for="exampleFormControlInput1">Escr&iacute;be todas tus inquietudes</label>  
-                    <textarea class="form-control" formControlName="inquietudes" id="#" rows="3" placeholder="Escribe..."></textarea>
+                    <label i18n="Etiqueta inquietudes|Etiqueta de inquietudes@@inquietudesEtiqueta" for="exampleFormControlInput1">Escr&iacute;be todas tus inquietudes</label>
+                    <textarea class="form-control" formControlName="inquietudes" id="#" rows="3"></textarea>
             </div>
             <div class="form-group">
-                    <input class="btn btn-success" type="submit" value="Enviar">
+                    <input class="btn btn-success" type="submit" value="Enter">
             </div>
         </form>
-            
-        
+
+
     </div>
-    
+
 </section>
 
 </div>
 
 
 
-  
+

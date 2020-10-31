@@ -1,18 +1,18 @@
 <ng-template #content let-c="close" let-d="dismiss">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Cerrar Sesi&oacute;n</h4>
+        <h4 i18n="Cerrar sesión modal|Acerca de nosotros@@logout" class="modal-title" id="modal-basic-title">Cerrar Sesi&oacute;n</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div i18n="Seguro?|Acerca de nosotros@@seguroCerrar" class="modal-body">
           ¿Seguro que quiere cerrar sesión?
       </div>
       <div class="modal-footer">
-        <a class="nav-link" routerLink="/login"><button type="button" class="btn btn-primary" (click)="logout()">Si</button></a>
-        <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancelar</button>
+        <a class="nav-link" routerLink="/login"><button i18n="Si|Acerca de nosotros@@si" type="button" class="btn btn-primary" (click)="logout()">Si</button></a>
+        <button i18n="Cancelar boton modal|Acerca de nosotros@@cancelButtonModal" type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancelar</button>
       </div>
   </ng-template>
 
-  <a class="nav-link"(click)="open(content)">Cerrar Sesion</a>
+  <a i18n="Cerrar encabezado?|Acerca de nosotros@@cerrarEncabezado" class="nav-link"(click)="open(content)">Cerrar Sesion</a>
