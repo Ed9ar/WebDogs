@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralService } from './../../services/general.service';
+
 
 @Component({
   selector: 'app-encabezado',
@@ -7,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncabezadoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private generalService: GeneralService) { }
 
   ngOnInit(): void {
   }
   public isNavbarCollapsed = false;
 
+  
 }

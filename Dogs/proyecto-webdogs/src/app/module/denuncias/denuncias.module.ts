@@ -7,10 +7,12 @@ import { TablaComponent } from './components/tabla/tabla.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { CerrarSesionComponent } from './components/cerrar-sesion/cerrar-sesion.component';
+import { EditarComponent } from './components/editar/editar.component';
 
 
 @NgModule({
-  declarations: [TablaComponent, DenunciasComponent, MapaComponent, FormularioComponent],
+  declarations: [TablaComponent, DenunciasComponent, MapaComponent, FormularioComponent, CerrarSesionComponent, EditarComponent],
   imports: [
     CommonModule,
     DenunciasRoutingModule,

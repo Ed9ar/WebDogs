@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralService } from './../../../../services/general.service';
+
 
 @Component({
   selector: 'app-login-formulario',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormularioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private generalService: GeneralService) { }
 
   ngOnInit(): void {
+  }
+
+  logear() {
+    this.generalService.cambioEstatusUsuario(true);
   }
 
 }
