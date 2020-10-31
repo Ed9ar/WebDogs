@@ -1549,6 +1549,72 @@
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="textoGrafica" datatype="html">
+        <source>Adopciones anuales</source>
+        <target>Annual adoptions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/grafica/grafica.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Texto de grafica</note>
+      </trans-unit>
+      <trans-unit id="logout" datatype="html">
+        <source>Cerrar Sesión</source>
+        <target>Logout</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/cerrar-sesion/cerrar-sesion.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-encabezado/cuenta-encabezado.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Cerrar sesión modal</note>
+      </trans-unit>
+      <trans-unit id="seguroCerrar" datatype="html">
+        <source>
+          ¿Seguro que quiere cerrar sesión?
+      </source>
+      <target>Are you sure?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/cerrar-sesion/cerrar-sesion.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Seguro?</note>
+      </trans-unit>
+      <trans-unit id="si" datatype="html">
+        <source>Si</source>
+        <target>Yes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/cerrar-sesion/cerrar-sesion.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Si</note>
+      </trans-unit>
+      <trans-unit id="cancelButtonModal" datatype="html">
+        <source>Cancelar</source>
+        <target>Cancel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/cerrar-sesion/cerrar-sesion.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Cancelar boton modal</note>
+      </trans-unit>
+      <trans-unit id="cerrarEncabezado" datatype="html">
+        <source>Cerrar Sesion</source>
+        <target>Logout</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-components/cerrar-sesion/cerrar-sesion.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Cerrar encabezado?</note>
+      </trans-unit>
 
     </body>
   </file>

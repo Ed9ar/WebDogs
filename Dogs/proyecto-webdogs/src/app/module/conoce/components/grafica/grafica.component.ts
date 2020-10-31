@@ -12,18 +12,18 @@ export class GraficaComponent implements OnInit {
     responsive: true
   };
 
-  public barChartLabels = ['Primer Trimestre', 'Segundo Trimestre', 'Tercer Trimestre' , 'Cuarto Trimestre']
+  public barChartLabels = ['1/4', '2/4', '3/4' , '4/4']
   public barChartType = 'bar';
   public barChartLegend = true;
 
   public chartColors: any[] = [
-    { 
-      backgroundColor:["#FF7360", "#6FC8CE", "#FF7360", "#6FC8CE"] 
+    {
+      backgroundColor:["#FF7360", "#6FC8CE", "#FF7360", "#6FC8CE"]
   }];
-  
+
   public barChartData = [
-    {data : [30, 89, 25, 70], label: 'Perros Adpotados'}
-   
+    {data : [30, 89, 25, 70], label: ''}
+
   ]
   constructor() { }
 
