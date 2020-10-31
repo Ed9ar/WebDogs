@@ -445,6 +445,1112 @@
         <note priority="1" from="description">Suscribirse al newsletter</note>
         <note priority="1" from="meaning">Boton suscripcion</note>
       </trans-unit>
+      <trans-unit id="why" datatype="html">
+        <source>¿Por qué adoptar?</source>
+        <target>Why to adopt?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/info-right/info-right.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Por que adoptar</note>
+        <note priority="1" from="meaning">Why</note>
+      </trans-unit>
+      <trans-unit id="infoPerros" datatype="html">
+        <source>México es el país con mayor número de perros callejeros en Latinoamérica y aproximadamente en la CDMX hay un millón doscientos mil perros callejeros. Esto hace que se convierta en un problema de salud pública por las heces que se encuentran en la calle y cadáveres que no son recogidos de los perros callejeros. De igual manera, aproximadamente 10 mil perros son sacrificados al mes en perreras solamente en CDMX. </source>
+        <target>Mexico is the country with the highest number of stray dogs in Latin America and there are approximately one million two hundred thousand stray dogs in the CDMX. This causes it to become a public health problem due to feces found in the street and corpses that are not collected from stray dogs. Similarly, approximately 10,000 dogs are slaughtered per month in kennels only in CDMX.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/info-right/info-right.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Informacion del problema</note>
+        <note priority="1" from="meaning">Info perros callejeros</note>
+      </trans-unit>
+      <trans-unit id="quienes" datatype="html">
+        <source>¿Quienes somos?</source>
+        <target>Who we are?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/info-left/info-left.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Quienes somos</note>
+        <note priority="1" from="meaning">Quienes somos</note>
+      </trans-unit>
+      <trans-unit id="infoSistema" datatype="html">
+        <source>Nuestro sistema busca disminuir los perros de la calle brindando un medio para que las organizaciones y refugios puedan tener una plataforma de adopción responsable en la cual puedan corroborar de forma más rápida los datos de las personas que quieran adoptar agilizando el proceso de adopción. De igual manera, se busca que se informe a los usuarios sobre la problemática y sobre el proceso para que estos perros no terminen otra vez en la calle y también los usuarios podrán subir reportes o denuncias de perros maltratados por sus dueños o que sus condiciones sean deplorables.</source>
+        <target>Our system seeks to reduce street dogs by providing a means for organizations and shelters to have a responsible adoption platform in which they can more quickly corroborate the data of people who want to adopt, speeding up the adoption process. In the same way, it is sought that users are informed about the problem and about the process so that these dogs do not end up on the street again and also users can upload reports or complaints of dogs abused by their owners or that their conditions are deplorable.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/info-left/info-left.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Informacion acerca de que hace nuestra aplicacion</note>
+        <note priority="1" from="meaning">Informacion del sistema</note>
+      </trans-unit>
+      <trans-unit id="pasos" datatype="html">
+        <source>Adopta con tres sencillos pasos:</source>
+        <target>Adopt in three easy steps:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/steps/steps.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Pasos para adoptar</note>
+        <note priority="1" from="meaning">Pasos</note>
+      </trans-unit>
+      <trans-unit id="buscar" datatype="html">
+        <source>Busca</source>
+        <target>Search</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/steps/steps.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Header buscar</note>
+        <note priority="1" from="meaning">Buscar</note>
+      </trans-unit>
+      <trans-unit id="infoPlataforma" datatype="html">
+        <source>Por medio de esta plataforma tu serás capaz de buscar entre todos los perros que se dan en adopción. Podrás ver su información general, así como su forma de ser y un contacto con el cual tendrás que hablar para ver si eres un candidato viable para la mascota que elijas.
+            </source>
+        <target>Through this platform you will be able to search among all the dogs that are given up for adoption. You will be able to see their general information, as well as their way of being and a contact with whom you will have to speak to see if you are a viable candidate for the pet of your choice.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/steps/steps.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Informacion de la plataforma de adopcion</note>
+        <note priority="1" from="meaning">Info plataforma</note>
+      </trans-unit>
+      <trans-unit id="contacta" datatype="html">
+        <source>Contacta</source>
+        <target>Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/steps/steps.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Header contacta</note>
+        <note priority="1" from="meaning">Contacta</note>
+      </trans-unit>
+      <trans-unit id="infoContacto" datatype="html">
+        <source>Una vez que decidad que perrito quieres adoptar, podrás hacer contacto con los actuales dueños por medio de los datos de contacto que el dueño proporcione y este podrá ver tu información para decidir si eres el mejor candidato para adoptar a el perro.
+            </source>
+        <target>Once you decide which puppy you want to adopt, you can make contact with the current owners through the contact information that the owner provides and he can see your information to decide if you are the best candidate to adopt the dog.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/steps/steps.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Informacion sobre el contacto</note>
+        <note priority="1" from="meaning">Info contacto</note>
+      </trans-unit>
+      <trans-unit id="adopta" datatype="html">
+        <source>Adopta</source>
+        <target>Adopt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/steps/steps.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Header adopta</note>
+        <note priority="1" from="meaning">Adopta</note>
+      </trans-unit>
+      <trans-unit id="infoAdopcion" datatype="html">
+        <source>Una vez que hagas contacto y que los actuales dueños de un perrito decidan que eres la mejor opción para adoptar al perro, ustedes podrán quedar en algún lugar para que vayas a recoger a tu nuevo mejor amigo.
+            </source>
+        <target>Once you make contact and the current owners of a puppy decide that you are the best option to adopt the dog, you can meet somewhere to go pick up your new best friend.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/steps/steps.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Informacion para finalizar la adopcion</note>
+        <note priority="1" from="meaning">Info adopcion</note>
+      </trans-unit>
+      <trans-unit id="about" datatype="html">
+        <source>Acerca de nosotros</source>
+        <target>About us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/conoce/components/conoce/conoce.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">About</note>
+      </trans-unit>
+      <trans-unit id="mostrar" datatype="html">
+        <source>Mostrar Solicitudes de Contacto</source>
+        <target>Show Contact Requests</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto/contacto.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Mostrar solicitudes</note>
+        <note priority="1" from="meaning">Mostrar solicitudes</note>
+      </trans-unit>
+      <trans-unit id="contactos" datatype="html">
+        <source>Contactos:</source>
+        <target>Contacts:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto/contacto.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Encabezado contactos</note>
+        <note priority="1" from="meaning">Contactos</note>
+      </trans-unit>
+      <trans-unit id="nombre" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto/contacto.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Input de nombre</note>
+        <note priority="1" from="meaning">Nombre</note>
+      </trans-unit>
+      <trans-unit id="correo" datatype="html">
+        <source>Correo</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto/contacto.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Input de correo</note>
+        <note priority="1" from="meaning">Correo</note>
+      </trans-unit>
+      <trans-unit id="conoci" datatype="html">
+        <source>Conocí</source>
+        <target>I met</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto/contacto.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Input de conoci</note>
+        <note priority="1" from="meaning">Conoci</note>
+      </trans-unit>
+      <trans-unit id="inquietudes" datatype="html">
+        <source>Inquietudes</source>
+        <target>Concerns</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto/contacto.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Input de inquietudes</note>
+        <note priority="1" from="meaning">Inquietudes</note>
+      </trans-unit>
+      <trans-unit id="nombreEtiqueta" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto-form/contacto-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Etiqueta de nombre</note>
+        <note priority="1" from="meaning">Etiqueta nombre</note>
+      </trans-unit>
+      <trans-unit id="correoEtiqueta" datatype="html">
+        <source>Correo</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto-form/contacto-form.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Etiqueta de correo</note>
+        <note priority="1" from="meaning">Etiqueta correo</note>
+      </trans-unit>
+      <trans-unit id="conociEtiqueta" datatype="html">
+        <source>Conocí la página en:</source>
+        <target>I met the page at:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto-form/contacto-form.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Etiqueta de conoci</note>
+        <note priority="1" from="meaning">Etiqueta conoci</note>
+      </trans-unit>
+      <trans-unit id="inquietudesEtiqueta" datatype="html">
+        <source>Escríbe todas tus inquietudes</source>
+        <target>Write all your concerns</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/contacto/components/contacto-form/contacto-form.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Etiqueta de inquietudes</note>
+        <note priority="1" from="meaning">Etiqueta inquietudes</note>
+      </trans-unit>
+      <trans-unit id="cambioFoto" datatype="html">
+        <source>
+            Cambiar foto
+            <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/>
+        </source>
+        <target>Change image</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-info/cuenta-info.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Cambiar de foto de perfil</note>
+        <note priority="1" from="meaning">Cambio foto</note>
+      </trans-unit>
+      <trans-unit id="descPerfil" datatype="html">
+        <source>
+            Amante de los animales, vivo en CDMX y he concluido dos procesos de adopción
+        </source>
+        <target>Animal lover, I live in CDMX and I have concluded two adoption processes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-info/cuenta-info.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Descripcion del usuario en el perfil</note>
+        <note priority="1" from="meaning">Descripcion Perfil</note>
+      </trans-unit>
+      <trans-unit id="telefono" datatype="html">
+        <source>
+            <x id="START_TAG_LABEL" ctype="x-label" equiv-text="&lt;label&gt;"/>Número de teléfono<x id="CLOSE_TAG_LABEL" ctype="x-label" equiv-text="&lt;/label&gt;"/>
+        </source>
+        <target>Phone number</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-info/cuenta-info.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Numero de telefono del contacto</note>
+        <note priority="1" from="meaning">Telefono</note>
+      </trans-unit>
+      <trans-unit id="procesos" datatype="html">
+        <source>Mis Procesos</source>
+        <target>My processes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-info/cuenta-info.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Procesos de adopcion del usuario</note>
+        <note priority="1" from="meaning">Procesos</note>
+      </trans-unit>
+      <trans-unit id="favoritos" datatype="html">
+        <source>Favoritos</source>
+        <target>Favorites</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-info/cuenta-info.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Perros favoritos del usuario</note>
+        <note priority="1" from="meaning">Favoritos</note>
+      </trans-unit>
+      <trans-unit id="fotoPerro" datatype="html">
+        <source>Foto</source>
+        <target>Photo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-proceso/cuenta-proceso.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Foto del perro</note>
+        <note priority="1" from="meaning">Foto perro</note>
+      </trans-unit>
+      <trans-unit id="nombrePerro" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-proceso/cuenta-proceso.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Nombre del perro</note>
+        <note priority="1" from="meaning">Nombre perro</note>
+      </trans-unit>
+      <trans-unit id="progreso" datatype="html">
+        <source>Progreso</source>
+        <target>Progress</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/cuenta/components/cuenta-proceso/cuenta-proceso.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Progreso de la adopcion del perro</note>
+        <note priority="1" from="meaning">Progreso perro</note>
+      </trans-unit>
+      <trans-unit id="aboutUs" datatype="html">
+        <source>Acerca de nosotros</source>
+        <target>About Us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/denuncias/denuncias.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">About</note>
+      </trans-unit>
+      <trans-unit id="regDenuncia" datatype="html">
+        <source>Registrar una denuncia</source>
+        <target>Make a report</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Registrar una nueva denuncia</note>
+        <note priority="1" from="meaning">Registro denuncia</note>
+      </trans-unit>
+      <trans-unit id="denunciaID" datatype="html">
+        <source>Id de la denuncia:</source>
+        <target>Report ID:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Id de la denuncia</note>
+        <note priority="1" from="meaning">Denuncia id</note>
+      </trans-unit>
+      <trans-unit id="titulodenuncia" datatype="html">
+        <source>Titulo de la denuncia:</source>
+        <target>Report title:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Titulo de la denuncia</note>
+        <note priority="1" from="meaning">Denuncia titulo</note>
+      </trans-unit>
+      <trans-unit id="fechaDenuncia" datatype="html">
+        <source>Fecha de la denuncia:</source>
+        <target>Report date:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Fecha de la denuncia</note>
+        <note priority="1" from="meaning">Denuncia fecha</note>
+      </trans-unit>
+      <trans-unit id="anonima" datatype="html">
+        <source>Tu denuncia será anónima? :</source>
+        <target>Anonymous report?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">anonima?</note>
+        <note priority="1" from="meaning">Denuncia anonima</note>
+      </trans-unit>
+      <trans-unit id="ubicacionDenuncia" datatype="html">
+        <source>Ubicacion de la denuncia:</source>
+        <target>Report location:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Ubicacion de la denuncia</note>
+        <note priority="1" from="meaning">Denuncia ubicacion</note>
+      </trans-unit>
+      <trans-unit id="estatus" datatype="html">
+        <source>Estatus de la denuncia:</source>
+        <target>Report status:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Estatus de la denuncia</note>
+        <note priority="1" from="meaning">Denuncia estatus</note>
+      </trans-unit>
+      <trans-unit id="guardar" datatype="html">
+        <source>Guardar</source>
+        <target>Save</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Boton para guardar denuncia</note>
+        <note priority="1" from="meaning">Guardar</note>
+      </trans-unit>
+      <trans-unit id="cancelar" datatype="html">
+        <source>Cancelar</source>
+        <target>Cancel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/formulario/formulario.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Boton para cancelar denuncia</note>
+        <note priority="1" from="meaning">Cancelar</note>
+      </trans-unit>
+      <trans-unit id="mapa" datatype="html">
+        <source>Mi Mapa</source>
+        <target>My Map</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/mapa/mapa.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Mapa de la ciudad</note>
+        <note priority="1" from="meaning">Mapa</note>
+      </trans-unit>
+      <trans-unit id="descMapa" datatype="html">
+        <source>Aquí podras ver el mapa con las zonas de mayores indices de maltrato en la CDMX según nuestras denuncias</source>
+        <target>Here you can see the map with the areas with the highest rates of abuse in CDMX according to our complaints</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/mapa/mapa.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Descripcion del mapa</note>
+        <note priority="1" from="meaning">Descripcion mapa</note>
+      </trans-unit>
+      <trans-unit id="misDenuncias" datatype="html">
+        <source>Mis denuncias</source>
+        <target>My reports</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Encabezado mis denuncias</note>
+        <note priority="1" from="meaning">Mis denuncias</note>
+      </trans-unit>
+      <trans-unit id="descMisDenuncias" datatype="html">
+        <source>Aquí podras realizar denuncias a tu nombre o anónimas, las cuales serán reportadas con el gobierno de la CDMX y podrás ver su estado.</source>
+        <target>Here you can make complaints in your name or anonymously, which will be reported to the CDMX government and you will be able to see their status.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Descripcion de las denuncias</note>
+        <note priority="1" from="meaning">Descripcion mis denuncias</note>
+      </trans-unit>
+      <trans-unit id="fechaDen" datatype="html">
+        <source>Fecha</source>
+        <target>Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Columna fecha </note>
+        <note priority="1" from="meaning">Fecha denuncia</note>
+      </trans-unit>
+      <trans-unit id="den" datatype="html">
+        <source>Denuncia</source>
+        <target>Report</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> denuncia </note>
+        <note priority="1" from="meaning">Fecha denuncia</note>
+      </trans-unit>
+      <trans-unit id="anonCol" datatype="html">
+        <source>Anónima</source>
+        <target>Anonymous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Columna anonima </note>
+        <note priority="1" from="meaning">Anonima denuncia</note>
+      </trans-unit>
+      <trans-unit id="ubiCol" datatype="html">
+        <source>Ubicación</source>
+        <target>Location</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Columna ubicacion </note>
+        <note priority="1" from="meaning">Ubicacion denuncia</note>
+      </trans-unit>
+      <trans-unit id="estatusCol" datatype="html">
+        <source>Estatus</source>
+        <target>Status</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Columna estatus </note>
+        <note priority="1" from="meaning">Estatus denuncia</note>
+      </trans-unit>
+      <trans-unit id="pista" datatype="html">
+        <source>Selecciona Nuevo para ver formulario</source>
+        <target>Select new to see the form</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Texto pista </note>
+        <note priority="1" from="meaning">Pista</note>
+      </trans-unit>
+      <trans-unit id="anonSi" datatype="html">
+        <source>Si</source>
+        <target>Yes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Estado de denuncia anonima </note>
+        <note priority="1" from="meaning">Anon si</note>
+      </trans-unit>
+      <trans-unit id="infoTabla" datatype="html">
+        <source>agrega y veras en la tabla</source>
+        <target>Add one and you will see the table</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description"> Info tabla </note>
+        <note priority="1" from="meaning">Info tabla</note>
+      </trans-unit>
+      <trans-unit id="status" datatype="html">
+        <source>En Proceso</source>
+        <target>In process</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/denuncias/components/tabla/tabla.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Status </note>
+        <note priority="1" from="meaning">Status</note>
+      </trans-unit>
+      <trans-unit id="ciudades" datatype="html">
+        <source>Actualmente estamos en estas ciudades</source>
+        <target>We are on this cities</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/familias/components/carrousel/carrousel.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Ciudades actuales</note>
+        <note priority="1" from="meaning">Ciudades</note>
+      </trans-unit>
+      <trans-unit id="conoceFamilias" datatype="html">
+        <source>Conoce algunas de nuestras familias</source>
+        <target>Meet some of our families</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/familias/components/familias/familias.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Nuestras familias</note>
+        <note priority="1" from="meaning">Conoce familias</note>
+      </trans-unit>
+      <trans-unit id="usuariosFelices" datatype="html">
+        <source>Nuestros usuarios están felices</source>
+        <target>Our users are very happy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/familias/components/footer/footer.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Felices encabezado</note>
+        <note priority="1" from="meaning">Usuarios</note>
+      </trans-unit>
+      <trans-unit id="opinion1" datatype="html">
+        <source>
+            WebDogs me ha parecido increíble. Desde que adoptamos, mi familia es más feliz y se nota.
+            <x id="START_TAG_CITE" ctype="x-cite" equiv-text="&lt;cite&gt;"/><x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/>Alberto Pérez<x id="CLOSE_TAG_CITE" ctype="x-cite" equiv-text="&lt;/cite&gt;"/>
+        </source>
+        <target>WebDogs has seemed incredible to me. Since we adopted, my family has been happier and it shows.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/familias/components/footer/footer.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Opinion 1</note>
+      </trans-unit>
+      <trans-unit id="opinion2" datatype="html">
+        <source>
+            WebDogs facilita por mucho el proceso de adopcíon. Antes no había podido y ahora tengo 3 nuevos amigos en casa.
+            <x id="START_TAG_CITE" ctype="x-cite" equiv-text="&lt;cite&gt;"/><x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/>Joana Silva<x id="CLOSE_TAG_CITE" ctype="x-cite" equiv-text="&lt;/cite&gt;"/>
+        </source>
+        <target>WebDogs makes the adoption process much easier. Before I could not and now I have 3 new friends at home.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/familias/components/footer/footer.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Opinion 2</note>
+      </trans-unit>
+      <trans-unit id="opinion3" datatype="html">
+        <source>
+            Estuve buscando un servicio en mi ciudad, que me permitiera adoptar de forma fácil y sencilla.  WebDogs fue la solución. Gracias!
+            <x id="START_TAG_CITE" ctype="x-cite" equiv-text="&lt;cite&gt;"/><x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/>Carlos Viana<x id="CLOSE_TAG_CITE" ctype="x-cite" equiv-text="&lt;/cite&gt;"/>
+        </source>
+        <target>I was looking for a service in my city that would allow me to adopt easily and simply. WebDogs was the solution. Thank you!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/familias/components/footer/footer.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Opinion 3</note>
+      </trans-unit>
+      <trans-unit id="loginH" datatype="html">
+        <source>Inicio de Sesión</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/login/components/login-formulario/login-formulario.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Encabezado de pag inicio de sesion</note>
+        <note priority="1" from="meaning">Encabezado Login</note>
+      </trans-unit>
+      <trans-unit id="372facde1a72e3f82ac81cac6b81980dcdc1a7bd" datatype="html">
+        <source>Correo</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/login/components/login-formulario/login-formulario.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Email</note>
+      </trans-unit>
+      <trans-unit id="e369e13629132e32dcd958b82261059243f21d58" datatype="html">
+        <source>Contraseña</source>
+        <target>Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/login/components/login-formulario/login-formulario.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Password</note>
+      </trans-unit>
+      <trans-unit id="botonLogin" datatype="html">
+        <source>Iniciar Sesión</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/login/components/login-formulario/login-formulario.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Log In</note>
+        <note priority="1" from="meaning">Login button</note>
+      </trans-unit>
+      <trans-unit id="nuevo" datatype="html">
+        <source>Soy nuevo : </source>
+        <target>New user:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/login/components/login-formulario/login-formulario.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Nuevo usuario</note>
+        <note priority="1" from="meaning">Nuevo usuario</note>
+      </trans-unit>
+      <trans-unit id="nuevoBoton" datatype="html">
+        <source>Regístrate</source>
+        <target>Register here</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/login/components/login-formulario/login-formulario.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Boton ir a registro</note>
+      </trans-unit>
+      <trans-unit id="olvide" datatype="html">
+        <source>Olvide mi contraseña</source>
+        <target>Forgot my password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/login/components/login-formulario/login-formulario.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Olvidar contraseña</note>
+      </trans-unit>
+      <trans-unit id="perro1" datatype="html">
+        <source>Es un perro lleno de energía, excelente para niños pequeños</source>
+        <target>It is a dog full of energy, is excellent for young kids</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/cards/cards.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Descripcio perro</note>
+      </trans-unit>
+      <trans-unit id="perro2" datatype="html">
+        <source>Es un perro lleno de energía, excelente para niños pequeños</source>
+        <target>It is a dog full of energy, is excellent for young kids</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/cards/cards.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/cards/cards.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Descripcio perro</note>
+      </trans-unit>
+      <trans-unit id="botonConoce" datatype="html">
+        <source>Conocer</source>
+        <target>Meet!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/cards/cards.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/cards/cards.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/cards/cards.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Conoce boton</note>
+      </trans-unit>
+      <trans-unit id="encuentra" datatype="html">
+        <source>Con webdogs Encuentra un amigo cerca de ti</source>
+        <target>With WebDogs, find a friend near you.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/main/main.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Encuentra</note>
+      </trans-unit>
+      <trans-unit id="perrosAdopcion" datatype="html">
+        <source>Perros en adopción</source>
+        <target>Dogs in adoption</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/main/main.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Perros adopcion</note>
+      </trans-unit>
+      <trans-unit id="dudas" datatype="html">
+        <source>Encuentra tu mascota ideal</source>
+        <target>Find your ideal buddy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/main/components/main/main.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Dudas</note>
+      </trans-unit>
+      <trans-unit id="myName" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Mi nombre es Roque</source>
+        <target>My name is Roque</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Nombre del perro</note>
+      </trans-unit>
+      <trans-unit id="razaPerrito" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Soy un Corgi</source>
+        <target>I'm a Corgi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Raza perro</note>
+      </trans-unit>
+      <trans-unit id="generoPerrito" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Soy macho</source>
+        <target>I'm a male</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Genero perro</note>
+      </trans-unit>
+      <trans-unit id="sizePerrito" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Soy de tamaño mediano</source>
+        <target>I'm medium size</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Tamaño perro</note>
+      </trans-unit>
+      <trans-unit id="tipoPerrito" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Soy un cachorro Juguetón</source>
+        <target>I'm a playful puppy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Tipo perro</note>
+      </trans-unit>
+      <trans-unit id="edadPerrito" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Tengo 5 años</source>
+        <target>I'm 5 years old</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Edad del perro</note>
+      </trans-unit>
+      <trans-unit id="ubiPerrito" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Me encuentro actualmente en CDMX</source>
+        <target>I live in Ciudad de Mexico</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Ubicacion del perro</note>
+      </trans-unit>
+      <trans-unit id="contactaResponsable" datatype="html">
+        <source>Contactar al Responsable</source>
+        <target>Contact the responsible</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/perfil-perro1/components/perfil-perro-info/perfil-perro-info.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Contactar al responsable</note>
+      </trans-unit>
+      <trans-unit id="mostrarPerros" datatype="html">
+        <source>Mostrar Perros Registrados</source>
+        <target>Show registered dogs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Mostrar perros</note>
+      </trans-unit>
+      <trans-unit id="tituloPerros" datatype="html">
+        <source>Perros:</source>
+        <target>Dogs:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Titulo Perros</note>
+      </trans-unit>
+      <trans-unit id="columnaNombre" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Columna nombre</note>
+      </trans-unit>
+      <trans-unit id="columnaRaza" datatype="html">
+        <source>Raza</source>
+        <target>Breed</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Columna raza</note>
+      </trans-unit>
+      <trans-unit id="columnaTamano" datatype="html">
+        <source>Tamaño</source>
+        <target>Size</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Columna tamaño</note>
+      </trans-unit>
+      <trans-unit id="columnaEdadPerro" datatype="html">
+        <source>Edad</source>
+        <target>Age</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Columna edad</note>
+      </trans-unit>
+      <trans-unit id="columnaCorreo" datatype="html">
+        <source>Correo contacto</source>
+        <target>Contact email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Columna correo</note>
+      </trans-unit>
+      <trans-unit id="columnaDesc" datatype="html">
+        <source>Descripcion</source>
+        <target>Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro/registrar-perro.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Columna descripcionAcerca de nosotros</note>
+      </trans-unit>
+      <trans-unit id="registroPerros" datatype="html">
+        <source>Registro de perros para dar en adopción</source>
+        <target>Registration of dogs for adoption</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Registro perros</note>
+      </trans-unit>
+      <trans-unit id="labelNombre" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Label nombre</note>
+      </trans-unit>
+      <trans-unit id="labelRaza" datatype="html">
+        <source>Raza</source>
+        <target>Breed</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Label raza</note>
+      </trans-unit>
+      <trans-unit id="labelTamano" datatype="html">
+        <source>Selecciona el tamaño</source>
+        <target>Choose size</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Label tamaño</note>
+      </trans-unit>
+      <trans-unit id="select" datatype="html">
+        <source>Selecciona...</source>
+        <target>Choose...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Select</note>
+      </trans-unit>
+      <trans-unit id="opcionPeque" datatype="html">
+        <source>Pequeño</source>
+        <target>Small</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Opcion pequeño</note>
+      </trans-unit>
+      <trans-unit id="opcionMediano" datatype="html">
+        <source>Mediano</source>
+        <target>Medium</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Opcion mediano</note>
+      </trans-unit>
+      <trans-unit id="opcionGrande" datatype="html">
+        <source>Grande</source>
+        <target>Large</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Opcion grande</note>
+      </trans-unit>
+      <trans-unit id="formEdad" datatype="html">
+        <source>Edad</source>
+        <target>Age</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Form edad</note>
+      </trans-unit>
+      <trans-unit id="formCorreo" datatype="html">
+        <source>Correo de contacto</source>
+        <target>Contact email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Form correo</note>
+      </trans-unit>
+      <trans-unit id="formDesc" datatype="html">
+        <source>Descripción del perro</source>
+        <target>Dog description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Form desc</note>
+      </trans-unit>
+      <trans-unit id="formGuardar" datatype="html">
+        <source>Guardar</source>
+        <target>Save</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registrar-perro/components/registrar-perro-formulario/registrar-perro-formulario.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">Acerca de nosotros</note>
+        <note priority="1" from="meaning">Form guardar</note>
+      </trans-unit>
+      <trans-unit id="textoRegistro" datatype="html">
+        <source>Registro</source>
+        <target>Registry</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Encabezado contactos</note>
+        <note priority="1" from="meaning">Registro</note>
+      </trans-unit>
+      <trans-unit id="placeNombre" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="placeCiudad" datatype="html">
+        <source>Ciudad</source>
+        <target>City</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="placeEdad" datatype="html">
+        <source>Edad</source>
+        <target>Age</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="placeCorreo" datatype="html">
+        <source>Correo</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="placeContra" datatype="html">
+        <source>Contraseña</source>
+        <target>Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="placeDesc" datatype="html">
+        <source>Describe porque quieres adoptar a un perro</source>
+        <target>Describe why you want to adopt a dog</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terminos" datatype="html">
+        <source>
+          Acepto términos y condiciones
+        </source>
+        <target>I accept terms and conditions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="valueRegistrarte" datatype="html">
+        <source>Registrarse</source>
+        <target>Register</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/registro/components/registro-formulario/registro-formulario.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>
+

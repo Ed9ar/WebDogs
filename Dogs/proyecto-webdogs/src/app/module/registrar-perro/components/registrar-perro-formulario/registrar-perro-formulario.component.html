@@ -1,7 +1,7 @@
 <header id="head" class="perritodudoso">
     <div class="hero-text-box2">
         <div class="row">
-            <h1 class="col-md-8 dudas">Registro de perros para dar en adopción</h1>
+            <h1 i18n="Registro perros|Acerca de nosotros@@registroPerros" class="col-md-8 dudas">Registro de perros para dar en adopción</h1>
         </div>
     </div>
 </header>
@@ -10,39 +10,38 @@
         <div class="my-5 inner-contact">
             <form class="contact-form " [formGroup]="modeloPerro" (ngSubmit)="registrarPerro()">
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Nombre</label>
-                    <input type="email" formControlName="nombrePerro" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                    <label i18n="Label nombre|Acerca de nosotros@@labelNombre" for="exampleFormControlInput1">Nombre</label>
+                    <input type="email" formControlName="nombrePerro" class="form-control" id="exampleFormControlInput1">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Raza</label>
-                    <input type="email" class="form-control" formControlName="raza" id="exampleFormControlInput1" placeholder="Raza">
+                    <label i18n="Label raza|Acerca de nosotros@@labelRaza" for="exampleFormControlInput1">Raza</label>
+                    <input type="email" class="form-control" formControlName="raza" id="exampleFormControlInput1">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Selecciona el tamaño</label>
+                    <label i18n="Label tamaño|Acerca de nosotros@@labelTamano" for="exampleFormControlSelect1">Selecciona el tamaño</label>
                     <select class="form-control" formControlName="tamanio" id="exampleFormControlSelect1">
-                        <option>Selecciona...</option>
-                        <option>Pequeño</option>
-                        <option>Mediano</option>
-                        <option>Grande</option>
+                        <option i18n="Select|Acerca de nosotros@@select">Selecciona...</option>
+                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Pequeño</option>
+                        <option i18n="Opcion mediano|Acerca de nosotros@@opcionMediano">Mediano</option>
+                        <option i18n="Opcion grande|Acerca de nosotros@@opcionGrande">Grande</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Edad</label>
-                    <input type="email" formControlName="edad" class="form-control" id="exampleFormControlInput1" placeholder="Edad">
+                    <label i18n="Form edad|Acerca de nosotros@@formEdad" for="exampleFormControlInput1">Edad</label>
+                    <input type="email" formControlName="edad" class="form-control" id="exampleFormControlInput1">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Correo de contacto</label> <input type="email" formControlName="correoContacto" class="form-control" id="exampleFormControlInput1" placeholder="nombre@dominio.com">
+                    <label i18n="Form correo|Acerca de nosotros@@formCorreo" for="exampleFormControlInput1">Correo de contacto</label> <input type="email" formControlName="correoContacto" class="form-control" id="exampleFormControlInput1">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Descripci&oacute;n del perro</label>
-                    <textarea formControlName="descripcion" class="form-control" id="#" rows="3" placeholder="Escribe..."></textarea>
+                    <label i18n="Form desc|Acerca de nosotros@@formDesc" for="exampleFormControlInput1">Descripci&oacute;n del perro</label>
+                    <textarea formControlName="descripcion" class="form-control" id="#" rows="3" ></textarea>
                 </div>
                 <div class="form-group">
-                    <a><input class="btn btn-success" type="submit" value="Guardar"></a>
-                    <!-- routerLink="/main" -->
+                    <a><input class="btn btn-success" type="submit" i18n-value="Form guardar|Acerca de nosotros@@formGuardar" value="Guardar"></a>
                 </div>
             </form>
 

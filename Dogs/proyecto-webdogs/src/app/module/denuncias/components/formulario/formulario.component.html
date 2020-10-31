@@ -1,52 +1,52 @@
 <ng-template #content let-c="close" let-d="dismiss">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Registrar una denuncia</h4>
+        <h4 i18n="Registro denuncia|Registrar una nueva denuncia@@regDenuncia" class="modal-title" id="modal-basic-title">Registrar una denuncia</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-          <form [formGroup]="modeloDenuncias" (ngSubmit)="enviar()"> 
+          <form [formGroup]="modeloDenuncias" (ngSubmit)="enviar()">
             <div class="form-group">
-                <label for="exampleFormControlInput1">Id de la denuncia:</label>
-                <input type="text" formControlName="idDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="Id">
-                
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Titulo de la denuncia:</label>
-                <input type="text" formControlName="tituloDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
-                
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Fecha de la denuncia:</label>
-                <input type="date" formControlName="fechaDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="Fecha">
-                
-                
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Tu denuncia será anónima? :</label>
-                <input type="text" formControlName="anonimatoDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="anonimato?">
+                <label i18n="Denuncia id|Id de la denuncia@@denunciaID" for="exampleFormControlInput1">Id de la denuncia:</label>
+                <input type="text" formControlName="idDenuncia" class="form-control" id="exampleFormControlInput1" >
 
-                
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Ubicacion de la denuncia:</label>
-                <input type="text" formControlName="ubicacionDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="Ubicacion">
-                
+                <label i18n="Denuncia titulo|Titulo de la denuncia@@titulodenuncia" for="exampleFormControlInput1">Titulo de la denuncia:</label>
+                <input type="text" formControlName="tituloDenuncia" class="form-control" id="exampleFormControlInput1" >
+
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Estatus de la denuncia:</label>
-                <input type="text" formControlName="estatusDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="Estatus">
-                
+                <label i18n="Denuncia fecha|Fecha de la denuncia@@fechaDenuncia" for="exampleFormControlInput1">Fecha de la denuncia:</label>
+                <input type="date" formControlName="fechaDenuncia" class="form-control" id="exampleFormControlInput1" >
+
+
+            </div>
+            <div class="form-group">
+                <label i18n="Denuncia anonima|anonima?@@anonima" for="exampleFormControlInput1">Tu denuncia será anónima? :</label>
+                <input type="text" formControlName="anonimatoDenuncia" class="form-control" id="exampleFormControlInput1" >
+
+
+            </div>
+            <div class="form-group">
+                <label i18n="Denuncia ubicacion|Ubicacion de la denuncia@@ubicacionDenuncia" for="exampleFormControlInput1">Ubicacion de la denuncia:</label>
+                <input type="text" formControlName="ubicacionDenuncia" class="form-control" id="exampleFormControlInput1" >
+
+            </div>
+            <div class="form-group">
+                <label i18n="Denuncia estatus|Estatus de la denuncia@@estatus" for="exampleFormControlInput1">Estatus de la denuncia:</label>
+                <input type="text" formControlName="estatusDenuncia" class="form-control" id="exampleFormControlInput1" >
+
             </div>
           </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="enviar()">Guardar</button>
-        <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancelar</button>
+        <button i18n="Guardar|Boton para guardar denuncia@@guardar" type="button" class="btn btn-primary" (click)="enviar()">Guardar</button>
+        <button i18n="Cancelar|Boton para cancelar denuncia@@cancelar" type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancelar</button>
       </div>
   </ng-template>
-  
-  <button type="button" class="btn btn-secondary" (click)="open(content)">Nueva +</button>
+
+  <button type="button" class="btn btn-secondary" (click)="open(content)">+</button>
   <!--<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>-->
