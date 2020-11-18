@@ -28,7 +28,6 @@ import { environment as env } from '../environments/environment';
 import { LoginButtonComponent } from './main-components/login-button/login-button.component';
 import { RegistroButtonComponent } from './main-components/registro-button/registro-button.component';
 import { LogoutButtonComponent } from './main-components/logout-button/logout-button.component';
-import { ProfileComponent } from './main-components/profile/profile.component';
 
 
 @NgModule({
@@ -42,7 +41,6 @@ import { ProfileComponent } from './main-components/profile/profile.component';
     LoginButtonComponent,
     RegistroButtonComponent,
     LogoutButtonComponent,
-    ProfileComponent,
   ],
   imports: [
     BrowserModule,
