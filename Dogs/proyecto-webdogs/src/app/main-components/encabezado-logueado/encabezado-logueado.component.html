@@ -8,35 +8,31 @@
         <div [ngbCollapse]="isNavbarCollapsed" (click)="isNavbarCollapsed = true" class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto  main-nav">
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/" >Inicio</a>
+                    <a class="nav-link" routerLink="/">Inicio</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/conoce/" >Conoce</a>
+                    <a class="nav-link" routerLink="/conoce/">Conoce</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/familias/" >Familias</a>
+                    <a class="nav-link" routerLink="/familias/">Familias</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/contacto/" >Contacto</a>
+                    <a class="nav-link" routerLink="/contacto/">Contacto</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/denuncias/" >Denuncias</a>
+                    <a class="nav-link" routerLink="/denuncias/">Denuncias</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                  <a i18n="Registro Perro|Pestaña de registro perro@@registroPerro" class="nav-link" routerLink="/registrarPerro" >Registro Perro</a>
-              </li>
-              <li class="nav-item" routerLinkActive="active">
-                  <a i18n="Perfil|Pestaña de perfil@@perfil" class="nav-link" routerLink="/cuenta" >Perfil</a>
-              </li>
-              <li class="nav-item" routerLinkActive="active">
-                  <a i18n="Perfil Perro|Pestaña de perfil perro@@perfilPerro" class="nav-link" routerLink="/perfil-perro" >PerfilPerro</a>
-              </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <app-cerrar-sesion></app-cerrar-sesion>
+                    <a i18n="Registro Perro|Pestaña de registro perro@@registroPerro" class="nav-link" routerLink="/registrarPerro">Registro Perro</a>
                 </li>
-
+                <li class="nav-item" routerLinkActive="active">
+                    <a i18n="Perfil|Pestaña de perfil@@perfil" class="nav-link" routerLink="/cuenta">Perfil</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a i18n="Perfil Perro|Pestaña de perfil perro@@perfilPerro" class="nav-link" routerLink="/perfil-perro">PerfilPerro</a>
+                </li>
+                <app-logout-button></app-logout-button>
             </ul>
         </div>
     </nav>
 </header>
-

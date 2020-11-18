@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { fader } from './route-transition-animations';
-import { GeneralService } from './services/general.service';
+import { AuthService } from '@auth0/auth0-angular';
 
 
 @Component({
@@ -12,20 +12,14 @@ import { GeneralService } from './services/general.service';
 })
 export class AppComponent {
   title = 'proyecto-webdogs';
-  loggedIn = false;
+  loggedIn = true;
 
-  constructor(private generalService: GeneralService) { 
-    generalService.claseUsuarioLogueado$.subscribe(
-      loggedIn=>{
-        this.loggedIn = loggedIn
-        console.log(`El estatus cambió a ${loggedIn}`)
-      }
-    )
-  }
+
+  constructor(public auth: AuthService) {}
 
   prepareRoute(outlet: RouterOutlet): boolean {
-    return outlet && 
-    outlet.activatedRouteData && 
+    return outlet &&
+    outlet.activatedRouteData &&
     outlet.activatedRouteData['animationState'];
-	}
+  }
 }

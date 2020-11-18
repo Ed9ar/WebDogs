@@ -1,5 +1,4 @@
-
-<div *ngIf="loggedIn; else elseBlock">
+<div *ngIf="(auth.isAuthenticated$ | async) === true; else elseBlock">
     <app-encabezado-logueado></app-encabezado-logueado>
 </div>
 <ng-template #elseBlock>
