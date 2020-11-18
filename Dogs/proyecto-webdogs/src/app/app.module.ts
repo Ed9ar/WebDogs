@@ -23,7 +23,11 @@ import { ContactoService } from './module/contacto/services/contacto.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EncabezadoLogueadoComponent } from './main-components/encabezado-logueado/encabezado-logueado.component';
 import { CerrarSesionComponent } from './main-components/cerrar-sesion/cerrar-sesion.component';
-
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
+import { LoginButtonComponent } from './main-components/login-button/login-button.component';
+import { RegistroButtonComponent } from './main-components/registro-button/registro-button.component';
+import { LogoutButtonComponent } from './main-components/logout-button/logout-button.component';
 
 
 @NgModule({
@@ -34,6 +38,9 @@ import { CerrarSesionComponent } from './main-components/cerrar-sesion/cerrar-se
     ContentComponent,
     EncabezadoLogueadoComponent,
     CerrarSesionComponent,
+    LoginButtonComponent,
+    RegistroButtonComponent,
+    LogoutButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,9 +56,10 @@ import { CerrarSesionComponent } from './main-components/cerrar-sesion/cerrar-se
     MainModule,
     PerfilPerroModule,
     NgbModule,
-    BrowserModule, 
-    BrowserAnimationsModule, 
-    AppRoutingModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    AuthModule.forRoot({ ...env.auth })
   ],
   providers: [RegistrarPerroService, ContactoService],
   bootstrap: [AppComponent]

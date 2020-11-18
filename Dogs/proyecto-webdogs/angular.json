@@ -31,7 +31,13 @@
                             "src/styles/styles.scss",
                             "src/styles/main.scss"
                         ],
-                        "scripts": []
+                        "scripts": [
+                           {
+                            "input": "node_modules/chart.js/src/chart.js",
+                            "inject": false,
+                            "bundleName": "chartJS"
+                           }
+                        ]
                     },
                     "configurations": {
                         "production": {
