@@ -4,8 +4,10 @@ const perros = new mongoose.Schema({
     nombre: String,
     raza: String,
     edad: Number,
+    descripcion: String,
+    correoContacto: String
 });
 
-const perro = mongoose.model("Perro", perros);
+const Perro = mongoose.model("Perro", perros);
 
-export default perro;
+export default Perro;

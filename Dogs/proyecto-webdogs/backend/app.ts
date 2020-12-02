@@ -5,10 +5,19 @@ import { setMaxListeners } from 'process';
 import setMongo from './mongo';
 import setRoutes from './routes';
 
+const{ join } = require('path');
+const cors = require("cors");
+var corsOption = {
+    origin: "*",
+    optionSuccessStatus: 200,
+};
+
 const app = express();
 app.set('port', 3000);
 
-app.use(express.json());
+app.use(express.json()); //mensaje de nuestro body {req, resp} es un json
+app.use(cors(corsOption));
+app.options("*", cors());
 app.use(express.urlencoded({extended:false}));
 app.use(morgan('dev'));
 
