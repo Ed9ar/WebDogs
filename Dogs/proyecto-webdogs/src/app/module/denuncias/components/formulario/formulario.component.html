@@ -9,35 +9,30 @@
       <div class="modal-body">
           <form [formGroup]="modeloDenuncias" (ngSubmit)="enviar()">
             <div class="form-group">
-                <label i18n="Denuncia id|Id de la denuncia@@denunciaID" for="exampleFormControlInput1">Id de la denuncia:</label>
-                <input type="text" formControlName="idDenuncia" class="form-control" id="exampleFormControlInput1" >
-
-            </div>
-            <div class="form-group">
                 <label i18n="Denuncia titulo|Titulo de la denuncia@@titulodenuncia" for="exampleFormControlInput1">Titulo de la denuncia:</label>
-                <input type="text" formControlName="tituloDenuncia" class="form-control" id="exampleFormControlInput1" >
+                <input type="text" formControlName="descripcion" class="form-control" id="exampleFormControlInput1" >
 
             </div>
             <div class="form-group">
                 <label i18n="Denuncia fecha|Fecha de la denuncia@@fechaDenuncia" for="exampleFormControlInput1">Fecha de la denuncia:</label>
-                <input type="date" formControlName="fechaDenuncia" class="form-control" id="exampleFormControlInput1" >
+                <input type="date" formControlName="fecha" class="form-control" id="exampleFormControlInput1" >
 
 
             </div>
             <div class="form-group">
                 <label i18n="Denuncia anonima|anonima?@@anonima" for="exampleFormControlInput1">Tu denuncia será anónima? :</label>
-                <input type="text" formControlName="anonimatoDenuncia" class="form-control" id="exampleFormControlInput1" >
+                <input type="text" formControlName="responsableDenuncia" class="form-control" id="exampleFormControlInput1" >
 
 
             </div>
             <div class="form-group">
                 <label i18n="Denuncia ubicacion|Ubicacion de la denuncia@@ubicacionDenuncia" for="exampleFormControlInput1">Ubicacion de la denuncia:</label>
-                <input type="text" formControlName="ubicacionDenuncia" class="form-control" id="exampleFormControlInput1" >
+                <input type="text" formControlName="ubicacion" class="form-control" id="exampleFormControlInput1" >
 
             </div>
             <div class="form-group">
                 <label i18n="Denuncia estatus|Estatus de la denuncia@@estatus" for="exampleFormControlInput1">Estatus de la denuncia:</label>
-                <input type="text" formControlName="estatusDenuncia" class="form-control" id="exampleFormControlInput1" >
+                <input type="text" formControlName="estatus" class="form-control" id="exampleFormControlInput1" >
 
             </div>
           </form>
