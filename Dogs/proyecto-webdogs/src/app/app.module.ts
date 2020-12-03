@@ -29,7 +29,7 @@ import { LoginButtonComponent } from './main-components/login-button/login-butto
 import { RegistroButtonComponent } from './main-components/registro-button/registro-button.component';
 import { LogoutButtonComponent } from './main-components/logout-button/logout-button.component';
 
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +59,7 @@ import { LogoutButtonComponent } from './main-components/logout-button/logout-bu
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     AuthModule.forRoot({ ...env.auth })
   ],
   providers: [RegistrarPerroService, ContactoService],

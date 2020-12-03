@@ -31,9 +31,9 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   ngOnInit() {
   }
 
-  registrarPerro() {
+  enviar() {
     console.log(this.modeloPerro.value)
-    this.registrarPerroService.agregacionPerro(this.modeloPerro.value);
+    this.registrarPerroService.insertarPerro(this.modeloPerro.value);
     this.modeloPerro.reset();
   }
 

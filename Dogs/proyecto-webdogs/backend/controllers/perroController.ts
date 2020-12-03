@@ -33,8 +33,16 @@ class PerroController{
     get = async(req, res) => {
         try{
             const obj = await Perro.findOne({_id : req.params.id});
-            res.status(201).json(obj);
+            if(obj){
+                res.status(201).json(obj);
+            }
+            else{
+                res.status(400).json({"mensaje": "No encontrado"});
+            }
         }catch(err){
+            if(err.message.includes("Cast to ObjectId")){
+                return res.status(404).json({"mensaje":"Not found"});
+            }
             return res.status(500).json({ error: err.message });
         }
     }
