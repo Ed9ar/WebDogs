@@ -8,7 +8,7 @@
 <div class="general">
     <section class="contact-section">
         <div class="my-5 inner-contact">
-            <form class="contact-form " [formGroup]="modeloPerro" (ngSubmit)="registrarPerro()">
+            <form class="contact-form " [formGroup]="modeloPerro" (ngSubmit)="enviar()">
                 <div class="form-group">
                     <label i18n="Label nombre|Acerca de nosotros@@labelNombre" for="exampleFormControlInput1">Nombre</label>
                     <input type="email" formControlName="nombrePerro" class="form-control" id="exampleFormControlInput1">
@@ -41,7 +41,7 @@
                     <textarea formControlName="descripcion" class="form-control" id="#" rows="3" ></textarea>
                 </div>
                 <div class="form-group">
-                    <a><input class="btn btn-success" type="submit" i18n-value="Form guardar|Acerca de nosotros@@formGuardar" value="Guardar"></a>
+                    <a><input class="btn btn-success" type="submit" i18n-value="Form guardar|Acerca de nosotros@@formGuardar" value="Guardar" ></a>
                 </div>
             </form>
 
