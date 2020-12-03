@@ -20,10 +20,38 @@ class PerroController{
         }
     }
 
+
     count = async(req, res) => {
         try{
             const count = await Perro.count();
             res.status(201).json(count);
+        }catch(err){
+            return res.status(400).json({ error: err.message });
+        }
+    }
+
+    get = async(req, res) => {
+        try{
+            const obj = await Perro.findOne({_id : req.params.id});
+            res.status(201).json(obj);
+        }catch(err){
+            return res.status(500).json({ error: err.message });
+        }
+    }
+
+    update = async(req, res) => {
+        try{
+            await Perro.findOneAndUpdate({_id : req.params.id}, req.body);
+            res.sendStatus(200);
+        }catch(err){
+            return res.status(400).json({ error: err.message });
+        }
+    }
+
+    delete = async(req, res) => {
+        try{
+            await Perro.findOneAndRemove({_id : req.params.id});
+            res.sendStatus(200);
         }catch(err){
             return res.status(400).json({ error: err.message });
         }
