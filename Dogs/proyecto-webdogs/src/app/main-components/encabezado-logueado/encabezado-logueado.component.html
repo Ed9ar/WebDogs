@@ -8,7 +8,7 @@
         <div [ngbCollapse]="isNavbarCollapsed" (click)="isNavbarCollapsed = true" class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto  main-nav">
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/">Inicio</a>
+                    <a class="nav-link" routerLink="/main/">Inicio</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="/conoce/">Conoce</a>
@@ -27,9 +27,6 @@
                 </li>
                 <li class="nav-item" routerLinkActive="active">
                     <a i18n="Perfil|Pestaña de perfil@@perfil" class="nav-link" routerLink="/cuenta">Perfil</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a i18n="Perfil Perro|Pestaña de perfil perro@@perfilPerro" class="nav-link" routerLink="/perfil-perro">PerfilPerro</a>
                 </li>
                 <app-logout-button></app-logout-button>
             </ul>

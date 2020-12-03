@@ -1,39 +1,16 @@
 <section id="gallery">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 mb-3">
+            <div class="col-lg-4 mb-3" *ngFor="let perro of perrosObjeto">
                 <div class="card h-100">
                     <img class="card-img-top" src="../../../../../assets/img/loginDog.jpg" alt="First dog">
                     <div class="card-body">
-                        <h5 class="card-title">Roque</h5>
-                        <p i18n="Descripcio perro|Acerca de nosotros@@perro1" class="card-text">Es un perro lleno de energía, excelente para niños pequeños</p>
-                        <p class="card-text">5 km</p>
+                        <h5 class="card-title">{{perro.nombre}}</h5>
+                        <p i18n="Descripcio perro|Acerca de nosotros@@perro1" class="card-text">{{perro.descripcion}}</p>
+                        <p class="card-text">{{perro.raza}}</p>
                         <a i18n="Conoce boton|Acerca de nosotros@@botonConoce"  class=" nav-link btn btn-outline-success btn-sm" routerLink="/perfil-perro">Conocer</a>
                         <a  class=" nav-link btn btn-outline-danger btn-sm" routerLink="/perfil-perro"><i class="far fa-heart"></i></a>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card h-100">
-                    <img class="card-img-top" src="../../../../../assets/img/perro.jpg" alt="First pattern">
-                    <div class="card-body">
-                        <h5 class="card-title">Roque</h5>
-                        <p i18n="Descripcio perro|Acerca de nosotros@@perro2" class="card-text">Es un perro lleno de energía, excelente para niños pequeños</p>
-                        <p class="card-text">5 km</p>
-                        <a i18n="Conoce boton|Acerca de nosotros@@botonConoce"  class=" nav-link btn btn-outline-success btn-sm" routerLink="/perfil-perro">Conocer</a>
-                        <a  class=" nav-link btn btn-outline-danger btn-sm" routerLink="/perfil-perro"><i class="far fa-heart"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card h-100">
-                    <img class="card-img-top" src="../../../../../assets/img/loginDog.jpg" alt="First pattern">
-                    <div class="card-body">
-                        <h5 class="card-title">Roque</h5>
-                        <p i18n="Descripcio perro|Acerca de nosotros@@perro2" class="card-text">Es un perro lleno de energía, excelente para niños pequeños</p>
-                        <p class="card-text">5 km</p>
-                        <a i18n="Conoce boton|Acerca de nosotros@@botonConoce"  class=" nav-link btn btn-outline-success btn-sm" routerLink="/perfil-perro">Conocer</a>
-                        <a  class=" nav-link btn btn-outline-danger btn-sm" routerLink="/perfil-perro"><i class="far fa-heart"></i></a></div>
                 </div>
             </div>
     </div>
