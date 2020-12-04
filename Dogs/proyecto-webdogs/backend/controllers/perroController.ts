@@ -1,6 +1,16 @@
 import Perro from '../models/perro';
 import  axios  from 'axios';
 
+const multer = require("multer");
+
+const MYME_TYPE_MAP = {
+    'image/png': 'png',
+    'image/jpeg': 'jpg',
+    'image/jpg': 'jpg'
+}
+
+
+
 class PerroController{
     getAll = async(req, res) =>{
         try{
@@ -14,6 +24,9 @@ class PerroController{
 
     insert = async(req, res) => {
         try{
+            console.log("Insertar");
+            // console.log(req.body);
+            // console.log(req[1])
             const per = await new Perro(req.body).save();
             res.status(201).json(per);
         }catch(err){

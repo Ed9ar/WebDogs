@@ -6,6 +6,7 @@ export class Perro {
   edad: number;
   correoContacto: string;
   descripcion: string;
+  image: string;
 }
 
 export const PERROS =

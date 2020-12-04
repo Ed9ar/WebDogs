@@ -89,7 +89,7 @@
                     <img [src]="imagePreview">
                 </div>
 
-                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('descripcion').errors && (modeloPerro.get('descripcion').touched || modeloPerro.get('descripcion').dirty)}">
+                 <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('descripcion').errors && (modeloPerro.get('descripcion').touched || modeloPerro.get('descripcion').dirty)}">
                     <label i18n="Form desc|Acerca de nosotros@@formDesc" for="exampleFormControlInput1">Descripci&oacute;n del perro</label>
                     <textarea formControlName="descripcion" class="form-control" id="descripcion" rows="3"></textarea>
                     <span class="help-block" *ngIf="modeloPerro.get('descripcion').errors && (modeloPerro.get('descripcion').touched || modeloPerro.get('descripcion').dirty)">
@@ -102,6 +102,7 @@
                       </span>
                     </span>
                 </div>
+
                 <div class="form-group">
                     <a><input class="btn btn-success" type="submit" i18n-value="Form guardar|Acerca de nosotros@@formGuardar" value="Guardar"></a>
                 </div>
