@@ -24,26 +24,25 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   help: Perro[] = [];
 
   imagePreview: string;
-
+  
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
 
   destroy$: Subject<boolean> = new Subject<boolean>();
 
- 
-  modeloPerro = this.formBuild.group(
-    {
-      perroId: ['', Validators.required],
-      nombre: ['', Validators.required],
-      raza: ['', Validators.required],
-      tamanio: ['', Validators.required],
-      edad: ['', Validators.required],
-      correoContacto: ['', Validators.required],
-      descripcion: ['',Validators.required],
-      image: [null,Validators.required],
-    }
-  );
 
   ngOnInit(): void {
+    this.modeloPerro = this.formBuild.group(
+      {
+        perroId: ['', Validators.required],
+        nombre: ['', [Validators.required, Validators.minLength(2)]],
+        raza: ['', [Validators.required, Validators.minLength(2)]],
+        tamanio: ['', Validators.required],
+        edad: ['', [Validators.required, Validators.min(1)]],
+        correoContacto: ['',  [Validators.required, Validators.email]],
+        descripcion: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(255)]],
+        image: [null,Validators.required],
+      }
+    );
     this.razaService.getRaza().pipe(takeUntil(this.destroy$)).subscribe((data2: any[])=>{
       this.razas = data2;
       console.log(data2);
