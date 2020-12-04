@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
 
@@ -12,23 +12,24 @@ import { RegistrarPerroService } from '../../services/registrar-perro.service';
 export class RegistrarPerroFormularioComponent implements OnInit {
 
   suscribe: Subscription;
-
+modeloPerro:FormGroup;
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService) { }
 
- 
-  modeloPerro = this.formBuild.group(
-    {
-      perroId: ['', Validators.required],
-      nombrePerro: ['', Validators.required],
-      raza: ['', Validators.required],
-      tamanio: ['', Validators.required],
-      edad: ['', Validators.required],
-      correoContacto: ['', Validators.required],
-      descripcion: ['',Validators.required],
-    }
-  );
+
+
 
   ngOnInit() {
+    this.modeloPerro = this.formBuild.group(
+    {
+      perroId: ['', Validators.required],
+      nombrePerro: ['', [Validators.required, Validators.minLength(2)]],
+      raza: ['', [Validators.required, Validators.minLength(2)]],
+      tamanio: ['', Validators.required],
+      edad: ['', [Validators.required, Validators.min(1)]],
+      correoContacto: ['',  [Validators.required, Validators.email]],
+      descripcion: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(255)]],
+    }
+  );
   }
 
   registrarPerro() {
