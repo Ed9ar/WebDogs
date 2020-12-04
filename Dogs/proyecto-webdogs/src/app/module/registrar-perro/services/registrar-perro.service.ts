@@ -60,6 +60,7 @@ export class RegistrarPerroService {
   clasePerroAgregadoAnunciada$ = this.perroAgregado.asObservable();
 
 
+<<<<<<< Updated upstream
   insertarPerro(perros: Perro){
     this.http.post<Perro>(this.endpoint, perros).subscribe({
       next: data =>{
@@ -74,6 +75,11 @@ export class RegistrarPerroService {
   /*
   updatePerro(perros: Perro, id:String){
     this.http.put<Perro>(this.endpoint+"/"+id, perros).subscribe({
+=======
+  insertarPerro(fd: FormData){
+    
+    this.http.post<FormData>(this.endpoint, fd).subscribe({
+>>>>>>> Stashed changes
       next: data =>{
         console.log("datos", data);
       },error: error =>{
@@ -83,14 +89,4 @@ export class RegistrarPerroService {
     })
   }
 
-  deletePerro(id:String){
-    this.http.delete(this.endpoint+"/"+id).subscribe({
-      next: data =>{
-        console.log("datos", data);
-      },error: error =>{
-        console.error( ' error!', error);
-      }
-      
-    })
-  }*/
 }

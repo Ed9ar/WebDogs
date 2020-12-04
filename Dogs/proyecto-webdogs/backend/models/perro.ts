@@ -3,6 +3,7 @@ import * as mongoose from 'mongoose';
 const perros = new mongoose.Schema({
     nombre: String,
     raza: String,
+    tamanio: String,
     edad: Number,
 });
 

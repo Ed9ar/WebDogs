@@ -28,6 +28,12 @@
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@ngrx/schematics": "^10.0.1",
     "@types/chart.js": "^2.9.28",
+<<<<<<< Updated upstream
+=======
+    "@types/multer": "^1.4.4",
+    "@types/uuid": "^8.3.0",
+    "axios": "^0.21.0",
+>>>>>>> Stashed changes
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.2",
     "chart.js": "^2.9.4",
@@ -37,8 +43,14 @@
     "mongoose": "^5.10.15",
     "morgan": "^1.10.0",
     "ng2-charts": "^2.4.2",
+<<<<<<< Updated upstream
+=======
+    "ng2-file-upload": "^1.4.0",
+    "ngx-webstorage-service": "^4.1.0",
+>>>>>>> Stashed changes
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "uuid": "^8.3.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

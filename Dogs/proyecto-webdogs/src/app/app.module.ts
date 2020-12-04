@@ -28,6 +28,16 @@ import { environment as env } from '../environments/environment';
 import { LoginButtonComponent } from './main-components/login-button/login-button.component';
 import { RegistroButtonComponent } from './main-components/registro-button/registro-button.component';
 import { LogoutButtonComponent } from './main-components/logout-button/logout-button.component';
+<<<<<<< Updated upstream
+=======
+import { ReactiveFormsModule } from "@angular/forms";
+import { FileUploadModule } from 'ng2-file-upload';
+import { FileSelectDirective } from 'ng2-file-upload';
+
+ 
+
+//import { StorageServiceModule } from 'ngx-webstorage-service';
+>>>>>>> Stashed changes
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
@@ -60,6 +70,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+<<<<<<< Updated upstream
+=======
+    ReactiveFormsModule,
+    FileUploadModule,
+>>>>>>> Stashed changes
     AuthModule.forRoot({ ...env.auth })
   ],
   providers: [RegistrarPerroService, ContactoService],

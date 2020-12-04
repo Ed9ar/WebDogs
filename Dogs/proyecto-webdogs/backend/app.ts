@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as morgan from 'morgan';
+import * as path from 'path';
 import { setMaxListeners } from 'process';
 
 import setMongo from './mongo';
@@ -23,6 +24,8 @@ async function main(): Promise<any> {
     }
 
 }
+
+app.use('/uploads', express.static(path.resolve('uploads')));
 
 main();
 
