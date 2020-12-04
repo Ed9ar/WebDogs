@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
 import { animation, trigger, animateChild, group, transition, animate, style, query, state } from '@angular/animations';
@@ -22,11 +22,12 @@ export class RegistrarPerroFormularioComponent implements OnInit {
 
   help: Perro[] = [];
 
+  modeloPerro:FormGroup;
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
 
   destroy$: Subject<boolean> = new Subject<boolean>();
 
- 
+
   modeloPerro = this.formBuild.group(
     {
       perroId: ['', Validators.required],
@@ -40,6 +41,17 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   );
 
   ngOnInit(): void {
+    this.modeloPerro = this.formBuild.group(
+      {
+        perroId: ['', Validators.required],
+        nombre: ['', Validators.required],
+        raza: ['', Validators.required],
+        tamanio: ['', Validators.required],
+        edad: ['', Validators.required],
+        correoContacto: ['', Validators.required],
+        descripcion: ['',Validators.required],
+      }
+    );
     this.razaService.getRaza().pipe(takeUntil(this.destroy$)).subscribe((data2: any[])=>{
       this.razas = data2;
       console.log(data2);
@@ -53,10 +65,10 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   }
 
   enviar() {
-    
+
     /*this.help = [{'nombre': this.modeloPerro.value.nombre,
-    'raza': this.modeloPerro.value.raza, 
-    'tamanio': this.modeloPerro.value.tamanio, 
+    'raza': this.modeloPerro.value.raza,
+    'tamanio': this.modeloPerro.value.tamanio,
     'edad': this.modeloPerro.value.edad,
     'correoContacto': this.modeloPerro.value.correoContacto,
     'descripcion': this.modeloPerro.value.descripcion,
