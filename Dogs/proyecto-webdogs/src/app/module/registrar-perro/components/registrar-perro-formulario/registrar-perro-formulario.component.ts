@@ -36,6 +36,7 @@ export class RegistrarPerroFormularioComponent implements OnInit {
         edad: ['', [Validators.required, Validators.min(1)]],
         correoContacto: ['',  [Validators.required, Validators.email]],
         descripcion: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(255)]],
+        image: [null,Validators.required],
       }
     );
     this.razaService.getRaza().pipe(takeUntil(this.destroy$)).subscribe((data2: any[])=>{
