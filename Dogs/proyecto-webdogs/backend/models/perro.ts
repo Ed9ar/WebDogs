@@ -5,7 +5,7 @@ const perros = new mongoose.Schema({
     type: String,
     minlength: 2,
     maxlength: 255,
-    required: [true, "El nombre de tener más de 2 caracteres y no debe tener números"],
+    required: [true, "El nombre debe tener más de 2 caracteres y no debe tener números"],
 
   },
   raza: {
