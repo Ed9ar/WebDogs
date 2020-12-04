@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
 import { animation, trigger, animateChild, group, transition, animate, style, query, state } from '@angular/animations';
@@ -22,27 +22,28 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   razas: object[] = [];
 
   help: Perro[] = [];
-  modeloPerro: FormGroup;
-
 
   imagePreview: string;
+
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
 
   destroy$: Subject<boolean> = new Subject<boolean>();
 
+ 
+  modeloPerro = this.formBuild.group(
+    {
+      perroId: ['', Validators.required],
+      nombre: ['', Validators.required],
+      raza: ['', Validators.required],
+      tamanio: ['', Validators.required],
+      edad: ['', Validators.required],
+      correoContacto: ['', Validators.required],
+      descripcion: ['',Validators.required],
+      image: [null,Validators.required],
+    }
+  );
 
   ngOnInit(): void {
-    this.modeloPerro = this.formBuild.group(
-      {
-        perroId: ['', Validators.required],
-        nombre: ['', [Validators.required, Validators.minLength(2)]],
-        raza: ['', [Validators.required, Validators.minLength(2)]],
-        tamanio: ['', Validators.required],
-        edad: ['', [Validators.required, Validators.min(1)]],
-        correoContacto: ['',  [Validators.required, Validators.email]],
-        descripcion: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(255)]],
-      }
-    );
     this.razaService.getRaza().pipe(takeUntil(this.destroy$)).subscribe((data2: any[])=>{
       this.razas = data2;
       console.log(data2);
@@ -56,10 +57,10 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   }
 
   enviar() {
-
+    
     /*this.help = [{'nombre': this.modeloPerro.value.nombre,
-    'raza': this.modeloPerro.value.raza,
-    'tamanio': this.modeloPerro.value.tamanio,
+    'raza': this.modeloPerro.value.raza, 
+    'tamanio': this.modeloPerro.value.tamanio, 
     'edad': this.modeloPerro.value.edad,
     'correoContacto': this.modeloPerro.value.correoContacto,
     'descripcion': this.modeloPerro.value.descripcion,
