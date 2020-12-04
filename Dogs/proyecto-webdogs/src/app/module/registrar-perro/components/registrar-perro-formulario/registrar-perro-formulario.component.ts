@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
+import { animation, trigger, animateChild, group, transition, animate, style, query, state } from '@angular/animations';
+import { Perro } from '../../../../models/perro.model';
+import { Subject } from 'rxjs';
+import {  takeUntil } from 'rxjs/operators';
+import { RazaService } from '../../../../main-services/raza.service';
 
 @Component({
   selector: 'app-registrar-perro-formulario',
@@ -13,7 +18,11 @@ export class RegistrarPerroFormularioComponent implements OnInit {
 
   suscribe: Subscription;
 
-  constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService) { }
+  razas: object[] = [];
+
+  constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
+
+  destroy$: Subject<boolean> = new Subject<boolean>();
 
  
   modeloPerro = this.formBuild.group(
@@ -28,7 +37,17 @@ export class RegistrarPerroFormularioComponent implements OnInit {
     }
   );
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.razaService.getRaza().pipe(takeUntil(this.destroy$)).subscribe((data2: any[])=>{
+      this.razas = data2;
+      console.log(data2);
+    });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    // Unsubscribe from the subject
+    this.destroy$.unsubscribe();
   }
 
   enviar() {

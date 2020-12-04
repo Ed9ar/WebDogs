@@ -8,7 +8,7 @@
                         <h5 class="card-title">{{perro.nombre}}</h5>
                         <p i18n="Descripcio perro|Acerca de nosotros@@perro1" class="card-text">{{perro.descripcion}}</p>
                         <p class="card-text">{{perro.raza}}</p>
-                        <a i18n="Conoce boton|Acerca de nosotros@@botonConoce"  class=" nav-link btn btn-outline-success btn-sm" routerLink="/perfil-perro">Conocer</a>
+                        <a i18n="Conoce boton|Acerca de nosotros@@botonConoce"  class=" nav-link btn btn-outline-success btn-sm" routerLink="/perfil-perro" (click)="enviarPerro(perro)">Conocer</a>
                         <a  class=" nav-link btn btn-outline-danger btn-sm" routerLink="/perfil-perro"><i class="far fa-heart"></i></a>
                     </div>
                 </div>

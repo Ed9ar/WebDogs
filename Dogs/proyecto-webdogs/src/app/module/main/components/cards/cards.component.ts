@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PerrosService } from '../../../../main-services/perros.service';
+import { GeneralService } from '../../../../services/general.service';
 
 import { Perro } from '../../../../models/perro.model';
 import {  takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 
 
 
@@ -16,8 +17,12 @@ export class CardsComponent implements OnInit {
 
   perrosObjeto: Perro[] = [];
 
+  confirmada = false;
+
+  subscribe: Subscription;
+
   destroy$: Subject<boolean> = new Subject<boolean>();
-  constructor(private perrosService: PerrosService) {}
+  constructor(private perrosService: PerrosService, private generalService: GeneralService) {}
 
 
   estilo = false;
@@ -35,6 +40,11 @@ export class CardsComponent implements OnInit {
     this.destroy$.next(true);
     // Unsubscribe from the subject
     this.destroy$.unsubscribe();
+  }
+
+  enviarPerro(perro : Perro){
+    this.confirmada = true;
+    this.generalService.pasarPerroInformacion(perro);
   }
 
 }

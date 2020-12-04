@@ -14,16 +14,19 @@
                     <input type="email" formControlName="nombrePerro" class="form-control" id="exampleFormControlInput1">
                 </div>
                 <div class="form-group">
-                    <label i18n="Label raza|Acerca de nosotros@@labelRaza" for="exampleFormControlInput1">Raza</label>
-                    <input type="email" class="form-control" formControlName="raza" id="exampleFormControlInput1">
-                </div>
-                <div class="form-group">
                     <label i18n="Label tamaño|Acerca de nosotros@@labelTamano" for="exampleFormControlSelect1">Selecciona el tamaño</label>
                     <select class="form-control" formControlName="tamanio" id="exampleFormControlSelect1">
                         <option i18n="Select|Acerca de nosotros@@select">Selecciona...</option>
                         <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Pequeño</option>
                         <option i18n="Opcion mediano|Acerca de nosotros@@opcionMediano">Mediano</option>
                         <option i18n="Opcion grande|Acerca de nosotros@@opcionGrande">Grande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label i18n="Label tamaño|Acerca de nosotros@@labelTamano" for="exampleFormControlSelect1">Selecciona la raza</label>
+                    <select class="form-control" formControlName="raza" id="exampleFormControlSelect1">
+                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Selecciona una raza...</option>
+                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque"  *ngFor="let raza of razas">{{raza.name}}</option>
                     </select>
                 </div>
 

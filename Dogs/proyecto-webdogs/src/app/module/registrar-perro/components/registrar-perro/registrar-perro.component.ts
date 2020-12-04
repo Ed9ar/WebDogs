@@ -4,6 +4,7 @@ import { animation, trigger, animateChild, group, transition, animate, style, qu
 import { Perro } from '../../../../models/perro.model';
 import { Subject } from 'rxjs';
 import {  takeUntil } from 'rxjs/operators';
+import { RazaService } from '../../../../main-services/raza.service';
 
 @Component({
   selector: 'app-registrar-perro',
@@ -34,9 +35,11 @@ export class RegistrarPerroComponent implements OnInit {
 
   perros: Perro[] = [];
 
+  razas: object[] = [];
+
   destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private registrarperroService: RegistrarPerroService) {}
+  constructor(private registrarperroService: RegistrarPerroService, private razaService: RazaService) {}
    
 
   estilo = false;
@@ -50,6 +53,11 @@ export class RegistrarPerroComponent implements OnInit {
     this.registrarperroService.getPerros().pipe(takeUntil(this.destroy$)).subscribe((data: any[])=>{
     this.perros = data;
     console.log(data);
+  })  ;
+
+  this.razaService.getRaza().pipe(takeUntil(this.destroy$)).subscribe((data2: any[])=>{
+    this.razas = data2;
+    console.log(data2);
   })  ;
   }
 
