@@ -7,6 +7,7 @@ import { Perro } from '../../../../models/perro.model';
 import { Subject } from 'rxjs';
 import {  takeUntil } from 'rxjs/operators';
 import { RazaService } from '../../../../main-services/raza.service';
+import { mimeType} from './mime-type.validator';
 
 @Component({
   selector: 'app-registrar-perro-formulario',
@@ -22,9 +23,13 @@ export class RegistrarPerroFormularioComponent implements OnInit {
 
   help: Perro[] = [];
   modeloPerro: FormGroup;
+
+
+  imagePreview: string;
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
 
   destroy$: Subject<boolean> = new Subject<boolean>();
+
 
   ngOnInit(): void {
     this.modeloPerro = this.formBuild.group(
@@ -64,8 +69,21 @@ export class RegistrarPerroFormularioComponent implements OnInit {
     //this.razas.push(this.modeloPerro.value)
     //this.razas.push(url:'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0])
     //console.log(this.modeloPerro.value+{'url':'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0]})
-    this.registrarPerroService.insertarPerro(this.modeloPerro.value);
+    this.registrarPerroService.insertarPerro(this.modeloPerro.value, this.modeloPerro.value.image);
     this.modeloPerro.reset();
+  }
+
+  onImagePicked(event: Event){
+    const file = (event.target as HTMLInputElement).files[0];
+    this.modeloPerro.patchValue({image: file});
+    this.modeloPerro.get('image').updateValueAndValidity();
+    console.log(file);
+    console.log(this.modeloPerro);
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.imagePreview = reader.result as string;
+    };
+    reader.readAsDataURL(file);
   }
 
 }
