@@ -6,7 +6,7 @@ const perros = new mongoose.Schema({
     edad: Number,
     descripcion: String,
     correoContacto: String,
-    //url:String
+    url: String,
 });
 
 const Perro = mongoose.model("Perro", perros);
