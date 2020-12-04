@@ -76,14 +76,11 @@
                     </span>
                     </span>
                 </div>
-                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('image').errors && (modeloPerro.get('image').touched || modeloPerro.get('image').dirty)}">
+                <div class="form-group">
                     <!-- <label i18n="Form desc|Acerca de nosotros@@formDesc" for="exampleFormControlInput1">Descripci&oacute;n del perro</label>
                 <textarea formControlName="descripcion" class="form-control" id="#" rows="3" ></textarea> -->
                     <button mat-stroked-button type="button" class="btn btn-info" (click)="filePicker.click()">Img</button>
-                    <input type="file" formControlName="image" class="form-control" #filePicker (change)="onImagePicked($event)">
-                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('correoContacto').errors.required">
-                    <em>Imagen requerida</em>
-                </span>
+                    <input type="file" #filePicker (change)="onImagePicked($event)">
                 </div>
                 <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
                     <img [src]="imagePreview">
