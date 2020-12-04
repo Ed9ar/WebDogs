@@ -1,4 +1,5 @@
 import Perro from '../models/perro';
+import  axios  from 'axios';
 
 class PerroController{
     getAll = async(req, res) =>{
@@ -64,6 +65,28 @@ class PerroController{
             return res.status(400).json({ error: err.message });
         }
     }
+
+    getImages = async(req, res) =>
+            {
+                try{
+                    
+                    let query_params = {
+                        breed_ids: req.params.id,
+                        limit:1
+                    }
+
+                    let response = await axios.get('https://api.thedogapi.com/v1/images/search?breed_ids=22') 
+                    
+                    /*pagination_count = response.headers['pagination-count'];
+                    images = response.data 
+                    current_image = images[0]*/
+                    //console.log("-- ("+this.images.length +") Images from TheCatAPI.com")
+                    //console.log( this.pagination_count ,'images available for this query.')
+                    return res.status(201).response;
+                }catch(err){
+                    console.log(err)
+                }
+            }
 }
 
 export default PerroController;

@@ -13,6 +13,7 @@ function setRoutes(app):void{
     router.route("/perro/:id").put(perroController.update);
     router.route("/perro/:id").delete(perroController.delete);
 
+
     //Denuncias
     const denunciaController = new DenunciaController();
     router.route("/denuncia").get(denunciaController.getAll);

@@ -20,6 +20,8 @@ export class RegistrarPerroFormularioComponent implements OnInit {
 
   razas: object[] = [];
 
+  help: Perro[] = [];
+
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
 
   destroy$: Subject<boolean> = new Subject<boolean>();
@@ -28,7 +30,7 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   modeloPerro = this.formBuild.group(
     {
       perroId: ['', Validators.required],
-      nombrePerro: ['', Validators.required],
+      nombre: ['', Validators.required],
       raza: ['', Validators.required],
       tamanio: ['', Validators.required],
       edad: ['', Validators.required],
@@ -51,7 +53,19 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   }
 
   enviar() {
-    console.log(this.modeloPerro.value)
+    
+    /*this.help = [{'nombre': this.modeloPerro.value.nombre,
+    'raza': this.modeloPerro.value.raza, 
+    'tamanio': this.modeloPerro.value.tamanio, 
+    'edad': this.modeloPerro.value.edad,
+    'correoContacto': this.modeloPerro.value.correoContacto,
+    'descripcion': this.modeloPerro.value.descripcion,
+    'url': 'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0]}];
+    console.log("Aqui esta el help");
+    console.log(this.help);*/
+    //this.razas.push(this.modeloPerro.value)
+    //this.razas.push(url:'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0])
+    //console.log(this.modeloPerro.value+{'url':'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0]})
     this.registrarPerroService.insertarPerro(this.modeloPerro.value);
     this.modeloPerro.reset();
   }

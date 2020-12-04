@@ -26,7 +26,7 @@
                     <label i18n="Label tamaño|Acerca de nosotros@@labelTamano" for="exampleFormControlSelect1">Selecciona la raza</label>
                     <select class="form-control" formControlName="raza" id="exampleFormControlSelect1">
                         <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Selecciona una raza...</option>
-                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque"  *ngFor="let raza of razas">{{raza.name}}</option>
+                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque"  *ngFor="let raza of razas">{{raza.id}} {{raza.name}}</option>
                     </select>
                 </div>
 
