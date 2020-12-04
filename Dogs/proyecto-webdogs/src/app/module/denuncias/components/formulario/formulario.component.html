@@ -5,78 +5,43 @@
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
-    </div>
-    <div class="modal-body">
-        <form [formGroup]="modeloDenuncias" (ngSubmit)="enviar()">
-            <div class="form-group" [ngClass]="{'has-error' : modeloDenuncias.get('descripcion').errors && (modeloDenuncias.get('descripcion').touched || modeloDenuncias.get('descripcion').dirty)}">
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="modeloDenuncias" (ngSubmit)="enviar()">
+            <div class="form-group">
                 <label i18n="Denuncia titulo|Titulo de la denuncia@@titulodenuncia" for="exampleFormControlInput1">Titulo de la denuncia:</label>
-                <input type="text" formControlName="descripcion" class="form-control" id="exampleFormControlInput1 descripcion">
-                <span class="help-block" *ngIf="modeloDenuncias.get('descripcion').errors && (modeloDenuncias.get('descripcion').touched || modeloDenuncias.get('descripcion').dirty)">
-                  <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('descripcion').errors.required">
-                      <em>T&iacute;tulo requerido</em>
-                  </span>
-                <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('descripcion').errors.minlength || modeloDenuncias.get('descripcion').errors.maxlength">
-                    <em>T&iacute;tulo debe tener m&aacute;s de 2 caracteres y menos de 255 caracteres
-                    </em>
-                  </span>
-                </span>
-            </div>
-            <div class="form-group" [ngClass]="{'has-error' : modeloDenuncias.get('fecha').errors && (modeloDenuncias.get('fecha').touched || modeloDenuncias.get('fecha').dirty)}">
-                <label i18n="Denuncia fecha|Fecha de la denuncia@@fechaDenuncia" for="exampleFormControlInput1">Fecha de la denuncia:</label>
-                <input type="date" formControlName="fecha" class="form-control" id="exampleFormControlInput1 fecha">
-                <span class="help-block" *ngIf="modeloDenuncias.get('fecha').errors && (modeloDenuncias.get('fecha').touched || modeloDenuncias.get('fecha').dirty)">
-                  <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('fecha').errors.required">
-                      <em>Fecha requerida</em>
-                  </span>
-                </span>
-            </div>
-            <div class="form-group" [ngClass]="{'has-error' : modeloDenuncias.get('responsableDenuncia').errors && (modeloDenuncias.get('responsableDenuncia').touched || modeloDenuncias.get('responsableDenuncia').dirty)}">
-                <label i18n="Denuncia anonima|anonima?@@anonima" for="exampleFormControlInput1">Nombre del denunciante o escribir "An&oacute;nimo" si se desea:</label>
-                <input type="text" formControlName="responsableDenuncia" class="form-control" id="exampleFormControlInput1 responsableDenuncia">
-                <span class="help-block" *ngIf="modeloDenuncias.get('responsableDenuncia').errors && (modeloDenuncias.get('responsableDenuncia').touched || modeloDenuncias.get('responsableDenuncia').dirty)">
-                  <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('responsableDenuncia').errors.required">
-                      <em>Responsable de la denuncia requerido</em>
-                  </span>
-                <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('responsableDenuncia').errors.minlength || modeloDenuncias.get('responsableDenuncia').errors.maxlength">
-                    <em>Responsable de la deuncia debe tener m&aacute;s de 2 caracteres y menos de 255 caracteres
-                    </em>
-                  </span>
-                </span>
+                <input type="text" formControlName="descripcion" class="form-control" id="exampleFormControlInput1" >
 
             </div>
-            <div class="form-group" [ngClass]="{'has-error' : modeloDenuncias.get('ubicacion').errors && (modeloDenuncias.get('ubicacion').touched || modeloDenuncias.get('ubicacion').dirty)}">
-                <label i18n="Denuncia ubicacion|Ubicacion de la denuncia@@ubicacionDenuncia" for="exampleFormControlInput1">Ubicaci&oacute;n de la denuncia:</label>
-                <input type="text" formControlName="ubicacion" class="form-control" id="exampleFormControlInput1 ubicacion">
-                <span class="help-block" *ngIf="modeloDenuncias.get('ubicacion').errors && (modeloDenuncias.get('ubicacion').touched || modeloDenuncias.get('ubicacion').dirty)">
-                  <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('ubicacion').errors.required">
-                      <em>Ubicaci&oacute;n requerida</em>
-                  </span>
-                <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('ubicacion').errors.minlength || modeloDenuncias.get('ubicacion').errors.maxlength">
-                    <em>Ubicaci&oacute;n debe tener m&aacute;s de 2 caracteres y menos de 255 caracteres
-                    </em>
-                  </span>
-                </span>
+            <div class="form-group">
+                <label i18n="Denuncia fecha|Fecha de la denuncia@@fechaDenuncia" for="exampleFormControlInput1">Fecha de la denuncia:</label>
+                <input type="date" formControlName="fecha" class="form-control" id="exampleFormControlInput1" >
+
+
             </div>
-            <div class="form-group" [ngClass]="{'has-error' : modeloDenuncias.get('estatus').errors && (modeloDenuncias.get('estatus').touched || modeloDenuncias.get('estatus').dirty)}">
-                <label i18n="Denuncia estatus|Estatus de la denuncia@@estatus" for="exampleFormControlInput1">¿Cu&aacute;l es el estatus de la denuncia?:</label>
-                <input type="text" formControlName="estatus" class="form-control" id="exampleFormControlInput1 estatus">
-                <span class="help-block" *ngIf="modeloDenuncias.get('estatus').errors && (modeloDenuncias.get('estatus').touched || modeloDenuncias.get('estatus').dirty)">
-                  <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('estatus').errors.required">
-                      <em>Estatus requerido</em>
-                  </span>
-                <span class="span-alert reg-alert" *ngIf="modeloDenuncias.get('estatus').errors.minlength || modeloDenuncias.get('estatus').errors.maxlength">
-                    <em>Estatus debe tener m&aacute;s de 2 caracteres y menos de 255 caracteres
-                    </em>
-                  </span>
-                </span>
+            <div class="form-group">
+                <label i18n="Denuncia anonima|anonima?@@anonima" for="exampleFormControlInput1">Tu denuncia será anónima? :</label>
+                <input type="text" formControlName="responsableDenuncia" class="form-control" id="exampleFormControlInput1" >
+
+
             </div>
-        </form>
-    </div>
-    <div class="modal-footer">
+            <div class="form-group">
+                <label i18n="Denuncia ubicacion|Ubicacion de la denuncia@@ubicacionDenuncia" for="exampleFormControlInput1">Ubicacion de la denuncia:</label>
+                <input type="text" formControlName="ubicacion" class="form-control" id="exampleFormControlInput1" >
+
+            </div>
+            <div class="form-group">
+                <label i18n="Denuncia estatus|Estatus de la denuncia@@estatus" for="exampleFormControlInput1">Estatus de la denuncia:</label>
+                <input type="text" formControlName="estatus" class="form-control" id="exampleFormControlInput1" >
+
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
         <button i18n="Guardar|Boton para guardar denuncia@@guardar" type="button" class="btn btn-primary" (click)="enviar()">Guardar</button>
         <button i18n="Cancelar|Boton para cancelar denuncia@@cancelar" type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancelar</button>
-    </div>
-</ng-template>
+      </div>
+  </ng-template>
 
-<button type="button" class="btn btn-secondary" (click)="open(content)">+</button>
-<!--<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>-->
+  <button type="button" class="btn btn-secondary" (click)="open(content)">+</button>
+  <!--<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>-->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
 import { animation, trigger, animateChild, group, transition, animate, style, query, state } from '@angular/animations';
@@ -22,10 +22,9 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   razas: object[] = [];
 
   help: Perro[] = [];
-  modeloPerro: FormGroup;
-
 
   imagePreview: string;
+  
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
 
   destroy$: Subject<boolean> = new Subject<boolean>();
@@ -57,10 +56,10 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   }
 
   enviar() {
-
+    
     /*this.help = [{'nombre': this.modeloPerro.value.nombre,
-    'raza': this.modeloPerro.value.raza,
-    'tamanio': this.modeloPerro.value.tamanio,
+    'raza': this.modeloPerro.value.raza, 
+    'tamanio': this.modeloPerro.value.tamanio, 
     'edad': this.modeloPerro.value.edad,
     'correoContacto': this.modeloPerro.value.correoContacto,
     'descripcion': this.modeloPerro.value.descripcion,
