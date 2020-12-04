@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 
 const denuncias = new mongoose.Schema({
-    fecha: {
+  fecha: {
     type: String,
     required: [true, "La fecha es requerida"]
     },
@@ -29,20 +29,9 @@ const denuncias = new mongoose.Schema({
       maxlength: 255,
       required: [true, "El estatus es requerido y debe tener entre 2 y 255 caracteres"],
     },
-    correoContacto: {
-      type: String,
-      minlength: 4,
-      maxlength: 255,
-      required: [true, "Email no puede estar vacío"],
-    },
+    correoContacto: String
 });
 
 const Denuncia = mongoose.model("Denuncia", denuncias);
 
 export default Denuncia;
-
-denuncias.path('correoContacto').validate(function (correoContacto) {
-  var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-  return emailRegex.test(correoContacto.email);
-}, 'Email no puede estar vacio y debe ser válido')
-

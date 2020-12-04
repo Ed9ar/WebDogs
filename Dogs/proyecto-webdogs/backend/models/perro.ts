@@ -39,8 +39,3 @@ const perros = new mongoose.Schema({
 const Perro = mongoose.model("Perro", perros);
 
 export default Perro;
-
-perros.path('correoContacto').validate(function (correoContacto) {
-  var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-  return emailRegex.test(correoContacto.email);
-}, 'Email no puede estar vacio y debe ser válido')
