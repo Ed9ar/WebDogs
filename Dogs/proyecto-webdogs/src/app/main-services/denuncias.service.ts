@@ -56,6 +56,18 @@ export class DenunciasService {
     })
   }
 
+  editarDenuncia(denuncias: Denuncia, id:string) {
+    this.http.put<Denuncia>(this.endpoint+"/"+id, denuncias).subscribe({
+      next: data => {
+            console.log("datos",data)
+        },
+        error: error => {
+
+            console.error(' error!', error);
+        }
+    })
+  }
+
   eliminarDenuncia(id: string) {
     this.http.delete(this.endpoint+"/"+id).subscribe({
       next: data => {

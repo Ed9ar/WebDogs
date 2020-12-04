@@ -1,7 +1,7 @@
 <ng-template #content let-c="close" let-d="dismiss">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Registrar una denuncia</h4>
+        <h4 class="modal-title" id="modal-basic-title">Eliminar una denuncia</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -15,4 +15,4 @@
       </div>
 </ng-template>
 
-<button type="button" class="btn btn-danger" (click)="open(content)">D</button>
+<a  class=" nav-link btn btn-danger btn-sm" (click)="open(content)"><i class="fa fa-trash"></i></a>

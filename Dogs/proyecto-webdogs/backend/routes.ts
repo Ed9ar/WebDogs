@@ -19,6 +19,10 @@ function setRoutes(app):void{
     router.route("/denuncia").get(denunciaController.getAll);
     router.route("/denuncia/count").get(denunciaController.count);
     router.route("/denuncia").post(denunciaController.insert);
+    router.route("/denuncia/:id").get(denunciaController.get);
+    router.route("/denuncia/:id").put(denunciaController.update);
+    router.route("/denuncia/:id").delete(denunciaController.delete);
+
     app.use('/api', router);
 }
 
