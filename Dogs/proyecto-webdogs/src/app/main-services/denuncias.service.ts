@@ -85,7 +85,7 @@ export class DenunciasService {
         },
         error: error => {
             console.error(' error!', error);
-            window.alert("Ooops, intenta de nuevo por favor");
+            window.alert("Tu denuncia se ha eliminado");
         }
     })
   }
