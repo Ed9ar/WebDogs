@@ -22,14 +22,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>20-12-2020</td>
-                <td i18n="Pista|Texto pista @@pista">Selecciona Nuevo para ver formulario</td>
-                <td i18n="Anon si|Estado de denuncia anonima @@anonSi">Si</td>
-                <td i18n="Info tabla| Info tabla @@infoTabla">agrega y veras en la tabla</td>
-                <td i18n="Status|Status @@status">En Proceso</td>
-                <td><app-cerrar-sesion></app-cerrar-sesion><app-editar></app-editar></td>
-              </tr>
               <tr *ngFor="let den of denunciasObjeto">
                 
                 <td>{{den.fecha}}</td>

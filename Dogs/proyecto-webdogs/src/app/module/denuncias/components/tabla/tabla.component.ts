@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Directive, EventEmitter, Input, Output, QueryList, ViewChildren, Renderer2, HostListener, ElementRef } from '@angular/core';
 import { DenunciasService } from './../../../../main-services/denuncias.service';
 //import { DenunciaService } from './../../services/denuncia.service';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +15,9 @@ import { Subject } from 'rxjs';
   styleUrls: ['./tabla.component.scss'],
   providers: [NgbModalConfig, NgbModal]
 })
+
+
+
 export class TablaComponent implements OnInit {
   /*denunciasObjeto: object[] = [];
   indice = 0;
@@ -31,6 +34,8 @@ export class TablaComponent implements OnInit {
   ngOnInit(): void {
   }*/
 
+
+
   
   denunciasObjeto: Denuncia[] = [];
 
@@ -46,12 +51,11 @@ export class TablaComponent implements OnInit {
   );
 
   destroy$: Subject<boolean> = new Subject<boolean>();
-  constructor(private formBuild:FormBuilder, config: NgbModalConfig, private modalService: NgbModal, private denunciasService: DenunciasService) {
+  constructor(private formBuild:FormBuilder, config: NgbModalConfig, private modalService: NgbModal, private denunciasService: DenunciasService,private renderer: Renderer2, private targetElm: ElementRef) {
     // customize default values of modals used by this component tree
     config.backdrop = 'static';
     config.keyboard = false;
   }
-
 
   estilo = false;
 
@@ -63,8 +67,10 @@ export class TablaComponent implements OnInit {
 
       this.denunciasService.getDenuncias().pipe(takeUntil(this.destroy$)).subscribe((data: any[])=>{
         this.denunciasObjeto = data;
+        
     })  ;
   }
+
 
   eliminar(id: string){
     console.log(id);
