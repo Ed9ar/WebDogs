@@ -8,6 +8,11 @@ const perros = new mongoose.Schema({
     maxlength: 255,
     required: [true, "El nombre debe tener más de 2 caracteres y no debe tener números"],
   },
+  tamanio: {
+    type: String,
+    required: [true, "El tamaño es requerido"],
+
+  },
   raza: {
     type: String,
     required: [true, "La raza es requerida"],
@@ -34,7 +39,7 @@ const perros = new mongoose.Schema({
     required: [true, "Email no puede estar vacío"],
 
   },
-  //url: String
+  url: String,
 });
 
 const Perro = mongoose.model("Perro", perros);
