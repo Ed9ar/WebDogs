@@ -28,6 +28,11 @@ import { environment as env } from '../environments/environment';
 import { LoginButtonComponent } from './main-components/login-button/login-button.component';
 import { RegistroButtonComponent } from './main-components/registro-button/registro-button.component';
 import { LogoutButtonComponent } from './main-components/logout-button/logout-button.component';
+import { ReactiveFormsModule } from "@angular/forms";
+
+//import { StorageServiceModule } from 'ngx-webstorage-service';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 @NgModule({
@@ -59,6 +64,8 @@ import { LogoutButtonComponent } from './main-components/logout-button/logout-bu
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AuthModule.forRoot({ ...env.auth })
   ],
   providers: [RegistrarPerroService, ContactoService],

@@ -13,7 +13,6 @@
         <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th i18n="Fecha denuncia|Columna fecha @@fechaDen" scope="col">Fecha</th>
                 <th i18n="Fecha denuncia| denuncia @@den" scope="col">Denuncia</th>
                 <th i18n="Anonima denuncia|Columna anonima @@anonCol" scope="col">Anónima</th>
@@ -24,7 +23,6 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
                 <td>20-12-2020</td>
                 <td i18n="Pista|Texto pista @@pista">Selecciona Nuevo para ver formulario</td>
                 <td i18n="Anon si|Estado de denuncia anonima @@anonSi">Si</td>
@@ -33,13 +31,13 @@
                 <td><app-cerrar-sesion></app-cerrar-sesion><app-editar></app-editar></td>
               </tr>
               <tr *ngFor="let den of denunciasObjeto">
-                <th scope="row">{{den.idDenuncia}}</th>
-                <td>{{den.fechaDenuncia}}</td>
-                <td>{{den.tituloDenuncia}}</td>
-                <td>{{den.anonimatoDenuncia}}</td>
-                <td>{{den.ubicacionDenuncia}}</td>
-                <td>{{den.estatusDenuncia}}</td>
-                <td><button type="button" class="btn btn-success">E</button>  <button type="button" class="btn btn-danger">D</button></td>
+                
+                <td>{{den.fecha}}</td>
+                <td>{{den.descripcion}}</td>
+                <td>{{den.responsableDenuncia}}</td>
+                <td>{{den.ubicacion}}</td>
+                <td>{{den.estatus}}</td>
+                <td><button type="button" class="btn btn-success">E</button>  <button type="button" class="btn btn-danger" (click)="eliminar(den._id)">D</button></td>
               </tr>
             </tbody>
           </table>

@@ -185,7 +185,9 @@ h1,
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+.btn-sm:hover,
+.btn-sm:active {
     background-color: #8ECEFC;
 }
 

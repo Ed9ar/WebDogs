@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Perro } from '../../../models/perro.model';
+import { Perro } from '../models/perro.model';
 import { Observable, of, throwError } from 'rxjs';
 
 import {
@@ -10,15 +10,15 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 
-
 import { map, retry, catchError, tap } from 'rxjs/operators';
 import { $ } from 'protractor';
 import { createIncrementalCompilerHost } from 'typescript';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class RegistrarPerroService {
+export class PerrosService {
 
   endpoint = 'http://localhost:3000/api/perro';
 
@@ -43,7 +43,7 @@ export class RegistrarPerroService {
     }else{
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    window.alert(errorMessage); 
+    window.alert(errorMessage); //Meter gui bonitas
     return throwError(errorMessage);
   }
 
@@ -60,13 +60,7 @@ export class RegistrarPerroService {
   clasePerroAgregadoAnunciada$ = this.perroAgregado.asObservable();
 
 
-  insertarPerro(perros: Perro, image: File){
-    console.log("aiuhauhiauh");
-    console.log(image);
-    
-    const postData = new FormData();
-    postData.append("image", image, perros.nombrePerro);
-    
+  insertarPerro(perros: Perro){
     this.http.post<Perro>(this.endpoint, perros).subscribe({
       next: data =>{
         console.log("datos", data);
