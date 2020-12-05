@@ -37,7 +37,7 @@ const denuncias = new mongoose.Schema({
     },
     correoContacto: String
 });
-denuncias.plugin(mongooseIntl, { languages: ['en'], defaultLanguage: 'es' });
+denuncias.plugin(mongooseIntl, { languages: ['es', 'en'], defaultLanguage: 'es' });
 
 const Denuncia = mongoose.model("Denuncia", denuncias);
 
