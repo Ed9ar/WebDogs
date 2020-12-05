@@ -6,10 +6,11 @@
                     <img class="card-img-top" [src]="'http://localhost:3000/' + perro.url" alt="First dog">
                     <div class="card-body">
                         <h5 class="card-title">{{perro.nombre}}</h5>
-                        <p i18n="Descripcio perro|Acerca de nosotros@@perro1" class="card-text">{{perro.descripcion}}</p>
+                        <p class="card-text"> Edad : {{perro.edad}}</p>
                         <p class="card-text">{{perro.raza}}</p>
-                        <a i18n="Conoce boton|Acerca de nosotros@@botonConoce"  class=" nav-link btn btn-outline-success btn-sm" routerLink="/perfil-perro" (click)="enviarPerro(perro)">Conocer</a>
-                        <a  class=" nav-link btn btn-outline-danger btn-sm" routerLink="/perfil-perro"><i class="far fa-heart"></i></a>
+                        <p i18n="Descripcio perro|Acerca de nosotros@@perro1" class="card-text">{{perro.descripcion}}</p>
+                        <a href="mailto:'{{perro.correoContacto}}'" i18n="Conoce boton|Acerca de nosotros@@botonConoce"  class=" nav-link btn btn-outline-success btn-sm">Contactar</a>
+                        <!-- <a  class=" nav-link btn btn-outline-danger btn-sm" routerLink="/perfil-perro"><i class="far fa-heart"></i></a> -->
                     </div>
                 </div>
             </div>
