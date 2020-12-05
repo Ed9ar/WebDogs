@@ -60,14 +60,9 @@ export class RegistrarPerroService {
   clasePerroAgregadoAnunciada$ = this.perroAgregado.asObservable();
 
 
-  insertarPerro(perros: Perro, image: File){
-    console.log("aiuhauhiauh");
-    console.log(image);
+  insertarPerro(fd:FormData){
     
-    const postData = new FormData();
-    postData.append("image", image, perros.nombrePerro);
-    
-    this.http.post<Perro>(this.endpoint, perros).subscribe({
+    this.http.post<FormData>(this.endpoint, fd).subscribe({
       next: data =>{
         console.log("datos", data);
       },error: error =>{

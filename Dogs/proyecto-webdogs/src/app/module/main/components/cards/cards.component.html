@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-4 mb-3" *ngFor="let perro of perrosObjeto">
                 <div class="card h-100">
-                    <img class="card-img-top" src="../../../../../assets/img/loginDog.jpg" alt="First dog">
+                    <img class="card-img-top" [src]="'http://localhost:3000/' + perro.url" alt="First dog">
                     <div class="card-body">
                         <h5 class="card-title">{{perro.nombre}}</h5>
                         <p i18n="Descripcio perro|Acerca de nosotros@@perro1" class="card-text">{{perro.descripcion}}</p>

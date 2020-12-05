@@ -18,7 +18,7 @@ import { mimeType} from './mime-type.validator';
 export class RegistrarPerroFormularioComponent implements OnInit {
 
   suscribe: Subscription;
-
+  selectedFile: File;
   razas: object[] = [];
 
   help: Perro[] = [];
@@ -58,20 +58,15 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   }
 
   enviar() {
-
-    /*this.help = [{'nombre': this.modeloPerro.value.nombre,
-    'raza': this.modeloPerro.value.raza,
-    'tamanio': this.modeloPerro.value.tamanio,
-    'edad': this.modeloPerro.value.edad,
-    'correoContacto': this.modeloPerro.value.correoContacto,
-    'descripcion': this.modeloPerro.value.descripcion,
-    'url': 'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0]}];
-    console.log("Aqui esta el help");
-    console.log(this.help);*/
-    //this.razas.push(this.modeloPerro.value)
-    //this.razas.push(url:'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0])
-    //console.log(this.modeloPerro.value+{'url':'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0]})
-    this.registrarPerroService.insertarPerro(this.modeloPerro.value, this.modeloPerro.value.image);
+    const fd = new FormData();
+    fd.append('file', this.selectedFile);
+    fd.append('nombre', this.modeloPerro.value.nombre);
+    fd.append('raza', this.modeloPerro.value.raza);
+    fd.append('tamanio', this.modeloPerro.value.tamanio);
+    fd.append('edad', this.modeloPerro.value.edad);
+    fd.append('correoContacto', this.modeloPerro.value.correoContacto);
+    fd.append('descripcion', this.modeloPerro.value.descripcion);
+    this.registrarPerroService.insertarPerro(fd);
     this.modeloPerro.reset();
   }
 
@@ -79,6 +74,7 @@ export class RegistrarPerroFormularioComponent implements OnInit {
     const file = (event.target as HTMLInputElement).files[0];
     this.modeloPerro.patchValue({image: file});
     this.modeloPerro.get('image').updateValueAndValidity();
+    this.selectedFile = <File>(event.target as HTMLInputElement).files[0];
     console.log(file);
     console.log(this.modeloPerro);
     const reader = new FileReader();
