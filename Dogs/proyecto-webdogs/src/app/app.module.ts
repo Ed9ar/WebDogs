@@ -33,7 +33,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 //import { StorageServiceModule } from 'ngx-webstorage-service';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
+import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -66,9 +66,40 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AuthModule.forRoot({ ...env.auth })
+    AuthModule.forRoot({
+      // The domain and clientId were configured in the previous chapter
+    domain: 'dev-55arag8d.us.auth0.com',
+    clientId: 'kEM3XNoTYqZsHwb2hm9BfKxsSlftbtYf',
+
+    // Request this audience at user authentication time
+    audience: 'http://localhost:3000/',
+
+    // Request this scope at user authentication time
+    scope: 'read:current_user',
+
+    // Specify configuration for the interceptor
+    httpInterceptor: {
+      allowedList: [
+        {
+          // Match any request that starts 'https://dev-qz51ohsc.auth0.com/api/v2/' (note the asterisk)
+          uri: 'https://dev-55arag8d.us.auth0.com/api/v2/*',
+          tokenOptions: {
+            // The attached token should target this audience
+            audience: 'https://dev-55arag8d.us.auth0.com/api/v2/',
+
+            // The attached token should have these scopes
+            scope: 'read:current_user'
+          }
+        }
+      ]
+    }
+  })
   ],
-  providers: [RegistrarPerroService, ContactoService],
+  providers: [
+    RegistrarPerroService,
+    ContactoService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

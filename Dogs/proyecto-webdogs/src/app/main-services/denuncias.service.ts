@@ -39,12 +39,15 @@ export class DenunciasService {
     return throwError(errorMessage);
   }
 
+
   getDenuncias() {
+
     console.log("en el servicio")
     return this.http.get<Denuncia[]>(this.endpoint).pipe(retry(3),catchError(this.handleError));
   }
 
   insertarDenuncia(denuncias: Denuncia) {
+
     this.http.post<Denuncia>(this.endpoint, denuncias).subscribe({
       next: data => {
             console.log("datos",data)
@@ -59,6 +62,7 @@ export class DenunciasService {
   }
 
   editarDenuncia(denuncias: Denuncia, id:string) {
+
     this.http.put<Denuncia>(this.endpoint+"/"+id, denuncias).subscribe({
       next: data => {
             console.log("datos",data);
@@ -73,6 +77,7 @@ export class DenunciasService {
   }
 
   eliminarDenuncia(id: string) {
+
     this.http.delete(this.endpoint+"/"+id).subscribe({
       next: data => {
             console.log("datos",data);

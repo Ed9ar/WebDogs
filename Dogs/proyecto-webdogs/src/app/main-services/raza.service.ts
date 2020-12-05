@@ -42,6 +42,7 @@ export class RazaService {
   }
 
   getRaza() {
+
     console.log("en el servicio")
     return this.http.get<object[]>(this.endpoint).pipe(retry(3),catchError(this.handleError));
   }
