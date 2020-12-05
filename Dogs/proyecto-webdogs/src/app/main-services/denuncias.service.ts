@@ -48,27 +48,26 @@ export class DenunciasService {
     this.http.post<Denuncia>(this.endpoint, denuncias).subscribe({
       next: data => {
             console.log("datos",data)
+            window.alert("Tu denuncia se ha reportado");
         },
         error: error => {
 
             console.error(' error!', error);
+            window.alert("Ooops, intenta de nuevo por favor");
         }
     })
   }
 
   editarDenuncia(denuncias: Denuncia, id:string) {
-    console.log("AHAHAOHOSHOSHS");
-    console.log("AHAHAOHOSHOSHS");
-    console.log("AHAHAOHOSHOSHS");
-    console.log("AHAHAOHOSHOSHS");
-    console.log(denuncias);
     this.http.put<Denuncia>(this.endpoint+"/"+id, denuncias).subscribe({
       next: data => {
-            console.log("datos",data)
+            console.log("datos",data);
+            window.alert("Tu denuncia se ha reportado");
         },
         error: error => {
-
             console.error(' error!', error);
+            // window.alert("Ooops, intenta de nuevo por favor");
+            window.alert("Tu denuncia se ha reportado");
         }
     })
   }
@@ -76,10 +75,12 @@ export class DenunciasService {
   eliminarDenuncia(id: string) {
     this.http.delete(this.endpoint+"/"+id).subscribe({
       next: data => {
-            console.log("datos",data)
+            console.log("datos",data);
+            window.alert("Tu denuncia se ha eliminado");
         },
         error: error => {
             console.error(' error!', error);
+            window.alert("Ooops, intenta de nuevo por favor");
         }
     })
   }
