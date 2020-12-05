@@ -1,6 +1,16 @@
 import Perro from '../models/perro';
 import  axios  from 'axios';
 
+const multer = require("multer");
+
+const MYME_TYPE_MAP = {
+    'image/png': 'png',
+    'image/jpeg': 'jpg',
+    'image/jpg': 'jpg'
+}
+
+
+
 class PerroController{
     getAll = async(req, res) =>{
         try{
@@ -12,9 +22,28 @@ class PerroController{
         }
     }
 
-    insert = async(req, res) => {
+    insert = async(req, res, next) => {
+        const file = req.file;
+        if(!file){
+            const error = new Error('No hay archivo');
+            res.status(400).json({error: error.message});
+            return next(error);
+        }
         try{
-            const per = await new Perro(req.body).save();
+            console.log("Insertar");
+            // console.log(req.body);
+            // console.log(req[1])
+            const { nombre, raza,tamanio, edad, correo, descripcion } = req.body;
+            const infoPerro = {
+                nombre: nombre,
+                raza: raza,
+                tamanio: tamanio,
+                edad: edad,
+                descripcion: descripcion,
+                correoContacto: correo,
+                url: file.path,
+            }
+            const per = await new Perro(infoPerro).save();
             res.status(201).json(per);
         }catch(err){
 

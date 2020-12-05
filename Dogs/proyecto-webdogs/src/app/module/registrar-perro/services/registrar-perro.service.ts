@@ -43,7 +43,7 @@ export class RegistrarPerroService {
     }else{
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    window.alert(errorMessage); //Meter gui bonitas
+    window.alert(errorMessage); 
     return throwError(errorMessage);
   }
 
@@ -60,8 +60,9 @@ export class RegistrarPerroService {
   clasePerroAgregadoAnunciada$ = this.perroAgregado.asObservable();
 
 
-  insertarPerro(perros: Perro){
-    this.http.post<Perro>(this.endpoint, perros).subscribe({
+  insertarPerro(fd:FormData){
+    
+    this.http.post<FormData>(this.endpoint, fd).subscribe({
       next: data =>{
         console.log("datos", data);
       },error: error =>{

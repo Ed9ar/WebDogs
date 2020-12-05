@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, Validators, FormArray, FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { RegistrarPerroService } from '../../services/registrar-perro.service';
 import { animation, trigger, animateChild, group, transition, animate, style, query, state } from '@angular/animations';
@@ -7,6 +7,7 @@ import { Perro } from '../../../../models/perro.model';
 import { Subject } from 'rxjs';
 import {  takeUntil } from 'rxjs/operators';
 import { RazaService } from '../../../../main-services/raza.service';
+import { mimeType} from './mime-type.validator';
 
 @Component({
   selector: 'app-registrar-perro-formulario',
@@ -17,29 +18,33 @@ import { RazaService } from '../../../../main-services/raza.service';
 export class RegistrarPerroFormularioComponent implements OnInit {
 
   suscribe: Subscription;
-
+  selectedFile: File;
   razas: object[] = [];
 
   help: Perro[] = [];
+
+  modeloPerro:FormGroup;
+
+  imagePreview: string;
 
   constructor(private formBuild:FormBuilder ,private registrarPerroService: RegistrarPerroService, private razaService: RazaService) { }
 
   destroy$: Subject<boolean> = new Subject<boolean>();
 
- 
-  modeloPerro = this.formBuild.group(
-    {
-      perroId: ['', Validators.required],
-      nombre: ['', Validators.required],
-      raza: ['', Validators.required],
-      tamanio: ['', Validators.required],
-      edad: ['', Validators.required],
-      correoContacto: ['', Validators.required],
-      descripcion: ['',Validators.required],
-    }
-  );
 
   ngOnInit(): void {
+    this.modeloPerro = this.formBuild.group(
+      {
+        perroId: ['', Validators.required],
+        nombre: ['', [Validators.required, Validators.minLength(2)]],
+        raza: ['', [Validators.required, Validators.minLength(2)]],
+        tamanio: ['', Validators.required],
+        edad: ['', [Validators.required, Validators.min(1)]],
+        correoContacto: ['',  [Validators.required, Validators.email]],
+        descripcion: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(255)]],
+        image: [null,Validators.required],
+      }
+    );
     this.razaService.getRaza().pipe(takeUntil(this.destroy$)).subscribe((data2: any[])=>{
       this.razas = data2;
       console.log(data2);
@@ -53,21 +58,30 @@ export class RegistrarPerroFormularioComponent implements OnInit {
   }
 
   enviar() {
-    
-    /*this.help = [{'nombre': this.modeloPerro.value.nombre,
-    'raza': this.modeloPerro.value.raza, 
-    'tamanio': this.modeloPerro.value.tamanio, 
-    'edad': this.modeloPerro.value.edad,
-    'correoContacto': this.modeloPerro.value.correoContacto,
-    'descripcion': this.modeloPerro.value.descripcion,
-    'url': 'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0]}];
-    console.log("Aqui esta el help");
-    console.log(this.help);*/
-    //this.razas.push(this.modeloPerro.value)
-    //this.razas.push(url:'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0])
-    //console.log(this.modeloPerro.value+{'url':'https://api.thedogapi.com/v1/images/search?breed_ids='+this.modeloPerro.value.raza.split(' ')[0]})
-    this.registrarPerroService.insertarPerro(this.modeloPerro.value);
+    const fd = new FormData();
+    fd.append('file', this.selectedFile);
+    fd.append('nombre', this.modeloPerro.value.nombre);
+    fd.append('raza', this.modeloPerro.value.raza);
+    fd.append('tamanio', this.modeloPerro.value.tamanio);
+    fd.append('edad', this.modeloPerro.value.edad);
+    fd.append('correoContacto', this.modeloPerro.value.correoContacto);
+    fd.append('descripcion', this.modeloPerro.value.descripcion);
+    this.registrarPerroService.insertarPerro(fd);
     this.modeloPerro.reset();
+  }
+
+  onImagePicked(event: Event){
+    const file = (event.target as HTMLInputElement).files[0];
+    this.modeloPerro.patchValue({image: file});
+    this.modeloPerro.get('image').updateValueAndValidity();
+    this.selectedFile = <File>(event.target as HTMLInputElement).files[0];
+    console.log(file);
+    console.log(this.modeloPerro);
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.imagePreview = reader.result as string;
+    };
+    reader.readAsDataURL(file);
   }
 
 }

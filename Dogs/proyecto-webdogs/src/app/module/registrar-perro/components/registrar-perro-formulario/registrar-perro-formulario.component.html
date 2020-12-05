@@ -8,45 +8,97 @@
 <div class="general">
     <section class="contact-section">
         <div class="my-5 inner-contact">
-            <form class="contact-form " [formGroup]="modeloPerro" (ngSubmit)="enviar()">
-                <div class="form-group">
-                    <label i18n="Label nombre|Acerca de nosotros@@labelNombre" for="exampleFormControlInput1">Nombre</label>
-                    <input type="email" formControlName="nombrePerro" class="form-control" id="exampleFormControlInput1">
+            <form class="contact-form" [formGroup]="modeloPerro" (ngSubmit)="enviar()">
+                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('nombre').errors && (modeloPerro.get('nombre').touched || modeloPerro.get('nombre').dirty)}">
+                    <label i18n="Label nombre|Acerca de nosotros@@labelNombre" for="exampleFormControlInput1 nombre">Nombre</label>
+                    <input type="email" formControlName="nombre" class="form-control" id="exampleFormControlInput1">
+                    <span class="help-block" *ngIf="modeloPerro.get('nombre').errors && (modeloPerro.get('nombre').touched || modeloPerro.get('nombre').dirty)">
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('nombre').errors.required">
+                        <em>Nombre requerido</em>
+                    </span>
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('nombre').errors.minlength">
+                      <em>Nombre debe tener m&aacute;s de 2 caracteres y no debe tener n&uacute;meros
+                      </em>
+                    </span>
+                    </span>
                 </div>
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('tamanio').errors && (modeloPerro.get('tamanio').touched || modeloPerro.get('tamanio').dirty)}">
                     <label i18n="Label tamaño|Acerca de nosotros@@labelTamano" for="exampleFormControlSelect1">Selecciona el tamaño</label>
-                    <select class="form-control" formControlName="tamanio" id="exampleFormControlSelect1">
-                        <option i18n="Select|Acerca de nosotros@@select">Selecciona...</option>
-                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Pequeño</option>
-                        <option i18n="Opcion mediano|Acerca de nosotros@@opcionMediano">Mediano</option>
-                        <option i18n="Opcion grande|Acerca de nosotros@@opcionGrande">Grande</option>
-                    </select>
+                    <select class="form-control" formControlName="tamanio" id="exampleFormControlSelect1 tamanio">
+                      <option i18n="Select|Acerca de nosotros@@select">Selecciona...</option>
+                      <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Pequeño</option>
+                      <option i18n="Opcion mediano|Acerca de nosotros@@opcionMediano">Mediano</option>
+                      <option i18n="Opcion grande|Acerca de nosotros@@opcionGrande">Grande</option>
+                  </select>
+                    <span class="help-block" *ngIf="modeloPerro.get('tamanio').errors && (modeloPerro.get('tamanio').touched || modeloPerro.get('tamanio').dirty)">
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('tamanio').errors.required">
+                        <em>Tamaño requerido</em>
+                    </span>
+                    </span>
                 </div>
-                <div class="form-group">
-                    <label i18n="Label tamaño|Acerca de nosotros@@labelTamano" for="exampleFormControlSelect1">Selecciona la raza</label>
+                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('raza').errors && (modeloPerro.get('raza').touched || modeloPerro.get('raza').dirty)}">
+                    <label i18n="Label tamaño|Acerca de nosotros@@labelTamano" for="exampleFormControlSelect1 raza">Selecciona la raza</label>
                     <select class="form-control" formControlName="raza" id="exampleFormControlSelect1">
-                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Selecciona una raza...</option>
-                        <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque"  *ngFor="let raza of razas">{{raza.id}} {{raza.name}}</option>
-                    </select>
+                      <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque">Selecciona una raza...</option>
+                      <option i18n="Opcion pequeño|Acerca de nosotros@@opcionPeque"  *ngFor="let raza of razas">{{raza.name}}</option>
+                  </select>
+                    <span class="help-block" *ngIf="modeloPerro.get('raza').errors && (modeloPerro.get('raza').touched || modeloPerro.get('raza').dirty)">
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('raza').errors.required">
+                        <em>Raza requerida</em>
+                    </span>
+                    </span>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('edad').errors && (modeloPerro.get('edad').touched || modeloPerro.get('edad').dirty)}">
                     <label i18n="Form edad|Acerca de nosotros@@formEdad" for="exampleFormControlInput1">Edad</label>
-                    <input type="email" formControlName="edad" class="form-control" id="exampleFormControlInput1">
+                    <input type="number" formControlName="edad" class="form-control" id="exampleFormControlInput1 edad">
+                    <span class="help-block" *ngIf="modeloPerro.get('edad').errors && (modeloPerro.get('edad').touched || modeloPerro.get('edad').dirty)">
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('edad').errors.required">
+                        <em>Edad requerida (solamente n&uacute;mero)</em>
+                    </span>
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('edad').errors.min">
+                      <em> El m&iacute;nimo de edad es 1 aunque el perro tenga meses
+                      </em>
+                    </span>
+                    </span>
                 </div>
 
+                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('correoContacto').errors && (modeloPerro.get('correoContacto').touched || modeloPerro.get('correoContacto').dirty)}">
+                    <label i18n="Form correo|Acerca de nosotros@@formCorreo" for="exampleFormControlInput1">Correo de contacto</label>
+                    <input type="email" formControlName="correoContacto" class="form-control" id="exampleFormControlInput1 correoContacto">
+                    <span class="help-block" *ngIf="modeloPerro.get('correoContacto').errors && (modeloPerro.get('correoContacto').touched || modeloPerro.get('correoContacto').dirty)">
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('correoContacto').errors.required">
+                        <em>Email requerido</em>
+                    </span>
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('correoContacto').errors.email">
+                      <em> Email debe ser v&aacute;lido
+                      </em>
+                    </span>
+                    </span>
+                </div>
                 <div class="form-group">
-                    <label i18n="Form correo|Acerca de nosotros@@formCorreo" for="exampleFormControlInput1">Correo de contacto</label> <input type="email" formControlName="correoContacto" class="form-control" id="exampleFormControlInput1">
+                    <button mat-stroked-button type="button" class="btn btn-info" (click)="filePicker.click()">Img</button>
+                    <input type="file" #filePicker (change)="onImagePicked($event)">
+                </div>
+                <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
+                    <img [src]="imagePreview">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{'has-error' : modeloPerro.get('descripcion').errors && (modeloPerro.get('descripcion').touched || modeloPerro.get('descripcion').dirty)}">
                     <label i18n="Form desc|Acerca de nosotros@@formDesc" for="exampleFormControlInput1">Descripci&oacute;n del perro</label>
-                    <textarea formControlName="descripcion" class="form-control" id="#" rows="3" ></textarea>
+                    <textarea formControlName="descripcion" class="form-control" id="descripcion" rows="3"></textarea>
+                    <span class="help-block" *ngIf="modeloPerro.get('descripcion').errors && (modeloPerro.get('descripcion').touched || modeloPerro.get('descripcion').dirty)">
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('descripcion').errors.required">
+                        <em>Descripci&oacute;n requerida</em>
+                    </span>
+                    <span class="span-alert reg-alert" *ngIf="modeloPerro.get('descripcion').errors.minlength || modeloPerro.get('descripcion').errors.maxlength">
+                      <em>Descripci&oacute;n debe tener m&aacute;s de 4 caracteres y menos de 255 caracteres
+                      </em>
+                    </span>
+                    </span>
                 </div>
                 <div class="form-group">
-                    <a><input class="btn btn-success" type="submit" i18n-value="Form guardar|Acerca de nosotros@@formGuardar" value="Guardar" ></a>
+                    <a><input class="btn btn-success" type="submit" i18n-value="Form guardar|Acerca de nosotros@@formGuardar" value="Guardar"></a>
                 </div>
             </form>
-
-
         </div>
