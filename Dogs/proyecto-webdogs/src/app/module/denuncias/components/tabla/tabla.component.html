@@ -12,35 +12,40 @@
     <div class="row">
         <table class="table table-striped">
             <thead>
-              <tr>
-                <th i18n="Fecha denuncia|Columna fecha @@fechaDen" scope="col">Fecha</th>
-                <th i18n="Fecha denuncia| denuncia @@den" scope="col">Denuncia</th>
-                <th i18n="Anonima denuncia|Columna anonima @@anonCol" scope="col">Anónima</th>
-                <th i18n="Ubicacion denuncia|Columna ubicacion @@ubiCol" scope="col">Ubicación</th>
-                <th i18n="Estatus denuncia|Columna estatus @@estatusCol" scope="col">Estatus</th>
-                <th scope="col"><app-formulario></app-formulario></th>
-              </tr>
+                <tr>
+                    <th i18n="Fecha denuncia|Columna fecha @@fechaDen" scope="col">Fecha</th>
+                    <th i18n="Fecha denuncia| denuncia @@den" scope="col">Denuncia</th>
+                    <th i18n="Anonima denuncia|Columna anonima @@anonCol" scope="col">Anónima</th>
+                    <th i18n="Ubicacion denuncia|Columna ubicacion @@ubiCol" scope="col">Ubicación</th>
+                    <th i18n="Estatus denuncia|Columna estatus @@estatusCol" scope="col">Estatus</th>
+                    <th scope="col">
+                        <app-formulario></app-formulario>
+                    </th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>20-12-2020</td>
-                <td i18n="Pista|Texto pista @@pista">Selecciona Nuevo para ver formulario</td>
-                <td i18n="Anon si|Estado de denuncia anonima @@anonSi">Si</td>
-                <td i18n="Info tabla| Info tabla @@infoTabla">agrega y veras en la tabla</td>
-                <td i18n="Status|Status @@status">En Proceso</td>
-                <td><app-cerrar-sesion></app-cerrar-sesion><app-editar></app-editar></td>
-              </tr>
-              <tr *ngFor="let den of denunciasObjeto">
-                
-                <td>{{den.fecha}}</td>
-                <td>{{den.descripcion}}</td>
-                <td>{{den.responsableDenuncia}}</td>
-                <td>{{den.ubicacion}}</td>
-                <td>{{den.estatus}}</td>
-                <td><button type="button" class="btn btn-success">E</button>  <button type="button" class="btn btn-danger" (click)="eliminar(den._id)">D</button></td>
-              </tr>
+                <tr>
+                    <td>20-12-2020</td>
+                    <td i18n="Pista|Texto pista @@pista">Selecciona Nuevo para ver formulario</td>
+                    <td i18n="Anon si|Estado de denuncia anonima @@anonSi">Si</td>
+                    <td i18n="Info tabla| Info tabla @@infoTabla">agrega y veras en la tabla</td>
+                    <td i18n="Status|Status @@status">En Proceso</td>
+                    <td>
+                        <app-cerrar-sesion></app-cerrar-sesion>
+                        <app-editar></app-editar>
+                    </td>
+                </tr>
+                <tr *ngFor="let den of denunciasObjeto">
+
+                    <td>{{den.fecha.es}}</td>
+                    <td>{{den.descripcion.es}}</td>
+                    <td>{{den.responsableDenuncia.es}}</td>
+                    <td>{{den.ubicacion.es}}</td>
+                    <td>{{den.estatus.es}}</td>
+                    <td><button type="button" class="btn btn-success">E</button> <button type="button" class="btn btn-danger" (click)="eliminar(den._id)">D</button></td>
+                </tr>
             </tbody>
-          </table>
+        </table>
     </div>
 
     <hr class="featurette-divider">
