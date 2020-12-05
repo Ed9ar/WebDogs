@@ -1,10 +1,17 @@
 <section class="body-profile">
+    <div *ngIf="pSeleccion">
+        <label>
+          Nombre:
+          <input [(ngModel)]="pSeleccion" placeholder="nombre" />
+        </label>
+      </div>
     <div class="profile-card">
         <div class="image-container">
             <img src="../../../../../assets/img/loginDog.jpg" class="image-profile">
             <div class="title float-left">
-                <h2>Roque {{perroObjeto}} </h2>
+                <h2>Roque</h2>
             </div>
+
         </div>
         <div class="main-container">
             <p i18n="Nombre del perro|Acerca de nosotros@@myName"><i class="fas fa-dog info-dog"></i>Mi nombre es Roque</p>

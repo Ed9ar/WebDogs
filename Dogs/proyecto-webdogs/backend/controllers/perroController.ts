@@ -18,7 +18,7 @@ class PerroController{
             const perros = await Perro.find({});
             res.status(200).json(perros);
         }catch(err){
-            return res.status(400).json({error: err.message});
+          return res.status(404).json({"mensaje": "No se pudieron obtener los perros"});
         }
     }
 
@@ -26,7 +26,7 @@ class PerroController{
         const file = req.file;
         if(!file){
             const error = new Error('No hay archivo');
-            res.status(400).json({error: error.message});
+            res.status(404).json({error: error.message});
             return next(error);
         }
         try{
@@ -46,7 +46,7 @@ class PerroController{
             const per = await new Perro(infoPerro).save();
             res.status(201).json(per);
         }catch(err){
-
+          return res.status(400).json({"mensaje": "no se pudo añadir el perro"});
         }
     }
 
@@ -56,7 +56,7 @@ class PerroController{
             const count = await Perro.count();
             res.status(201).json(count);
         }catch(err){
-            return res.status(400).json({ error: err.message });
+          return res.status(400).json({ error: err.message });
         }
     }
 
@@ -80,9 +80,9 @@ class PerroController{
     update = async(req, res) => {
         try{
             await Perro.findOneAndUpdate({_id : req.params.id}, req.body);
-            res.sendStatus(200);
+            res.sendStatus(201);
         }catch(err){
-            return res.status(400).json({ error: err.message });
+          return res.status(409).json({ "mensaje": "hubo un conflicto al actualizar" });
         }
     }
 
@@ -91,29 +91,29 @@ class PerroController{
             await Perro.findOneAndRemove({_id : req.params.id});
             res.sendStatus(200);
         }catch(err){
-            return res.status(400).json({ error: err.message });
+          return res.status(400).json({ "mensaje": "no se pudo eliminar" });
         }
     }
 
     getImages = async(req, res) =>
             {
                 try{
-                    
+
                     let query_params = {
                         breed_ids: req.params.id,
                         limit:1
                     }
 
-                    let response = await axios.get('https://api.thedogapi.com/v1/images/search?breed_ids=22') 
-                    
+                    let response = await axios.get('https://api.thedogapi.com/v1/images/search?breed_ids=22')
+
                     /*pagination_count = response.headers['pagination-count'];
-                    images = response.data 
+                    images = response.data
                     current_image = images[0]*/
                     //console.log("-- ("+this.images.length +") Images from TheCatAPI.com")
                     //console.log( this.pagination_count ,'images available for this query.')
                     return res.status(201).response;
                 }catch(err){
-                    console.log(err)
+                  return res.status(404).json({"mensaje": "no se pudieron las imágenes"});
                 }
             }
 }

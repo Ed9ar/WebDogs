@@ -35,7 +35,7 @@ export class PerrosService {
 
   clasePerroAgregadoAnunciada$ = this.perroAgregado.asObservable();
   */
-  
+
   handleError(error: HttpErrorResponse){
     let errorMessage = 'Unknown error';
     if(error.error instanceof ErrorEvent){
@@ -47,27 +47,29 @@ export class PerrosService {
     return throwError(errorMessage);
   }
 
-  
-  
+
+
   getPerros(){
+
     console.log("en el servicio");
     return this.http.get<Perro[]>(this.endpoint).pipe(retry(3), catchError(this.handleError));
   }
 
-  
+
   private perroAgregado = new Subject<object>();
 
   clasePerroAgregadoAnunciada$ = this.perroAgregado.asObservable();
 
 
   insertarPerro(perros: Perro){
+
     this.http.post<Perro>(this.endpoint, perros).subscribe({
       next: data =>{
         console.log("datos", data);
       },error: error =>{
         console.error( ' error!', error);
       }
-      
+
     })
   }
 
@@ -79,7 +81,7 @@ export class PerrosService {
       },error: error =>{
         console.error( ' error!', error);
       }
-      
+
     })
   }
 
@@ -90,7 +92,7 @@ export class PerrosService {
       },error: error =>{
         console.error( ' error!', error);
       }
-      
+
     })
   }*/
 }

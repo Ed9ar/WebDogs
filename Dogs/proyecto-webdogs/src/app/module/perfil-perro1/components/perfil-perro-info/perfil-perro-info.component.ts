@@ -10,15 +10,23 @@ import { Perro } from '../../../../models/perro.model';
 export class PerfilPerroInfoComponent implements OnInit {
 
   perroObjeto: Perro;
+  pSeleccion:any;
 
   constructor(private generalService: GeneralService) {
     generalService.clasePerroInformacion$.subscribe(
       p=>{
         this.perroObjeto= p;
-        console.log(this.perroObjeto)
+        console.log(this.perroObjeto);
+        this.perroSeleccionado(p);
       }
     )
    }
+
+  perroSeleccionado(p:Perro){
+    this.pSeleccion = p;
+    console.log("pseleccion");
+    console.log(this.pSeleccion);
+  }
 
   ngOnInit(): void {
   }
