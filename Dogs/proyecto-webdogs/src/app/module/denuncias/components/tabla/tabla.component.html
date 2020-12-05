@@ -44,29 +44,29 @@
                         <form [formGroup]="modeloDenuncias" (ngSubmit)="enviar()">
                           <div class="form-group">
                               <label i18n="Denuncia titulo|Titulo de la denuncia@@titulodenuncia" for="exampleFormControlInput1">Titulo de la denuncia:</label>
-                              <input type="text" formControlName="descripcion" class="form-control" id="exampleFormControlInput1" placeholder="{{den.descripcion}}">
+                              <input type="text" formControlName="descripcion" class="form-control" id="exampleFormControlInput1" placeholder="{{den.descripcion.es}}">
                 
                           </div>
                           <div class="form-group">
                               <label i18n="Denuncia fecha|Fecha de la denuncia@@fechaDenuncia" for="exampleFormControlInput1">Fecha de la denuncia:</label>
-                              <input type="date" formControlName="fecha" class="form-control" id="exampleFormControlInput1" placeholder="{{den.fecha}}">
+                              <input type="date" formControlName="fecha" class="form-control" id="exampleFormControlInput1" placeholder="{{den.fecha.es}}">
                 
                 
                           </div>
                           <div class="form-group">
                               <label i18n="Denuncia anonima|anonima?@@anonima" for="exampleFormControlInput1">Autor de la denuncia</label>
-                              <input type="text" formControlName="responsableDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="{{den.responsableDenuncia}}">
+                              <input type="text" formControlName="responsableDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="{{den.responsableDenuncia.es}}">
                 
                 
                           </div>
                           <div class="form-group">
                               <label i18n="Denuncia ubicacion|Ubicacion de la denuncia@@ubicacionDenuncia" for="exampleFormControlInput1">Ubicacion de la denuncia:</label>
-                              <input type="text" formControlName="ubicacion" class="form-control" id="exampleFormControlInput1" placeholder="{{den.ubicacion}}">
+                              <input type="text" formControlName="ubicacion" class="form-control" id="exampleFormControlInput1" placeholder="{{den.ubicacion.es}}">
                 
                           </div>
                           <div class="form-group">
                               <label i18n="Denuncia estatus|Estatus de la denuncia@@estatus" for="exampleFormControlInput1">Estatus de la denuncia:</label>
-                              <input type="text" formControlName="estatus" class="form-control" id="exampleFormControlInput1" placeholder="{{den.estatus}}">
+                              <input type="text" formControlName="estatus" class="form-control" id="exampleFormControlInput1" placeholder="{{den.estatus.es}}">
                 
                           </div>
                         </form>

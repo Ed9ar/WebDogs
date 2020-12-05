@@ -42,8 +42,10 @@ class DenunciaController{
     // Update by id
     update = async (req, res) => {
         try {
-        await Denuncia.findOneAndUpdate({ _id: req.params.id }, req.body);
+        console.log(req.params.id.type());
+        await Denuncia.findOneAndUpdate({ _id: req.params.id }, req.body, {  returnOriginal: false});
         res.sendStatus(200);
+        //console.log(req.body );
         } catch (err) {
         return res.status(400).json({ error: err.message });
         }
@@ -52,6 +54,7 @@ class DenunciaController{
         // Delete by id
     delete = async (req, res) => {
         try {
+            console.log(req.params.id );
         await Denuncia.findOneAndRemove({ _id: req.params.id });
         res.sendStatus(200);
         } catch (err) {
