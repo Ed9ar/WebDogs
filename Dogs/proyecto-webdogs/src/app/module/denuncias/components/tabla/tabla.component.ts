@@ -41,6 +41,7 @@ export class TablaComponent implements OnInit {
 
   modeloDenuncias = this.formBuild.group(
     {
+
       descripcion: ['', Validators.required],
       fecha: ['', Validators.required],
       ubicacion: ['', Validators.required],
@@ -49,6 +50,8 @@ export class TablaComponent implements OnInit {
 
     }
   );
+
+  
 
   destroy$: Subject<boolean> = new Subject<boolean>();
   constructor(private formBuild:FormBuilder, config: NgbModalConfig, private modalService: NgbModal, private denunciasService: DenunciasService,private renderer: Renderer2, private targetElm: ElementRef) {
@@ -79,8 +82,31 @@ export class TablaComponent implements OnInit {
   }
 
   editar(denuncias: Denuncia, id: string){
-    console.log(id);
-    this.denunciasService.editarDenuncia(denuncias, id);
+    console.log("EDITAR");
+    console.log(denuncias);
+    console.log(this.modeloDenuncias.value);
+    // descripcion: ['', Validators.required],
+    //   fecha: ['', Validators.required],
+    //   ubicacion: ['', Validators.required],
+    //   estatus: ['', Validators.required],
+    if(this.modeloDenuncias.value.responsableDenuncia == ""){
+      this.modeloDenuncias.value.responsableDenuncia = denuncias.responsableDenuncia;
+    }
+    if(this.modeloDenuncias.value.fecha == ""){
+      this.modeloDenuncias.value.fecha = denuncias.fecha;
+    }
+    if(this.modeloDenuncias.value.descripcion == ""){
+      this.modeloDenuncias.value.descripcion = denuncias.descripcion;
+    }
+    if(this.modeloDenuncias.value.ubicacion == ""){
+      this.modeloDenuncias.value.ubicacion = denuncias.ubicacion;
+    }
+    if(this.modeloDenuncias.value.estatus == ""){
+      this.modeloDenuncias.value.estatus = denuncias.estatus;
+    }
+
+    console.log(this.modeloDenuncias.value);
+    this.denunciasService.editarDenuncia(this.modeloDenuncias.value, id);
     this.estilo = !this.estilo;
   }
 

@@ -42,7 +42,6 @@ class DenunciaController{
     // Update by id
     update = async (req, res) => {
         try {
-        console.log(req.params.id.type());
         await Denuncia.findOneAndUpdate({ _id: req.params.id }, req.body, {  returnOriginal: false});
         res.sendStatus(200);
         //console.log(req.body );

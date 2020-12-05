@@ -65,8 +65,10 @@ export class RegistrarPerroService {
     this.http.post<FormData>(this.endpoint, fd).subscribe({
       next: data =>{
         console.log("datos", data);
+        window.alert("Se ha registrado perro con éxito"); //Meter mensaje bonito de éxito
       },error: error =>{
         console.error( ' error!', error);
+        window.alert("OOPS! esto no ha salido bien, ingresar nuevamente"); 
       }
       
     })

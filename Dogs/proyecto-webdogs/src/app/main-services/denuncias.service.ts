@@ -57,6 +57,11 @@ export class DenunciasService {
   }
 
   editarDenuncia(denuncias: Denuncia, id:string) {
+    console.log("AHAHAOHOSHOSHS");
+    console.log("AHAHAOHOSHOSHS");
+    console.log("AHAHAOHOSHOSHS");
+    console.log("AHAHAOHOSHOSHS");
+    console.log(denuncias);
     this.http.put<Denuncia>(this.endpoint+"/"+id, denuncias).subscribe({
       next: data => {
             console.log("datos",data)

@@ -24,6 +24,64 @@
                 </tr>
             </thead>
             <tbody>
+             
+                <tr *ngFor="let den of denunciasObjeto">
+                
+                
+                    <td>{{den.fecha}}</td>
+                    <td>{{den.descripcion}}</td>
+                    <td>{{den.responsableDenuncia}}</td>
+                    <td>{{den.ubicacion}}</td>
+                    <td>{{den.estatus}}</td>
+                    <td>
+                      <ng-template #content let-c="close" let-d="dismiss">
+    
+                      <div class="modal-header">
+                          <h4 i18n="Editar denuncia|Editar una  denuncia@@regDenuncia" class="modal-title" id="modal-basic-title">Editar una denuncia</h4>
+                          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <form [formGroup]="modeloDenuncias" (ngSubmit)="enviar()">
+                              <div class="form-group">
+                                  <label i18n="Denuncia titulo|Titulo de la denuncia@@titulodenuncia" for="exampleFormControlInput1">Titulo de la denuncia:</label>
+                                  <input type="text" formControlName="descripcion" class="form-control" id="exampleFormControlInput1" placeholder="{{den.descripcion.es}}">
+                    
+                              </div>
+                              <div class="form-group">
+                                  <label i18n="Denuncia fecha|Fecha de la denuncia@@fechaDenuncia" for="exampleFormControlInput1">Fecha de la denuncia:</label>
+                                  <input type="date" formControlName="fecha" class="form-control" id="exampleFormControlInput1" placeholder="{{den.fecha.es}}">
+                    
+                    
+                              </div>
+                              <div class="form-group">
+                                  <label i18n="Denuncia anonima|anonima?@@anonima" for="exampleFormControlInput1">Autor de la denuncia</label>
+                                  <input type="text" formControlName="responsableDenuncia" class="form-control" id="exampleFormControlInput1" placeholder="{{den.responsableDenuncia.es}}">
+                    
+                    
+                              </div>
+                              <div class="form-group">
+                                  <label i18n="Denuncia ubicacion|Ubicacion de la denuncia@@ubicacionDenuncia" for="exampleFormControlInput1">Ubicacion de la denuncia:</label>
+                                  <input type="text" formControlName="ubicacion" class="form-control" id="exampleFormControlInput1" placeholder="{{den.ubicacion.es}}">
+                    
+                              </div>
+                              <div class="form-group">
+                                  <label i18n="Denuncia estatus|Estatus de la denuncia@@estatus" for="exampleFormControlInput1">Estatus de la denuncia:</label>
+                                  <input type="text" formControlName="estatus" class="form-control" id="exampleFormControlInput1" placeholder="{{den.estatus.es}}">
+                    
+                              </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button i18n="Guardar|Boton para guardar denuncia@@guardar" type="button" class="btn btn-primary" (click)="editar(den, den._id)">Guardar Cambios</button>
+                          <button i18n="Cancelar|Boton para cancelar denuncia@@cancelar" type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancelar</button>
+                        </div>
+                    </ng-template>
+                      
+                    <a  class=" nav-link btn btn-success btn-sm" (click)="open(content)"><i class="fa fa-address-card"></i></a><a  class=" nav-link btn btn-danger btn-sm" (click)="eliminar(den._id)"><i class="fa fa-trash"></i></a></td>
+                  </tr>
+                  
               <tr *ngFor="let den of denunciasObjeto">
                 
                 <td>{{den.fecha.es}}</td>
@@ -31,6 +89,11 @@
                 <td>{{den.responsableDenuncia.es}}</td>
                 <td>{{den.ubicacion.es}}</td>
                 <td>{{den.estatus.es}}</td>
+                <!-- <td>{{den.fecha}}</td>
+                <td>{{den.descripcion}}</td>
+                <td>{{den.responsableDenuncia}}</td>
+                <td>{{den.ubicacion}}</td>
+                <td>{{den.estatus}}</td> -->
                 <td>
                   <ng-template #content let-c="close" let-d="dismiss">
 
@@ -79,6 +142,8 @@
                   
                 <a  class=" nav-link btn btn-success btn-sm" (click)="open(content)"><i class="fa fa-address-card"></i></a><a  class=" nav-link btn btn-danger btn-sm" (click)="eliminar(den._id)"><i class="fa fa-trash"></i></a></td>
               </tr>
+
+
             </tbody>
         </table>
     </div>
