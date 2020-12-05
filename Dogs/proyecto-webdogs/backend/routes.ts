@@ -58,7 +58,7 @@ function setRoutes(app):void{
     router.route("/denuncia/:id").put(denunciaController.update);
     router.route("/denuncia/:id").delete(denunciaController.delete);
 
-    //app.use(jwtCheck);
+    app.use(jwtCheck);
     app.use('/api', router);
 }
 

@@ -35,6 +35,10 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +70,9 @@ import { AuthHttpInterceptor } from '@auth0/auth0-angular';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
     AuthModule.forRoot({
       // The domain and clientId were configured in the previous chapter
     domain: 'dev-55arag8d.us.auth0.com',

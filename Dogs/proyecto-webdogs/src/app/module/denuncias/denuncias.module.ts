@@ -10,6 +10,10 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { CerrarSesionComponent } from './components/cerrar-sesion/cerrar-sesion.component';
 import { EditarComponent } from './components/editar/editar.component';
 
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [TablaComponent, DenunciasComponent, MapaComponent, FormularioComponent, CerrarSesionComponent, EditarComponent],
@@ -17,7 +21,10 @@ import { EditarComponent } from './components/editar/editar.component';
     CommonModule,
     DenunciasRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class DenunciasModule { }
